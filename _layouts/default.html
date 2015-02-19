@@ -1,9 +1,16 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Getting Started with GitHub Pages and Jekyll</title>
-	</head>
-	<body>
-		{{ content}}
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+</body>
+
 </html>
