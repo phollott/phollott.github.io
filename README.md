@@ -1,24 +1,25 @@
-#Clean Blog by Start Bootstrap - Jekyll Version
+# Leap Day
 
-The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
+Open source content for Leap Day theme. Theme was first designed / developed for GitHub Pages and is availalbe for download, forking and using anywhere else on the web. Like the theme share it with the twitterverse.
 
-###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
+![Leap Day](http://cl.ly/image/2Z1Z1e2q2I1C/image)
 
-## Before You Begin
+**Note** If you are an original Leap Day user (pre August 2014) the [1.0 tag](https://github.com/mattgraham/leapday/releases/tag/1.0) is what you are on.
 
-In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
+The Leap Day Pages demo is [here](http://mattgraham.github.com/leapday)
 
-It should look like this:
-`baseurl: ""`
 
-## What's Included
+### Developing Locally
 
-A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
+```
+script/server
+```
 
-A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
+Running `script/server` will run `jekyll serve && compass --watch` commands via terminal. You will be able to open http://localhost:4000 and make changes to any of the, md, .html or .scss files and compass will compile them for you. Simply refresh your browser (or use something like livereload) and develop away. Most of the colors and sizing is found in the _variables.scss file.
 
-You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
 
-## Support
+### Credits
 
-Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.
+Leap-Day Theme is by [Matt Graham](http://madebygraham.com), twitter [@michigangraham](http://twitter.com/#!/michigangraham). Use, reuse and modify away.
+
+[Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/)
