@@ -1,41 +1,69 @@
-# Site settings
-title: Piers Hollott
-email: piers.hollott@gmail.com
-url: https://phollott.github.io
-description: "Personal portfolio for Piers Hollott, including application demonstrators drawn from work in Health Informatics, Open Data, and Open Branding."
+url: https://y7kim.github.io
+baseurl: /agency-jekyll-theme/
 
-# Contact form: comment the line below if you want to stick with the default PHP contact form
-contact: static
+# Site settings
+title: Awesome Title
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 94722b #18bc9c #80B3FF 
-  secondary: 82aca0 #2c3e50 #FD6E8A
-  secondary-dark: 8c1b1f #233140 #A2122F
+  primary: fed136
+  secondary: fec503  
+  secondary-dark: 333
 
-# Footer settings
-footer:
-  copyright: Piers Hollott
-  location: Victoria, British Columbia
-  social: Around the Web
-  credits: Credits
+# Team names, titles and social links
+people:
+- name: Kay Garland
+  pic: 1
+  position: Lead Designer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: stack-overflow
+      url: #
+
+- name: Larry Parker
+  pic: 2
+  position: Lead Marketer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: linkedin
+      url: #
+
+- name: Diana Petersen
+  pic: 3
+  position: Lead Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/phollott
+    url: http://twitter.com/jekyllrb
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket 
+    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/phollott
-  - title: linkedin
-    url: https://www.linkedin.com/in/piershollott/en
+    url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 5-1850 Fern Street
-  - line: Victoria BC, CAN V8R 4K2
-
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
 
 # Build settings
 markdown: kramdown

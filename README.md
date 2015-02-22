@@ -1,32 +1,30 @@
-Freelancer Jekyll theme
-=========================
+Agency Jekyll theme
+====================
 
-Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/templates/freelancer/)
+Agency theme based on [Agency bootstrap theme ](http://startbootstrap.com/templates/agency/)
 
-## How to use
- - Place a image in `/img/portoflio/`
- - Replace `you@email.com` in `_includes/contact_static.html` with your email address. refer to [formspree](http://formspree.io/) for more information.
- - Create posts to display your projects. Use the follow as an example:
-```txt
----
-layout: default
-modal-id: 1
-date: 2014-07-18
-img: cabin.png
-alt: image-alt
-project-date: July 2014
-client: The Client
-category: Web Development
-description: The description of the project
+# How to use
 
----
-```
+###Portfolio 
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/freelancer-theme)
+Portfolio projects are in '/_posts'
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/freelancer-theme/master/screenshot.png)
+Images are in '/img/portfolio'
+
+###About
+
+Images are in '/img/about/'
+
+###Team
+
+Team members and info are in '_config.yml'
+
+Images are in '/img/team/'
+
+
+# Demo
+
+View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
 
 =========
-For more details, read the [documentation](http://jekyllrb.com/)
+For more details, read [documentation](http://jekyllrb.com/)
