@@ -1,14 +1,12 @@
 ---
 layout: default
 modal-id: 1
-date: 2014-07-18
+date: 2015-01-23
 img: cabin.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
+project-date: January 2015
+client: Internal
+category: Healthcare
 description: The <a href="https://phollott.github.io/rhizome/">Rhizome Project Page</a>. 
 
 ---
-This is Project 1 Markdown
-==========================
