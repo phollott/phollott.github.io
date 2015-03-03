@@ -22,14 +22,13 @@
 		   },
 		  "disposition": "inline",
 		  "returnValue": true,
-		  "href": "/index_niem.html"
+		  "href": "/fxos_pmix/index_niem.html"
 		}
     },
     "installs_allowed_from": ["*"],
     "default_locale": "en",
     "permissions": {
-		"systemXHR": { "description": "Required for certain web communications" },
-		"desktop-notification": {},
-        "alarms" : {}
-    }
+		"systemXHR": { "description": "Required for certain web communications" }
+    },
+	"type": "privileged"
 }
