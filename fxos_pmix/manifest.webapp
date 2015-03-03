@@ -30,5 +30,5 @@
     "permissions": {
 		"systemXHR": { "description": "Required for certain web communications" }
     },
-	"type": "privileged"
+	"type": "certified"
 }
