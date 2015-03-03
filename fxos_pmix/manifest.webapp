@@ -1,7 +1,7 @@
 {
     "version": "1",
     "name": "Rhizome Pharm",
-    "launch_path": "index.html",
+    "launch_path": "/fxos_pmix/index.html",
     "description": "Rhizome (Medication Demo)",
     "icons": {
         "16": "images/logo16.png",
