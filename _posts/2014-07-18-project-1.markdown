@@ -8,9 +8,9 @@ project-date: January 2015
 client: Internal
 category: Open Data
 description: My <a href="https://phollott.github.io/opendata/">Open Data GitHub repository</a> 
-contains examples I have forked and then modified using Mike Bostock's d3.js (Data Driven Documents) library. 
-These samples support data visualization - finding ways we can make information more visual, intuitive and meaningful. 
-Where Mike's examples use the bl.ocks pastebin, I am storing these in GitHub, and then routing them through a Mozilla
+contains examples I have forked and then modified using the d3.js (Data Driven Documents) library. 
+These samples support data visualization, finding ways we can make information more visual, intuitive and meaningful. 
+Where most d3 examples use the bl.ocks pastebin, I am storing these in GitHub, and then routing them through a Mozilla
 web-based code sharing tool called jsFiddle. This makes these samples easier to fork and share. Over time, I intend to
 add to this repository as I discover and create more useful data visualizations.
 
