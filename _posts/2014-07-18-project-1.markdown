@@ -6,7 +6,7 @@ img: cabin.png
 alt: image-alt
 project-date: January 2015
 client: Internal
-category: Open Data
+category: Healthcare
 description: The <a href="http://phollott.github.io/rhizome/">Rhizome GitHub repository</a> contains samples from a Mobile Health library I am developing based on an emerging information standard from HL7 called FHIR (Fast Healthcare Interoperability Resources). In particular, I am focusing my attention on two resources, Questionnaire and Careplan, because I believe strongly in the value of the social health business cases they support; for instance, a mobile application that walks a patient through a health Questionnaire could either trigger a Careplan involving a request to change the patient's care team, or trigger a Careplan involving a series of preventive measures, such as exercise and diet, depending on how the patient responds to the Questionnaire. These code samples also use a high level of JavaScript framework support to provide a superior user experience.
 
 ---
