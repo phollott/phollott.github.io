@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2015-01-23
-img: cabin.png
+img: rhizome.png
 alt: image-alt
 project-date: January 2015
 client: Internal
