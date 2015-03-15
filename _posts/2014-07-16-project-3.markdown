@@ -2,7 +2,7 @@
 layout: default
 modal-id: opendata
 date: 2014-07-16
-img: cabin.png
+img: graph.png
 alt: image-alt
 project-date: April 2014
 client: Internal

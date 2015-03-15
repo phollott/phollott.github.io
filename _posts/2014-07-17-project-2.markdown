@@ -2,7 +2,7 @@
 layout: default
 modal-id: folds
 date: 2014-07-17
-img: book.png
+img: quote.png
 alt: image-alt
 project-date: April 2014
 client: Internal

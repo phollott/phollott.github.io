@@ -2,7 +2,7 @@
 layout: default
 modal-id: rhizome
 date: 2015-01-23
-img: circus.png
+img: heart.png
 alt: image-alt
 project-date: January 2015
 client: Internal
