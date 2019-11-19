@@ -66,7 +66,7 @@
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
-					<!-- TODO move these inline styles -->
+					<!-- TODO move these inline styles, and also apply -ms-transform and -webkit-transform -->
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 							<xsl:for-each select="v3:component/v3:section">
@@ -225,7 +225,8 @@
 					color: #AF3C43;
 				}
 				
-				<xsl:if test="$lang='fr'">#side .nav-link { font-size: 75%; }</xsl:if>				
+				<!-- this french language reduction reduces only the top level navigation -->
+				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 75%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
