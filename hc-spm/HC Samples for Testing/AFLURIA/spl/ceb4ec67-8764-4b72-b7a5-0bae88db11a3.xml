@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../Development/spl_canada.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
+  <templateId extension="NDS" root="2.16.840.1.113883.2.20.6.37"/>
+  <id root="bf363dae-0612-4be7-bb92-a8381fa1da35"/>
+  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10"
+    displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
+  <title>AFLURIA<sup>®</sup>TETRA <br/><br/> Quadrivalent Inactivated Influenza Vaccine (Split
+    Virion)<br/><br/> 20XX/20XX Strains:<br/> A/Official strain (H1N1)-like virus<br/> A/Official
+    strain (H3N2)-like virus<br/> B/Official strain-like virus<br/> B/Official strain-like
+    virus<br/><br/> Suspension for Injection<br/><br/> Active Immunizing Agent for the Prevention of
+    Influenza<br/><br/> ATC Code: J07B B</title>
+  <effectiveTime>
+    <!-- Date of Last Revision -->
+    <originalText description="20190222">20190807</originalText>
+  </effectiveTime>
+  <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
+  <setId root="ceb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
+  <versionNumber value="1"/>
+  <author>
+    <!--Organization Information-->
+    <time/>
+    <assignedEntity>
+      <representedOrganization>
+        <!--Market Authorization Holder-->
+        <id extension="xx" root="2.16.840.1.113883.2.20.6.31"/>
+        <name>Seqirus Pty Ltd</name>
+        <contactParty>
+          <addr>
+            <streetAddressLine>63 Poplar Road</streetAddressLine>
+            <city>Parkville</city>
+            <state>Victoria</state>
+            <postalCode>3052</postalCode>
+            <country code="AUS" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="AUSTRALIA"/>
+          </addr>
+          <telecom value="tel:+18553588966"/>
+          <telecom value="mailto:customerservice.us@seqirus.com"/>
+          <telecom value="http://www.seqirus.com"/>
+          <contactPerson/>
+        </contactParty>
+        <assignedEntity>
+          <assignedOrganization>
+            <!--Distributor-->
+            <id extension="xx" root="2.16.840.1.113883.2.20.6.31"/>
+            <name>Seqirus Canada Inc.</name>
+            <contactParty>
+              <addr>
+                <streetAddressLine>6766 TransCanada Highway, Suite 504</streetAddressLine>
+                <city>Kirkland</city>
+                <state>Quebec</state>
+                <postalCode>H9H 4M7</postalCode>
+                <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
+              </addr>
+              <telecom value="tel:+18443928582"/>
+              <telecom value="mailto:ca.medicalinformation@seqirus.com"/>
+              <telecom value="http://www.seqirus.ca"/>
+              <contactPerson/>
+            </contactParty>
+          </assignedOrganization>
+        </assignedEntity>
+      </representedOrganization>
+    </assignedEntity>
+  </author>
+  <component>
+    <structuredBody>
+      <component>
+        <!-- Manufactured Product Information -->
+        <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
+          <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
+          <code code="MP" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
+          <effectiveTime value="20170101"/>
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="123456" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <!-- DIN Number -->
+                <name>AFLURIA</name>
+                <formCode code="xx" codeSystem="2.16.840.1.113883.2.20.6.3"
+                  displayName="INJECTION, SUSPENSION"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                        <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx1a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx1b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                        <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx2a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))"/>
+                    <name>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx2b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))"/>
+                        <name>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx3a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)"/>
+                    <name>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx3b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)"/>
+                        <name>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx4a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))"/>
+                    <name>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx4b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))"/>
+                        <name>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="CALCIUM CHLORIDE"/>
+                    <name>CALCIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="2" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="DIBASIC SODIUM PHOSPHATE (ANHYDROUS)"/>
+                    <name>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="3" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="MONOBASIC POTASSIUM PHOSPHATE"/>
+                    <name>MONOBASIC POTASSIUM PHOSPHATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="4" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="POTASSIUM CHLORIDE"/>
+                    <name>POTASSIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="5" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="SODIUM CHLORIDE"/>
+                    <name>SODIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="6" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="WATER FOR INJECTION"/>
+                    <name>WATER FOR INJECTION</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <asContent>
+                  <!-- Packaging -->
+                  <quantity>
+                    <numerator value="0.5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="ABC-1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                    <formCode code="46" codeSystem="2.16.840.1.113883.2.20.6.32"
+                      displayName="SYRINGE, GLASS"/>
+                    <asContent>
+                      <quantity>
+                        <numerator value="10" unit="1"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="ABC-1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                        <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="CARTON"/>
+                      </containerPackagedProduct>
+	                  <subjectOf>
+                         <marketingAct>
+                            <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROVED"/>
+                            <statusCode code="ACTIVE"/>
+                            <effectiveTime>
+                               <!-- regulatory status of this package -->
+                                  <low value="20190222"/>
+                                  <!-- Date of initial approval -->
+                            </effectiveTime>
+                         </marketingAct>
+                      </subjectOf>				  
+                    </asContent>
+                  </containerPackagedProduct>
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <!--Regulatory Activity associated with this products status-->
+                <approval>
+                  <id extension="230311" root="2.16.840.1.113883.2.20.6.49"/>
+                  <!-- Control Number -->
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"
+                        />
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <!--Regulatory status of this product-->
+                <marketingAct>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROVED"/>
+                  <statusCode code="ACTIVE"/>
+                  <effectiveTime>
+                    <low value="20190222"/>
+                    <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <!--Characteristics of this product-->
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53"
+                    displayName="BIOLOGIC" xsi:type="CV">
+                    <originalText>BIOLOGIC</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="CLEAR"
+                    xsi:type="CV">
+                    <originalText>slightly opaque</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5"
+                    displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="SCHEDULE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="SCHEDULE D"
+                    xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="THERAPEUTIC CLASS"/>
+                  <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.6"
+                    displayName="ACTIVE IMMUNIZING AGENT" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="56" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="ORAL"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="123456" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <!-- DIN Number -->
+                <name>AFLURIA</name>
+                <formCode code="xx" codeSystem="2.16.840.1.113883.2.20.6.3"
+                  displayName="INJECTION, SUSPENSION"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                        <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx1a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                    <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx1b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))"/>
+                        <name>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx2a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))"/>
+                    <name>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx2b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))"/>
+                        <name>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx3a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)"/>
+                    <name>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx3b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)"/>
+                        <name>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="ACTIM">
+                  <quantity>
+                    <numerator value="15" unit="ug"/>
+                    <denominator value="0.5" unit="mL"/>
+                  </quantity>
+                  <ingredientSubstance>
+                    <code code="xx4a" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))"/>
+                    <name>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</name>
+                    <activeMoiety>
+                      <activeMoiety>
+                        <code code="xx4b" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))"/>
+                        <name>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</name>
+                      </activeMoiety>
+                    </activeMoiety>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="CALCIUM CHLORIDE"/>
+                    <name>CALCIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="2" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="DIBASIC SODIUM PHOSPHATE (ANHYDROUS)"/>
+                    <name>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="3" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="MONOBASIC POTASSIUM PHOSPHATE"/>
+                    <name>MONOBASIC POTASSIUM PHOSPHATE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="4" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="POTASSIUM CHLORIDE"/>
+                    <name>POTASSIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="5" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="SODIUM CHLORIDE"/>
+                    <name>SODIUM CHLORIDE</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="6" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="THIMEROSAL"/>
+                    <name>THIMEROSAL</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <ingredient classCode="IACT">
+                  <ingredientSubstance>
+                    <code code="7" codeSystem="2.16.840.1.113883.2.20.6.14"
+                      displayName="WATER FOR INJECTION"/>
+                    <name>WATER FOR INJECTION</name>
+                  </ingredientSubstance>
+                </ingredient>
+                <asContent>
+                  <!-- Packaging -->
+                  <quantity>
+                    <numerator value="5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="ABC-1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                    <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.32"
+                      displayName="VIAL, MULTI-DOSE"/>
+                    <asContent>
+                      <quantity>
+                        <numerator value="1" unit="1"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="ABC-1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                        <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="CARTON"/>
+                      </containerPackagedProduct>
+                      <subjectOf>
+                        <marketingAct>
+                          <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROVED"/>
+                          <statusCode code="ACTIVE"/>
+                          <effectiveTime>
+                            <!-- regulatory status of this package -->
+                            <low value="20190222"/>
+                            <!-- Date of initial approval -->
+                          </effectiveTime>
+                        </marketingAct>
+                      </subjectOf>
+                    </asContent>
+                  </containerPackagedProduct>
+                </asContent>
+              </manufacturedProduct>
+              <subjectOf>
+                <!--Regulatory Activity associated with this products status-->
+                <approval>
+                  <id extension="230311" root="2.16.840.1.113883.2.20.6.49"/>
+                  <!-- Control Number -->
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                  <author>
+                    <territorialAuthority>
+                      <territory>
+                        <code code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"
+                        />
+                      </territory>
+                    </territorialAuthority>
+                  </author>
+                </approval>
+              </subjectOf>
+              <subjectOf>
+                <!--Regulatory status of this product-->
+                <marketingAct>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROVED"/>
+                  <statusCode code="ACTIVE"/>
+                  <effectiveTime>
+                    <low value="20190222"/>
+                    <!-- Date of initial approval. Include high value=yyyymmdd if cancelled -->
+                  </effectiveTime>
+                </marketingAct>
+              </subjectOf>
+              <!--Characteristics of this product-->
+              <subjectOf>
+                <characteristic>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                  <value code="2" codeSystem="2.16.840.1.113883.2.20.6.53"
+                    displayName="BIOLOGIC" xsi:type="CV">
+                    <originalText>BIOLOGIC</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                  <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="CLEAR"
+                    xsi:type="CV">
+                    <originalText>slightly opaque</originalText>
+                  </value>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="PHARMACEUTICAL STANDARD"/>
+                  <value code="7" codeSystem="2.16.840.1.113883.2.20.6.5"
+                    displayName="USP" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="SCHEDULE"/>
+                  <value code="1" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="SCHEDULE D"
+                    xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <subjectOf>
+                <characteristic>
+                  <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
+                    displayName="THERAPEUTIC CLASS"/>
+                  <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.6"
+                    displayName="ACTIVE IMMUNIZING AGENT" xsi:type="CV"/>
+                </characteristic>
+              </subjectOf>
+              <consumedIn>
+                <substanceAdministration>
+                  <routeCode code="63" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="SOFT TISSUE INJECTION"/>
+                </substanceAdministration>
+              </consumedIn>
+            </manufacturedProduct>
+          </subject>
+        </section>
+      </component>
+      <component>
+        <!--Title Page section-->
+        <section ID="d8d30d86-e343-48f4-9cec-524834b3803b">
+          <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
+          <code code="TP" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE PAGE"/>
+          <title>TITLE PAGE</title>
+          <effectiveTime value="20180101"/>
+          <component>
+            <section ID="be75cfb9-3131-4903-800b-267427388a13">
+              <id root="b9db4fe0-3f46-437a-bd7b-4a3e010adaad"/>
+              <code code="TP-1.1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE"/>
+              <title>TITLE</title>
+              <text>
+                <paragraph> AFLURIA<sup>®</sup>TETRA <br/><br/> Quadrivalent Inactivated Influenza
+                  Vaccine (Split Virion)<br/><br/> 20XX/20XX Strains:<br/> A/Official strain
+                  (H1N1)-like virus<br/> A/Official strain (H3N2)-like virus<br/> B/Official
+                  strain-like virus<br/> B/Official strain-like virus<br/><br/> Suspension for
+                  Injection<br/><br/> Active Immunizing Agent for the Prevention of
+                  Influenza<br/><br/> ATC Code: J07B B</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="f187daf9-5e75-425a-9de6-f6ce1af2a965">
+              <id root="ac26f58c-721a-4c51-8bbc-c9dddb1f1233"/>
+              <code code="TP-1.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="COMPANY NAME AND ADDRESS"/>
+              <title>COMPANY NAME AND ADDRESS</title>
+              <text>
+                <paragraph><content styleCode="bold">Sponsor:</content><br/> Seqirus Pty Ltd<br/> 63
+                  Poplar Road<br/> Parkville VIC 3052<br/> Australia </paragraph>
+                <paragraph>
+                  <content styleCode="bold">Distributed by:</content><br/> Seqirus Canada Inc.<br/>
+                  16766 TransCanada Highway, Suite 504 Kirkland, Quebec,<br/> H9H 4M7 </paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
+              <id root="cf1dea39-d907-4664-b46f-e1d9736d47af"/>
+              <code code="TP-1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="DATE OF INITIAL APPROVAL"/>
+              <title>DATE OF INITIAL APPROVAL</title>
+              <text>
+                <paragraph>20190222</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="d0184119-8fd7-4378-af77-b227c39e8445">
+              <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
+              <code code="TP-1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="DATE OF REVISION"/>
+              <title>DATE OF REVISION</title>
+              <text>
+                <paragraph>20190807</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+          <component>
+            <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
+              <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
+              <code code="TP-1.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="CONTROL NUMBER"/>
+              <title>CONTROL NUMBER</title>
+              <text>
+                <paragraph>230311</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <!-- Recent Major Changes -->
+        <section ID="a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1">
+          <id root="dd1e1c43-f0d3-4ba8-b1f5-ad009a5dd5a8"/>
+          <code code="RMLC" codeSystem="2.16.840.1.113883.2.20.6.60"
+            displayName="RECENT MAJOR LABEL CHANGES"/>
+          <title>RECENT MAJOR LABEL CHANGES</title>
+          <text>
+            <paragraph> Section Heading, Subsection heading (Section or Subsection number), yyyymmdd
+            </paragraph>
+          </text>
+          <effectiveTime value="20180101"/>
+        </section>
+      </component>
+      <component>
+        <!-- PART I: HEALTH PROFESSIONAL INFORMATION -->
+        <section ID="b16a947e-e2be-45c0-8b2e-15d0d0eebea8">
+          <id root="e6bb83b9-2602-4f96-9077-b8b9535c254e"/>
+          <code code="P1" codeSystem="2.16.840.1.113883.2.20.6.60"
+            displayName="PART I: HEALTH PROFESSIONAL INFORMATION"/>
+          <title>PART I: HEALTH PROFESSIONAL INFORMATION</title>
+          <effectiveTime value="20180101"/>
+          <component>
+            <section ID="e2ea4fad-2b79-4dbc-8d99-6843adc2dec8">
+              <id root="ca3f869a-7734-425a-85d8-b8bd4d3500a5"/>
+              <code code="P1-1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="1 INDICATIONS"/>
+              <title>1 INDICATIONS</title>
+              <text>
+                <paragraph>AFLURIA<sup>®</sup> TETRA is indicated for the active immunization of
+                  adults and children aged 5 years or older for the prevention of influenza disease
+                  caused by influenza virus types A and B contained in the vaccine. The National
+                  Advisory Committee on Immunization (NACI) provides additional guidance on the use
+                  of the influenza vaccine in Canada. Please refer to the published Statement on
+                  Seasonal Influenza Vaccine for the current season.</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+              <component>
+                <section ID="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32">
+                  <id root="b9db4ee0-3f46-437a-bd7b-4a3e010adaad"/>
+                  <code code="P1-1.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                    displayName="1.1 PEDIATRICS"/>
+                  <title>1.1 PEDIATRICS</title>
+                  <text>
+                    <paragraph><content styleCode="bold">Pediatrics (5 to &lt;18 years):</content>
+                      Based on the data submitted and reviewed by Health Canada, the safety and
+                      efficacy of AFLURIA® TETRA in pediatric patients has been established in
+                      children 5 years of age and older; therefore, Health Canada has authorized an
+                      indication for pediatric use. (See Sections 7.1.3 Pediatrics, 8.3 Clinical
+                      Trial Adverse Reactions (Pediatrics) and 13.2 Study Results).<br/><br/>
+                      Clinical data have not been evaluated for use of AFLURIA® TETRA in children
+                      under 5 years of age.</paragraph>
+                  </text>
+                  <effectiveTime value="20180822"/>
+                </section>
+              </component>
+            </section>
+          </component>
+          <component>
+            <section ID="dbe75cfb-3131-4903-800b-367427388a13">
+              <id root="b9db4be0-3f46-437a-bd7b-4a3e010adaad"/>
+              <code code="P1-2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                displayName="2 CONTRAINDICATIONS"/>
+              <title>2 CONTRAINDICATIONS</title>
+              <text>
+                <paragraph> AFLURIA® TETRA is contraindicated in individuals with known severe
+                  allergic reactions (e.g., anaphylaxis) to any component of the vaccine, or to a
+                  previous dose of any influenza vaccine. For a complete listing, see Section 5
+                  Dosage Forms, Strengths, Composition and Packaging.</paragraph>
+              </text>
+              <effectiveTime value="20180101"/>
+            </section>
+          </component>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</document>

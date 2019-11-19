@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../Development/spl_canada.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
+  <templateId extension="NDS" root="2.16.840.1.113883.2.20.6.37"/>
+  <id root="ff363dae-0612-4be7-bb92-a8381fa1da35"/>
+  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10"
+    displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
+  <title> ESPEROCT<sup>®</sup>
+    <br/><br/> Antihemophilic Factor VIII (Recombinant, B-Domain Truncated), PEGylated turoctocog
+    alfa pegol <br/> Lyophilized Powder for Solution <br/><br/> 500, 1000, 1500, 2000 and 3000
+    IU/vial<br/><br/> Intravenous injection<br/><br/> Blood Coagulation Factor VIII </title>
+  <effectiveTime>
+    <!-- Date of Last Revision -->
+    <originalText description="Date of Initial Approval">20190704</originalText>
+  </effectiveTime>
+  <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
+  <setId root="eeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
+  <versionNumber value="1"/>
+  <author>
+    <!--Organization Information-->
+    <assignedEntity>
+      <representedOrganization>
+        <!--Market Authorization Holder-->
+        <id extension="4763" root="2.16.840.1.113883.2.20.6.31"/>
+        <name>NOVO NORDISK CANADA INC</name>
+        <contactParty>
+          <addr>
+            <streetAddressLine>101-2476 Argentia Road</streetAddressLine>
+            <city>Mississauga</city>
+            <state>Ontario</state>
+            <postalCode>L5N 6M1</postalCode>
+            <country code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
+          </addr>
+          <telecom value="tel:+18662342345"/>
+          <telecom value="mailto:test@novonordisk.ca"/>
+          <telecom value="http://www.novonordisk.ca"/>
+          <contactPerson/>
+          <!-- How to capture without contactPerson?-->
+        </contactParty>
+      </representedOrganization>
+    </assignedEntity>
+  </author>
+  <component>
+    <structuredBody>
+      <component>
+        <!-- Manufactured Product Information -->
+        <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
+          <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
+          <code code="1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
+          <effectiveTime value="20190704"/>
+          <subject>
+            <manufacturedProduct>
+              <manufacturedProduct>
+                <code code="02490060" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                <!-- DIN Number -->
+                <name>ESPEROCT</name>
+                <formCode code="32" codeSystem="2.16.840.1.113883.2.20.6.3" displayName="KIT"/>
+                <asEntityWithGeneric>
+                  <genericMedicine>
+                    <name>Antihemophilic Factor VIII (Recombinant, B-Domain Truncated),
+                      PEGylated</name>
+                  </genericMedicine>
+                </asEntityWithGeneric>
+                <asContent>
+                  <quantity>
+                    <numerator unit="1" value="1"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <containerPackagedProduct>
+                    <code code="1111" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                    <formCode code="19" codeSystem="2.16.840.1.113883.2.20.6.32" displayName="CARTON"/>
+                  </containerPackagedProduct>
+                </asContent>
+                <part>
+                  <quantity>
+                    <numerator value="5" unit="mL"/>
+                    <denominator value="1"/>
+                  </quantity>
+                  <partProduct>
+                    <code code="02490061" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                    <!-- DIN Number -->
+                    <name>ESPEROCT</name>
+                    <formCode code="56" codeSystem="2.16.840.1.113883.2.20.6.3"
+                      displayName="POWDER FOR SOLUTION"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Antihemophilic Factor VIII (Recombinant, B-Domain Truncated),
+                          PEGylated</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">
+                      <quantity>
+                        <numerator value="500" unit="[IU]"/>
+                        <denominator value="1" unit="1"/>
+                      </quantity>
+                      <ingredientSubstance>
+                        <code code="11907" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="turoctocog alfa pegol"/>
+                        <name>turoctocog alfa pegol</name>
+                        <activeMoiety>
+                          <activeMoiety>
+                            <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                              displayName="turoctocog alfa pegol"/>
+                            <name>turoctocog alfa pegol</name>
+                          </activeMoiety>
+                        </activeMoiety>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="Calcium chloride dihydrate"/>
+                        <name>Calcium chloride dihydrate</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="L-histidine"/>
+                        <name>L-histidine</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="L- methionine"/>
+                        <name>L- methionine</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="polysorbate 80"/>
+                        <name>polysorbate 80</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="sodium chloride"/>
+                        <name>sodium chloride</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <ingredient classCode="IACT">
+                      <ingredientSubstance>
+                        <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14" displayName="sucrose"/>
+                        <name>sucrose</name>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <asContent>
+                      <!-- Packaging -->
+                      <quantity>
+                        <numerator value="500" unit="[IU]"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                        <!--company defined pack code-->
+                        <formCode code="55" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="VIAL, GLASS"/>
+                      </containerPackagedProduct>
+                    </asContent>
+                  </partProduct>
+                  <subjectOf>
+                    <!--Regulatory Activity associated with this products status-->
+                    <approval>
+                      <id extension="218531" root="2.16.840.1.113883.2.20.6.49"/>
+                      <!-- Control Number -->
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
+                              displayName="CANADA"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>
+
+                  <!--Characteristics of this product-->
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
+                        displayName="PHARMACEUTICAL" xsi:type="CV">
+                        <originalText>PHARMACEUTICAL</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE"
+                        xsi:type="CV">
+                        <originalText>white to off-white</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="COMBINATION PRODUCT"/>
+                      <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.8" xsi:type="CV"
+                        displayName="NOT A COMBINATION PRODUCT"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="MFR"
+                        xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="PRESCRIPTION"
+                        xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="THERAPEUTIC CLASS"/>
+                      <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.6"
+                        displayName="BLOOD COAGULATION FACTOR VIII" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="49" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="INTRAVENOUS"/>
+                    </substanceAdministration>
+                  </consumedIn>
+                </part>                
+                <part>
+                  <quantity>
+                    <numerator value="5" unit="mL"/>
+                    <denominator value="1"></denominator>
+                  </quantity>
+                  <partProduct>
+                    <code code="02490062" codeSystem="2.16.840.1.113883.2.20.6.42"/>
+                    <!-- DIN Number -->
+                    <name>ESPEROCT</name>
+                    <formCode code="34" codeSystem="2.16.840.1.113883.2.20.6.3"
+                      displayName="LIQUID"/>
+                    <asEntityWithGeneric>
+                      <genericMedicine>
+                        <name>Sodium chloride, water for injections</name>
+                      </genericMedicine>
+                    </asEntityWithGeneric>
+                    <ingredient classCode="ACTIB">
+                      <quantity>
+                        <numerator value="1" unit="mL"/>
+                        <denominator value="1" unit="mL"/>
+                      </quantity>
+                      <ingredientSubstance>
+                        <code code="34" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="sodium chloride"/>
+                        <name>sodium chloride</name>
+                        <activeMoiety>
+                          <activeMoiety>
+                            <code code="34" codeSystem="2.16.840.1.113883.2.20.6.14"
+                              displayName="sodium chloride"/>
+                            <name>sodium chloride</name>
+                          </activeMoiety>
+                        </activeMoiety>
+                      </ingredientSubstance>
+                    </ingredient>
+                    <asContent>
+                      <!-- Packaging -->
+                      <quantity>
+                        <numerator value="4" unit="mL"/>
+                        <denominator value="1"/>
+                      </quantity>
+                      <containerPackagedProduct>
+                        <code code="1234" codeSystem="2.16.840.1.113883.2.20.6.56"/>
+                        <!--company defined pack code-->
+                        <formCode code="45" codeSystem="2.16.840.1.113883.2.20.6.32"
+                          displayName="SYRINGE"/>
+                      </containerPackagedProduct>
+                    </asContent>
+                  </partProduct>
+                  <subjectOf>
+                    <!--Regulatory Activity associated with this products status-->
+                    <approval>
+                      <id extension="218531" root="2.16.840.1.113883.2.20.6.49"/>
+                      <!-- Control Number -->
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                      <author>
+                        <territorialAuthority>
+                          <territory>
+                            <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
+                              displayName="CANADA"/>
+                          </territory>
+                        </territorialAuthority>
+                      </author>
+                    </approval>
+                  </subjectOf>
+                  <!--Characteristics of this product-->
+                  <subjectOf>
+                    <characteristic>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT CLASS"/>
+                      <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
+                        displayName="PHARMACEUTICAL" xsi:type="CV">
+                        <originalText>PHARMACEUTICAL</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="2" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="COLOUR"/>
+                      <value code="11" codeSystem="2.16.840.1.113883.2.20.6.24" displayName="WHITE"
+                        xsi:type="CV">
+                        <originalText>white to off-white</originalText>
+                      </value>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="8" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="COMBINATION PRODUCT"/>
+                      <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.8" xsi:type="CV"
+                        displayName="NOT A COMBINATION PRODUCT"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="PHARMACEUTICAL STANDARD"/>
+                      <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="MFR"
+                        xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="10" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="SCHEDULE"/>
+                      <value code="6" codeSystem="2.16.840.1.113883.2.20.6.2" displayName="PRESCRIPTION"
+                        xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <subjectOf>
+                    <characteristic>
+                      <code code="11" codeSystem="2.16.840.1.113883.2.20.6.23"
+                        displayName="THERAPEUTIC CLASS"/>
+                      <value code="xx" codeSystem="2.16.840.1.113883.2.20.6.6"
+                        displayName="BLOOD COAGULATION FACTOR VIII" xsi:type="CV"/>
+                    </characteristic>
+                  </subjectOf>
+                  <consumedIn>
+                    <substanceAdministration>
+                      <routeCode code="49" codeSystem="2.16.840.1.113883.2.20.6.7" displayName="INTRAVENOUS"/>
+                    </substanceAdministration>
+                  </consumedIn>
+                </part>
+              </manufacturedProduct>
+			  <subjectOf>
+                 <approval>
+                    <id extension="218531" root="2.16.840.1.113883.2.20.6.49"/>
+                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.37" displayName="NDS"/>
+                    <author>
+                       <territorialAuthority>
+                          <territory>
+                             <code code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17"
+								displayName="CANADA"/>
+                          </territory>
+                       </territorialAuthority>
+                    </author>
+                 </approval>
+              </subjectOf>
+              <subjectOf>
+                 <marketingAct>
+                    <code code="1" codeSystem="2.16.840.1.113883.2.20.6.11" displayName="APPROVED"/>
+                    <statusCode code="ACTIVE"/>
+                    <effectiveTime>
+                       <low value="20171009"/>
+                    </effectiveTime>
+                 </marketingAct>
+              </subjectOf>
+              </manufacturedProduct>
+          </subject>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</document>
+    
