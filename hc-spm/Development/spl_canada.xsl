@@ -30,7 +30,8 @@
 			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 				<tr>
 					<td colspan="4" class="formHeadingReg">
-						<span class="formHeadingTitle" ><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span><xsl:value-of select="./v3:name"/> 
+						<span class="formHeadingTitle"><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span>
+						<xsl:value-of select="./v3:name"/> 
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -43,12 +44,8 @@
 			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
 				<tr>
 					<td colspan="4" class="formHeadingReg">
-						<span class="formHeadingTitle" >
-							<xsl:choose>
-								<xsl:when test="/v3:document/v3:code/@code[. = '75030-7']">Reporter -&#160;</xsl:when>
-								<xsl:otherwise><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</xsl:otherwise>
-							</xsl:choose>
-						</span><xsl:value-of select="./v3:name"/><xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
+						<span class="formHeadingTitle"><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</span>
+						<xsl:value-of select="./v3:name"/><xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -92,55 +89,43 @@
 		</xsl:for-each>
 	</xsl:template>	
 	
-	<!-- override FDA Product Info section -->
+	<!-- override FDA Product Info section, using Canadian French and English labels -->
 	<xsl:template name="ProductInfoBasic">
 		<tr>
 			<td>
 				<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 					<tr>
-						<td colspan="2" class="formHeadingTitle">
-							<xsl:value-of select="$labels/productInfo[@lang = $lang]"/>
-						</td>
+						<td colspan="2" class="formHeadingTitle"><xsl:value-of select="$labels/productInfo[@lang = $lang]"/></td>
 					</tr>
 					<tr class="formTableRowAlt">
-						<td class="formLabel">
+						<td class="formLabel"> <!-- Product Brand Name -->
 							<xsl:value-of select="$labels/brandName[@lang = $lang]"/>
 						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:name"/>
-						</td>
+						<td class="formItem"><xsl:value-of select="v3:name"/></td>
 					</tr>
 					<tr class="formTableRow">
-						<td class="formLabel">	
+						<td class="formLabel"> <!-- Product Generic Name -->
 							<xsl:value-of select="$labels/nonPropName[@lang = $lang]"/>
 						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>
-						</td>
+						<td class="formItem"><xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/></td>
 					</tr>
 					<tr class="formTableRowAlt">
-						<td class="formLabel">	
+						<td class="formLabel"> <!-- Product DIN -->
 							<xsl:value-of select="$labels/din[@lang = $lang]"/>
 						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:code/@code"/>
-						</td>
+						<td class="formItem"><xsl:value-of select="v3:code/@code"/></td>
 					</tr>
 					<tr class="formTableRow">
-						<td class="formLabel">
+						<td class="formLabel"> <!-- Product Substance Administration Route -->
 							<xsl:value-of select="$labels/adminRoute[@lang = $lang]"/>
 						</td>
-						<td class="formItem">
-							<xsl:value-of select="../v3:consumedIn/v3:substanceAdministration/v3:routeCode/@displayName"/>
-						</td>
+						<td class="formItem"><xsl:value-of select="../v3:consumedIn/v3:substanceAdministration/v3:routeCode/@displayName"/></td>
 					</tr>
 					<tr class="formTableRowAlt">
-						<td class="formLabel">
+						<td class="formLabel"> <!-- Product Dosage Form -->
 							<xsl:value-of select="$labels/dosageForm[@lang = $lang]"/>
 						</td>
-						<td class="formItem">
-							<xsl:value-of select="v3:formCode/@displayName"/>
-						</td>
+						<td class="formItem"><xsl:value-of select="v3:formCode/@displayName"/></td>
 					</tr>
 				</table>
 			</td>
@@ -190,7 +175,7 @@
 							<xsl:text> (</xsl:text>
 							<xsl:for-each select="v3:code/@code">
 								<xsl:value-of select="."/>
-								<xsl:if test="position()!=last()"> and </xsl:if>
+								<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
 							</xsl:for-each>
 							<xsl:text>) </xsl:text>
 							<xsl:if test="normalize-space(v3:activeMoiety/v3:activeMoiety/v3:code/@displayName)">
@@ -226,7 +211,7 @@
 					<td class="formItem">
 						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
 						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
-													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> &#160;in&#160;<xsl:value-of select="v3:quantity/v3:denominator/@value"
+													or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
 													/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 							</xsl:if></xsl:if>
 					</td>
@@ -434,7 +419,7 @@
 			<xsl:if test="not($path/v3:asContent)">
 				<tr>
 					<td colspan="4" class="formTitle">
-						<strong>Package Information Not Applicable</strong>
+						<strong><xsl:value-of select="$labels/noPackageFound[@lang = $lang]"/></strong>
 					</td>
 				</tr>
 			</xsl:if>

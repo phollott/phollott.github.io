@@ -15,7 +15,7 @@
 		<productInfo lang="en">Product Information</productInfo>
 		<brandName lang="en">Brand Name</brandName>
 		<nonPropName lang="en">Non-Proprietary Name</nonPropName>
-		<din lang="en">Drug Identification Number</din>
+		<din lang="en">Drug Identification Number (DIN)</din>
 		<adminRoute lang="en">Route of Administration</adminRoute>
 		<dosageForm lang="en">Dosage Form</dosageForm>
 		<activeIngredients lang="en">Active Ingredient/Active Moiety</activeIngredients>
@@ -49,7 +49,9 @@
 		<partNumber lang="en">Part&#160;</partNumber>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
+		<noPackageFound lang="en">Package Information Not Applicable</noPackageFound>
 		<inConnective lang="en">&#160;in&#160;</inConnective>
+		<andConnective lang="en">&#160;and&#160;</andConnective>
 		<!-- French Labels -->
 		<tableOfContents lang="fr">(francais) TABLE OF CONTENTS</tableOfContents>
 		<productDetails lang="fr">(francais) PRODUCT DETAILS</productDetails>
@@ -63,7 +65,7 @@
 		<productInfo lang="fr">(francais) Product Information</productInfo>
 		<brandName lang="fr">(francais) Brand Name</brandName>
 		<nonPropName lang="fr">(francais) Non-Proprietary Name</nonPropName>
-		<din lang="fr">(francais) Drug Identification Number</din>
+		<din lang="fr">(francais) Drug Identification Number (DIN)</din>
 		<adminRoute lang="fr">(francais) Route of Administration</adminRoute>
 		<dosageForm lang="fr">(francais) Dosage Form</dosageForm>
 		<activeIngredients lang="fr">(francais) Active Ingredient/Active Moiety</activeIngredients>
@@ -97,7 +99,9 @@
 		<partNumber lang="fr">(francais) Part&#160;</partNumber>
 		<pkgQuantity lang="fr">(francais) Package Quantity</pkgQuantity>
 		<ttlProdQty lang="fr">(francais) Total Product Quantity</ttlProdQty>
+		<noPackageFound lang="fr">(francais) Package Information Not Applicable</noPackageFound>
 		<inConnective lang="fr">&#160;dans&#160;</inConnective>
+		<andConnective lang="fr">&#160;et&#160;</andConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 	
