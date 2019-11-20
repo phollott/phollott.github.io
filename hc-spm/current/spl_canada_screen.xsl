@@ -47,7 +47,7 @@
 	
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
-		Product #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
+		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
 		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>), 		
 		<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 			<xsl:if test="position() > 1">/ </xsl:if>
