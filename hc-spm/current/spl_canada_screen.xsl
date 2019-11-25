@@ -259,7 +259,7 @@
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	
 						height: calc(100vh - 50px); 
-						overflow-y: scroll; 
+/*						overflow-y: scroll; */
 					}
 
 					.Section > h1 {display: none; }
