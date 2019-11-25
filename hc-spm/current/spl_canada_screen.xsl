@@ -67,8 +67,8 @@
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
 					<!-- TODO move these inline styles, and also apply -ms-transform and -webkit-transform -->
-					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
-						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
+<!--					<div style="transform: scaleX(-1);" id="navigation-scrollbar"> -->
+						<ul class="navbar-nav" id="navigation-sidebar"> <!-- style="transform: scaleX(-1); "> -->
 							<xsl:for-each select="v3:component/v3:section">
 								<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
 								<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
@@ -122,7 +122,7 @@
 								</xsl:choose>
 							</xsl:for-each>
 						</ul>
-					</div>
+<!--					</div> -->
 				</section>	
 			</div>			
 		</aside>	
