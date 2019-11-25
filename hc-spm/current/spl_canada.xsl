@@ -32,6 +32,7 @@
 					<td colspan="4" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span>
 						<xsl:value-of select="./v3:name"/> 
+						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -45,7 +46,8 @@
 				<tr>
 					<td colspan="4" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</span>
-						<xsl:value-of select="./v3:name"/><xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
+						<xsl:value-of select="./v3:name"/>
+						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -63,7 +65,7 @@
 			</xsl:if>
 			<tr class="formTableRowAlt">
 				<td class="formItem">		
-<!--					<xsl:apply-templates mode="format" select="v3:addr"/> -->
+<!--				<xsl:apply-templates mode="format" select="v3:addr"/> -->
 					<table>
 						<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
 						<tr><td>
@@ -258,11 +260,14 @@
 					</xsl:attribute>
 					<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
 						<td class="formItem">
-							<strong>
-								<xsl:for-each select="v3:code">
-									<xsl:value-of select="@displayName"/>
-								</xsl:for-each>
-							</strong>
+							<!-- TODO is this correct for more than one code? is the cardinality guaranteed [1..1]? -->							
+							<xsl:for-each select="v3:code">
+								<strong><xsl:value-of select="@displayName"/></strong>								
+								<xsl:text> (</xsl:text>
+									<xsl:value-of select="@code"/>
+								<xsl:text>) </xsl:text>
+								<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
+							</xsl:for-each>
 						</td>
 					</xsl:for-each>
 					<td class="formItem">
@@ -668,7 +673,7 @@
 						<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
 						<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
 						<xsl:choose>
-							<xsl:when test="v3:code[@code='MP']">
+							<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
 								<!-- PRODUCT DETAIL -->
 								<section class="hide-in-print card" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">

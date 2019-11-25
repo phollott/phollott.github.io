@@ -135,7 +135,7 @@
 				<xsl:value-of select="v3:code/@displayName"/>
 			</a>
 			<xsl:if test="v3:component/v3:section">
-				<ul class="navbar-nav small">
+				<ul class="navbar-nav">
 					<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
 				</ul>
 			</xsl:if>
@@ -209,7 +209,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>508: <xsl:value-of select="v3:title"/></title>
+			<title>509: <xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
@@ -256,7 +256,9 @@
 					.TitlePage h3 { text-align: center !important; }
 					#side { max-width: 420px; min-width: 420px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
-					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }					
+					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
+
+					.Section > h1 {display: none; }
 				}
 			</style>
 		</head>
