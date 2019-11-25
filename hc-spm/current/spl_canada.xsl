@@ -57,34 +57,51 @@
 		<xsl:for-each select="v3:contactParty">
 			<xsl:if test="position() = 1">
 				<tr>
-					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyContact[@lang = $lang]"/></th>
 					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAddress[@lang = $lang]"/></th>
 					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyTelephone[@lang = $lang]"/></th>
-					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyEmailAddr[@lang = $lang]"/></th>
 				</tr>
 			</xsl:if>
 			<tr class="formTableRowAlt">
-				<td class="formItem">
-					<xsl:value-of select="v3:contactPerson/v3:name"/>
-				</td>
 				<td class="formItem">		
-					<xsl:apply-templates mode="format" select="v3:addr"/>
+<!--					<xsl:apply-templates mode="format" select="v3:addr"/> -->
+					<table>
+						<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
+						<tr><td>
+								<xsl:value-of select="v3:addr/v3:city"/>
+								<xsl:if test="string-length(v3:addr/v3:state)>0">,&#160;<xsl:value-of select="v3:addr/v3:state"/></xsl:if>
+								<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
+							</td>
+						</tr>
+						<tr><td><xsl:value-of select="v3:addr/v3:country"/></td></tr>
+					</table>
 				</td>
 				<td class="formItem">
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/>
+					<div><xsl:text>Tel: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
-						<br/>
-						<xsl:text>FAX: </xsl:text>
-						<xsl:value-of select="substring-after(., 'fax:')"/>
+						<div><xsl:text>Fax: </xsl:text>
+						<xsl:value-of select="substring-after(., 'fax:')"/></div>
 					</xsl:for-each>
+					<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
+						<div><xsl:text>Email: </xsl:text>
+						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
+					</xsl:for-each>
+					<xsl:for-each select="v3:telecom/@value[starts-with(.,'www.')]">
+						<div><xsl:text>Web: </xsl:text>
+						<xsl:value-of select="."/></div>
+					</xsl:for-each>
+<!--					<div><xsl:text>Email: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/></div>
+					<div><xsl:text>Web: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'www')][1], 'www')"/></div> -->
 				</td>
-				<td class="formItem">
+<!--				<td class="formItem">
 					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
 					<div style="display:none">
 						<xsl:attribute name="id"><xsl:text>contactMailId</xsl:text></xsl:attribute>
 						<xsl:value-of select=" substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
 					</div>
-				</td>
+				</td> -->
 			</tr>
 		</xsl:for-each>
 	</xsl:template>	
@@ -519,6 +536,53 @@
 				</td>
 			</tr>
 	</xsl:template>
+	
+	<!-- override FDA Part templating -->
+	<xsl:template mode="subjects" match="v3:part/v3:partProduct|v3:part/v3:partMedicine">
+		<!-- only display the outer part packaging once -->
+		<xsl:if test="not(../preceding-sibling::v3:part)">
+			<xsl:if test="../../v3:asContent">
+				<tr>
+					<td>
+						<xsl:call-template name="packaging">
+							<xsl:with-param name="path" select="../.."/>
+						</xsl:call-template>
+					</td>
+				</tr>
+			</xsl:if>
+			<tr>
+				<td>
+					<xsl:call-template name="partQuantity">
+						<xsl:with-param name="path" select="../.."/>
+					</xsl:call-template>
+				</td>
+			</tr>
+		</xsl:if>
+		<tr>
+			<td>
+				<table width="100%" cellspacing="0" cellpadding="5">
+					<tr>
+						<td class="contentTableTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
+					</tr>
+					<xsl:call-template name="piMedNames"/>
+				</table>
+			</td>
+		</tr>
+			<xsl:call-template name="ProductInfoBasic"/>
+			<xsl:call-template name="ProductInfoIng"/>
+		<tr>
+			<td>
+				<xsl:call-template name="image">
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='SPLIMAGE']"/>
+				</xsl:call-template>
+			</td>
+		</tr>
+		<tr>
+			<td class="normalizer">
+				<xsl:call-template name="MarketingInfo"/>
+			</td>
+		</tr>
+	</xsl:template>
 
 	<xsl:template name="partQuantity">
 		<xsl:param name="path" select="."/>
@@ -613,6 +677,7 @@
 				<div class="col">
 					<xsl:for-each select="v3:component/v3:section">
 						<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
+						<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
 						<xsl:choose>
 							<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
 								<!-- PRODUCT DETAIL -->
@@ -628,6 +693,17 @@
 								</section>
 							</xsl:when>
 							<xsl:when test="v3:code[@code='2']|v3:code[@code='TP']">
+								<!-- LEGACY TITLE PAGE -->
+								<section class="card m-2" id="{$unique-section-id}">
+									<h5 class="card-header text-white bg-aurora-accent1">
+										<xsl:value-of select="v3:code/@displayName"/>
+									</h5>
+									<div class="spl TitlePage ForcePageBreak">
+										<xsl:apply-templates select="."/>
+									</div>
+								</section>
+							</xsl:when>
+							<xsl:when test="$tri-code-value = '001'">
 								<!-- TITLE PAGE -->
 								<section class="card m-2" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">

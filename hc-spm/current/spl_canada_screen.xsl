@@ -47,7 +47,7 @@
 	
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
-		Product #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
+		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
 		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>), 		
 		<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 			<xsl:if test="position() > 1">/ </xsl:if>
@@ -209,7 +209,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>506: <xsl:value-of select="v3:title"/></title>
+			<title>507: <xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
