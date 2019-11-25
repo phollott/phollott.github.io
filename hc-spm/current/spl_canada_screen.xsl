@@ -67,8 +67,8 @@
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
 					<!-- TODO move these inline styles, and also apply -ms-transform and -webkit-transform -->
-<!--					<div style="transform: scaleX(-1);" id="navigation-scrollbar"> -->
-						<ul class="navbar-nav" id="navigation-sidebar"> <!-- style="transform: scaleX(-1); "> -->
+					<div id="navigation-scrollbar"> <!-- style="transform: scaleX(-1);" -->
+						<ul class="navbar-nav" id="navigation-sidebar"> <!--  style="transform: scaleX(-1); " -->
 							<xsl:for-each select="v3:component/v3:section">
 								<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
 								<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
@@ -122,7 +122,7 @@
 								</xsl:choose>
 							</xsl:for-each>
 						</ul>
-<!--					</div> -->
+					</div>
 				</section>	
 			</div>			
 		</aside>	
@@ -255,12 +255,11 @@
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
 					#side { max-width: 550px; min-width: 550px; }
-					#left { max-width: 550px; min-width: 550px; }
+/*					#left { max-width: 550px; min-width: 550px; } */
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	
 						height: calc(100vh - 50px); 
 						overflow-y: scroll; 
-/*						max-width: 550px; min-width: 550px; */
 					}
 
 					.Section > h1 {display: none; }
