@@ -254,7 +254,7 @@
 					.TitlePage h1 { text-align: center !important; }
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
-					#side { max-width: 500px; min-width: 500px; background-color: coral; }
+					#side { max-width: 550px; min-width: 550px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 
