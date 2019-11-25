@@ -226,7 +226,7 @@
 				}
 				
 				<!-- this french language reduction reduces only the top level navigation -->
-				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 70%; }</xsl:if>				
+				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 75%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
@@ -254,7 +254,7 @@
 					.TitlePage h1 { text-align: center !important; }
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
-					#side { max-width: 420px; min-width: 420px; }
+/*					#side { max-width: 420px; min-width: 420px; } */
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 
