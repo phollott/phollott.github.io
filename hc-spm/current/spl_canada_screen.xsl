@@ -254,12 +254,13 @@
 					.TitlePage h1 { text-align: center !important; }
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
-/*					#side { max-width: 550px; min-width: 550px; } */
+					#side { max-width: 550px; min-width: 550px; }
+					#left { max-width: 550px; min-width: 550px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	
 						height: calc(100vh - 50px); 
 						overflow-y: scroll; 
-						max-width: 550px; min-width: 550px;
+/*						max-width: 550px; min-width: 550px; */
 					}
 
 					.Section > h1 {display: none; }
