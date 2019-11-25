@@ -24,22 +24,12 @@
 		<color lang="en">Colour</color>
 		<shape lang="en">Shape</shape>
 		<score lang="en">Score</score>
-		<size lang="en">Size</size>
 		<imprint lang="en">Imprint</imprint>
 		<flavor lang="en">Flavour</flavor>
 		<combinationProduct lang="en">Combination Product</combinationProduct>
 		<pharmaStandard lang="en">Pharmaceutical Standard</pharmaStandard>
 		<schedule lang="en">Schedule</schedule>
 		<therapeuticClass lang="en">Therapeutic Class</therapeuticClass>
-		<packaging lang="en">Packaging</packaging>
-		<itemCode lang="en">Package Identifier</itemCode>
-		<packageDescription lang="en">Package Description</packageDescription>
-		<approvalDate lang="en">Date of Approval</approvalDate>
-		<cancellationDate lang="en">Date of Cancellation</cancellationDate>
-		<marketingInfo lang="en">Regulatory Status</marketingInfo>
-		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
-		<applicationNumber lang="en">Control Number</applicationNumber>
-		<inConnective lang="en">&#160;in&#160;</inConnective>
 		<!-- French Labels -->
 		<tableOfContents lang="fr">(francais) TABLE OF CONTENTS</tableOfContents>
 		<productDetails lang="fr">(francais) PRODUCT DETAILS</productDetails>
@@ -62,22 +52,12 @@
 		<color lang="fr">(francais) Colour</color>
 		<shape lang="fr">(francais) Shape</shape>
 		<score lang="fr">(francais) Score</score>
-		<size lang="fr">(francais) Size</size>
 		<imprint lang="fr">(francais) Imprint</imprint>
 		<flavor lang="fr">(francais) Flavour</flavor>
 		<combinationProduct lang="fr">(francais) Combination Product</combinationProduct>
 		<pharmaStandard lang="fr">(francais) Pharmaceutical Standard</pharmaStandard>
 		<schedule lang="fr">(francais) Schedule</schedule>
 		<therapeuticClass lang="fr">(francais) Therapeutic Class</therapeuticClass>
-		<packaging lang="fr">(francais) Packaging</packaging>
-		<itemCode lang="fr">(francais) Package Identifier</itemCode>
-		<packageDescription lang="fr">(francais) Package Description</packageDescription>
-		<approvalDate lang="fr">(francais) Date of Approval</approvalDate>
-		<cancellationDate lang="fr">(francais) Date of Cancellation</cancellationDate>
-		<marketingInfo lang="fr">(francais) Regulatory Status</marketingInfo>
-		<marketingCategory lang="fr">(francais) Regulatory Activity Type</marketingCategory>
-		<applicationNumber lang="fr">(francais) Control Number</applicationNumber>
-		<inConnective lang="fr">&#160;dans&#160;</inConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 	
