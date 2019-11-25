@@ -10,7 +10,7 @@
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
 			<h6 class="card-header p-0 bg-aurora-accent2">
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+				<button class="btn bg-aurora-accent2 text-white text-left w-100 dropdown-toggle" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
@@ -28,7 +28,7 @@
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
 			<h6 class="card-header p-0 bg-aurora-accent2">
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+				<button class="btn bg-aurora-accent2 text-white text-left w-100 dropdown-toggle" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
@@ -59,87 +59,68 @@
 	<xsl:template match="v3:structuredBody" mode="sidebar-navigation">
 		<aside class="bg-aurora-light hide-in-print" id="left">
 			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side">
-
 				<section class="card">
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
-			
-			
-<!--				<h5 class="p-3"><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h5> -->
-				<div style="height: 95vh; overflow-y: scroll; transform: scaleX(-1);">
-				  <ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
-					<xsl:for-each select="v3:component/v3:section">
-						<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
-						<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
-						<xsl:choose>
-							<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
-								<!-- PRODUCT DETAIL NAVIGATION -->
-								<li class="nav-item">
-									<a href="#drop-{$unique-section-id}" title="{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
-										<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
-									</a>
-									<ul id="drop-{$unique-section-id}" 
-									   class="navbar-nav small collapse">
-<!--	no collapse				<li class="nav-item">
-									<a href="#{$unique-section-id}" class="nav-link">
-										<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
-									</a>
-									<ul class="navbar-nav small"> -->
+					<!-- TODO move these inline styles -->
+					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
+						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
+							<xsl:for-each select="v3:component/v3:section">
+								<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
+								<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
+								<xsl:choose>
+									<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
+										<!-- PRODUCT DETAIL NAVIGATION -->
 										<li class="nav-item">
-											<a href="#company-details" class="nav-link active">
-												<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
+											<a href="#drop-{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
+												<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
+											</a>
+											<ul id="drop-{$unique-section-id}" 
+											   class="navbar-nav small collapse">
+												<li class="nav-item">
+													<a href="#company-details" class="nav-link active">
+														<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
+													</a>
+												</li>
+												<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="sidebar-navigation"/>
+											</ul>
+										</li>							
+									</xsl:when>
+									<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
+									<xsl:when test="$tri-code-value = '001' or $tri-code-value = '007'">
+										<li class="nav-item">
+											<a href="#{$unique-section-id}" class="nav-link">
+												<xsl:value-of select="v3:code/@displayName"/>
 											</a>
 										</li>
-										<xsl:for-each select="v3:subject/v3:manufacturedProduct">
-											<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
-											<li class="nav-item">
-												<a href="#{$unique-product-id}" title="{$unique-product-id}" class="nav-link">
-													<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
-														<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
-													</xsl:apply-templates>
-												</a>
-											</li>
-										</xsl:for-each>
-									</ul>
-								</li>							
-							</xsl:when>
-							<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
-							<xsl:when test="$tri-code-value = '001' or $tri-code-value = '007'">
-								<li class="nav-item">
-									<a href="#{$unique-section-id}" title="{$unique-section-id}" class="nav-link">
-										<xsl:value-of select="v3:code/@displayName"/>
-									</a>
-								</li>
-							</xsl:when>
-							<xsl:otherwise>
-								<!-- NAVIGATION FOR DIFFERENT PARTS -->
-								<li class="nav-item">
-									<a href="#drop-{$unique-section-id}" title="{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
-										<xsl:value-of select="v3:code/@displayName"/>
-									</a>
-									<xsl:if test="v3:component/v3:section">
-									<ul id="drop-{$unique-section-id}" class="navbar-nav small collapse">
-											<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
-										</ul>
-									</xsl:if>
-								</li>
-<!--	no collapse				<li class="nav-item">
-									<a href="#{$unique-section-id}" class="nav-link">
-										<xsl:value-of select="v3:code/@displayName"/>
-									</a>
-									<xsl:if test="v3:component/v3:section">
-										<ul class="navbar-nav small">
-											<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
-										</ul>
-									</xsl:if>
-								</li> -->
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:for-each>
-				  </ul>
-				</div>
-			  </section>	
+									</xsl:when>
+									<!-- LEGACY - REMOVE WHEN THESE CODES ARE FULLY DEPRECATED -->
+									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
+										<li class="nav-item">
+											<a href="#{$unique-section-id}" class="nav-link">
+												<xsl:value-of select="v3:code/@displayName"/>
+											</a>
+										</li>
+									</xsl:when>
+									<xsl:otherwise>
+										<!-- NAVIGATION FOR DIFFERENT PARTS -->
+										<li class="nav-item">
+											<a href="#drop-{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
+												<xsl:value-of select="v3:code/@displayName"/>
+											</a>
+											<xsl:if test="v3:component/v3:section">
+											<ul id="drop-{$unique-section-id}" class="navbar-nav small collapse">
+												<xsl:apply-templates select="v3:component/v3:section" mode="sidebar-navigation"/>
+											</ul>
+											</xsl:if>
+										</li>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:for-each>
+						</ul>
+					</div>
+				</section>	
 			</div>			
 		</aside>	
 	</xsl:template>
@@ -158,6 +139,16 @@
 		</li>
 	</xsl:template>
 
+	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="sidebar-navigation">
+		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
+		<li class="nav-item">
+			<a href="#{$unique-product-id}" title="{$unique-product-id}" class="nav-link">
+				<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+					<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
+				</xsl:apply-templates>
+			</a>
+		</li>
+	</xsl:template>
 	
 	<!-- SECTION MODEL - is this kludgey to just override this? -->
 	<xsl:template match="v3:section">
@@ -215,7 +206,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>500: <xsl:value-of select="v3:title"/></title>
+			<title>502: <xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
@@ -261,6 +252,7 @@
 					.TitlePage h3 { text-align: center !important; }
 					#side { max-width: 420px; min-width: 420px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
+					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }					
 				}
 			</style>
 		</head>

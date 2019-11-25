@@ -207,7 +207,7 @@
 					</xsl:for-each>
 					<td class="formItem">
 						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
-						<xsl:if test="v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@unit)!='1'"> &#160;in&#160;<xsl:value-of select="v3:quantity/v3:denominator/@value"
+						<xsl:if test="v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@unit)!='1'"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
 						/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 							</xsl:if></xsl:if>
 					</td>
@@ -262,6 +262,21 @@
 			</td>
 		</tr>
 	</xsl:template>
+
+	<xsl:template name="pqCharacteristicRow">
+		<xsl:param name="path" select="."/>
+		<xsl:param name="class">formTableRow</xsl:param>
+		<xsl:param name="label"><xsl:value-of select="$path/v3:code/@displayName"/></xsl:param>
+		<tr class="{$class}">
+			<td class="formLabel">
+				<xsl:value-of select="$label"/>
+			</td>
+			<td class="formItem">
+				<xsl:value-of select="$path/v3:value/@value"/>
+				<xsl:value-of select="$path/v3:value/@unit"/>
+			</td>
+		</tr>
+	</xsl:template>
 	
 	<xsl:template name="listedCharacteristicRow">
 		<xsl:param name="path" select="."/>
@@ -303,11 +318,11 @@
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='3']"/>
 					<xsl:with-param name="label" select="$labels/shape[@lang = $lang]"/>
 				</xsl:call-template>
-				<tr class="formTableRowAlt"> 		<!-- Size is PQ, and this is the existing FDA templating -->
-					<xsl:call-template name="size">
-						<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
-					</xsl:call-template>
-				</tr>
+				<xsl:call-template name="pqCharacteristicRow"> <!-- Size is PQ -->
+					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='4']"/>
+					<xsl:with-param name="label" select="$labels/size[@lang = $lang]"/>
+					<xsl:with-param name="class">formTableRowAlt</xsl:with-param>
+				</xsl:call-template>
 				<xsl:call-template name="codedCharacteristicRow"> <!-- Score is CV -->
 					<xsl:with-param name="path" select="../v3:subjectOf/v3:characteristic[v3:code/@code='5']"/>
 					<xsl:with-param name="label" select="$labels/score[@lang = $lang]"/>
@@ -342,6 +357,36 @@
 			</tbody>
 		</table>
 	</xsl:template>
+
+	<xsl:template name="packaging">
+		<xsl:param name="path" select="."/>
+		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
+			<tr>
+				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/packaging[@lang = $lang]"/></td>
+			</tr>
+			<tr>
+				<th scope="col" width="1" class="formTitle">#</th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/itemCode[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/packageDescription[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
+				<th scope="col" class="formTitle"><xsl:value-of select="$labels/cancellationDate[@lang = $lang]"/></th>
+			</tr>
+			<xsl:for-each select="$path/v3:asContent/descendant-or-self::v3:asContent[not(*/v3:asContent)]">
+				<xsl:call-template name="packageInfo">
+					<xsl:with-param name="path" select="."/>
+					<xsl:with-param name="number" select="position()"/>
+				</xsl:call-template>
+			</xsl:for-each>
+			<xsl:if test="not($path/v3:asContent)">
+				<tr>
+					<td colspan="4" class="formTitle">
+						<strong>Package Information Not Applicable</strong>
+					</td>
+				</tr>
+			</xsl:if>
+		</table>
+	</xsl:template>
+
 
 	<!-- override packageInfo template to consolidate rows that have the same package number - some templating still specific to FDA business rules -->
 	<xsl:template name="packageInfo">
@@ -386,7 +431,8 @@
 									<xsl:value-of select="@unit"/>
 								</xsl:if>
 							</xsl:for-each>
-							<xsl:text> in </xsl:text>
+<!--						<xsl:text> in </xsl:text> -->
+							<xsl:value-of select="$labels/inConnective[@lang = $lang]"/>
 							<xsl:for-each select="v3:denominator">
 								<xsl:value-of select="@value"/>
 								<xsl:text> </xsl:text>
@@ -461,7 +507,7 @@
 						<strong>Part <xsl:value-of select="position()"/></strong>
 					</td>
 					<td class="formItem">
-						<!-- TODO cleanup - are there ever going to be multiple quanities? what is the cardinality here? -->
+						<!-- TODO cleanup - are there ever going to be multiple quantities? what is the cardinality here? -->
 						<xsl:for-each select="v3:quantity/v3:denominator">
 							<xsl:value-of select="@value"/>
 							<xsl:text> </xsl:text>
@@ -472,7 +518,7 @@
 					<td class="formItem">
 						<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:numerator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:numerator/@unit"/></xsl:if>
 						<xsl:if test="(v3:quantity/v3:denominator/@value and normalize-space(v3:quantity/v3:denominator/@value)!='1') 
-														or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> &#160;in&#160;<xsl:value-of select="v3:quantity/v3:denominator/@value"
+														or (v3:quantity/v3:denominator/@unit and normalize-space(v3:quantity/v3:denominator/@unit)!='1')"> <xsl:value-of select="$labels/inConnective[@lang = $lang]"/><xsl:value-of select="v3:quantity/v3:denominator/@value"
 														/>&#160;<xsl:if test="normalize-space(v3:quantity/v3:denominator/@unit)!='1'"><xsl:value-of select="v3:quantity/v3:denominator/@unit"/>
 							</xsl:if></xsl:if>
 					</td>
@@ -481,6 +527,47 @@
 		</table>
 	</xsl:template>
 
+	<xsl:template name="MarketingInfo">
+		<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
+			<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
+				<tr>
+					<td colspan="4" class="formHeadingReg"><span class="formHeadingTitle" ><xsl:value-of select="$labels/marketingInfo[@lang = $lang]"/></span></td>
+				</tr>
+				<tr>
+					<th scope="col" class="formTitle"><xsl:value-of select="$labels/marketingCategory[@lang = $lang]"/></th>
+					<th scope="col" class="formTitle"><xsl:value-of select="$labels/applicationNumber[@lang = $lang]"/></th>
+					<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
+						<th scope="col" class="formTitle"><xsl:value-of select="$labels/approvalDate[@lang = $lang]"/></th>
+						<th scope="col" class="formTitle"><xsl:value-of select="$labels/cancellationDate[@lang = $lang]"/></th>
+					</xsl:if>
+				</tr>
+				<tr class="formTableRowAlt">
+					<td class="formItem">
+						<xsl:value-of select="../v3:subjectOf/v3:approval/v3:code/@displayName"/>
+					</td>
+					<td class="formItem">
+						<xsl:value-of select="../v3:subjectOf/v3:approval/v3:id/@extension"/>
+					</td>
+					<xsl:if test="not($root/v3:document/v3:code/@code = '73815-3')">
+						<td class="formItem">						
+							<xsl:call-template name="string-to-date">
+								<xsl:with-param name="text">
+									<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:low/@value"/>
+								</xsl:with-param>
+							</xsl:call-template>
+						</td>
+						<td class="formItem">					
+							<xsl:call-template name="string-to-date">
+								<xsl:with-param name="text">
+									<xsl:value-of select="../v3:subjectOf/v3:marketingAct/v3:effectiveTime/v3:high/@value"/>
+								</xsl:with-param>
+							</xsl:call-template>
+						</td>
+					</xsl:if>
+				</tr>
+			</table>
+		</xsl:if>
+	</xsl:template>	
 	
 	<!-- STUFF THAT MAKES THE PAGE WORK - MOVE TO SCREEN AS APPROPRIATE -->	
 		
