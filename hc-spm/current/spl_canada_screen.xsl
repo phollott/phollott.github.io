@@ -61,8 +61,7 @@
 	<!-- This is a fairly decent navigation sidebar menu -->
 	<xsl:template match="v3:structuredBody" mode="sidebar-navigation">
 		<aside class="bg-aurora-light hide-in-print" id="left">
-<!--			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side"> -->
-			<div class="sticky-top sticky d-none d-sm-block hide-in-print" id="side">
+			<div class="sticky-top sticky d-none d-md-block hide-in-print" id="side">
 				<section class="card">
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
@@ -255,7 +254,7 @@
 					.TitlePage h1 { text-align: center !important; }
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
-					#side { max-width: 420px; min-width: 420px; }
+					#side { max-width: 450px; min-width: 450px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 
