@@ -9,14 +9,13 @@
 		<labeler lang="en">Market Authorization Holder</labeler>
 		<registrant lang="en">Canadian Importer/Distributor</registrant>
 		<partyContact lang="en">Contact</partyContact>
-		<partyAddress lang="en">Contact Address</partyAddress>
-		<partyTelephone lang="en">Additional Contact Information</partyTelephone>
+		<partyAddress lang="en">Address</partyAddress>
+		<partyTelephone lang="en">Telephone Number</partyTelephone>
 		<partyEmailAddr lang="en">Email Address</partyEmailAddr>
-		<product lang="en">Product</product>
 		<productInfo lang="en">Product Information</productInfo>
 		<brandName lang="en">Brand Name</brandName>
 		<nonPropName lang="en">Non-Proprietary Name</nonPropName>
-		<din lang="en">Drug Identification Number (DIN)</din>
+		<din lang="en">Drug Identification Number</din>
 		<adminRoute lang="en">Route of Administration</adminRoute>
 		<dosageForm lang="en">Dosage Form</dosageForm>
 		<activeIngredients lang="en">Active Ingredient/Active Moiety</activeIngredients>
@@ -50,10 +49,7 @@
 		<partNumber lang="en">Part&#160;</partNumber>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
-		<noPackageFound lang="en">Package Information Not Applicable</noPackageFound>
 		<inConnective lang="en">&#160;in&#160;</inConnective>
-		<andConnective lang="en">&#160;and&#160;</andConnective>
-		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<!-- French Labels -->
 		<tableOfContents lang="fr">(francais) TABLE OF CONTENTS</tableOfContents>
 		<productDetails lang="fr">(francais) PRODUCT DETAILS</productDetails>
@@ -61,14 +57,13 @@
 		<labeler lang="fr">(francais) Market Authorization Holder</labeler>
 		<registrant lang="fr">(francais) Canadian Importer/Distributor</registrant>
 		<partyContact lang="fr">(francais) Contact</partyContact>
-		<partyAddress lang="fr">(francais) Contact Address</partyAddress>
-		<partyTelephone lang="fr">(francais) Additional Contact Information</partyTelephone>
+		<partyAddress lang="fr">(francais) Address</partyAddress>
+		<partyTelephone lang="fr">(francais) Telephone Number</partyTelephone>
 		<partyEmailAddr lang="fr">(francais) Email Address</partyEmailAddr>
-		<product lang="fr">(francais) Product</product>
 		<productInfo lang="fr">(francais) Product Information</productInfo>
 		<brandName lang="fr">(francais) Brand Name</brandName>
 		<nonPropName lang="fr">(francais) Non-Proprietary Name</nonPropName>
-		<din lang="fr">(francais) Drug Identification Number (DIN)</din>
+		<din lang="fr">(francais) Drug Identification Number</din>
 		<adminRoute lang="fr">(francais) Route of Administration</adminRoute>
 		<dosageForm lang="fr">(francais) Dosage Form</dosageForm>
 		<activeIngredients lang="fr">(francais) Active Ingredient/Active Moiety</activeIngredients>
@@ -102,10 +97,7 @@
 		<partNumber lang="fr">(francais) Part&#160;</partNumber>
 		<pkgQuantity lang="fr">(francais) Package Quantity</pkgQuantity>
 		<ttlProdQty lang="fr">(francais) Total Product Quantity</ttlProdQty>
-		<noPackageFound lang="fr">(francais) Package Information Not Applicable</noPackageFound>
 		<inConnective lang="fr">&#160;dans&#160;</inConnective>
-		<andConnective lang="fr">&#160;et&#160;</andConnective>
-		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 	

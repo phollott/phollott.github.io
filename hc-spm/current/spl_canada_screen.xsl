@@ -10,9 +10,6 @@
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
 			<h6 class="card-header p-0 bg-aurora-accent2">
-<!--				<div class="text-white text-left d-none d-md-block p-2">
-					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
-				</div> -->
 				<button class="btn bg-aurora-accent2 text-white text-left w-100 dropdown-toggle" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
@@ -47,7 +44,7 @@
 	
 	<xsl:template mode="generateUniqueLabel" match="v3:manufacturedProduct">
 		<xsl:param name="position"/>
-		<xsl:value-of select="$labels/product[@lang = $lang]"/> #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
+		Product #<xsl:value-of select="$position"/><xsl:text> </xsl:text><xsl:value-of select="v3:name"/> 
 		(<xsl:value-of select="v3:asEntityWithGeneric/v3:genericMedicine/v3:name"/>), 		
 		<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 			<xsl:if test="position() > 1">/ </xsl:if>
@@ -66,7 +63,7 @@
 					<h5 class="card-header text-white bg-aurora-accent1">
 						<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 					</h5>
-					<!-- TODO move these inline styles, and also apply -ms-transform and -webkit-transform -->
+					<!-- TODO move these inline styles -->
 					<div style="transform: scaleX(-1);" id="navigation-scrollbar">
 						<ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 							<xsl:for-each select="v3:component/v3:section">
@@ -209,7 +206,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>507: <xsl:value-of select="v3:title"/></title>
+			<title><xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
@@ -225,8 +222,7 @@
 					color: #AF3C43;
 				}
 				
-				<!-- this french language reduction reduces only the top level navigation -->
-				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 75%; }</xsl:if>				
+				<xsl:if test="$lang='fr'">#side .nav-link { font-size: 75%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
