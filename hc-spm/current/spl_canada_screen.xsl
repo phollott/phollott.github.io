@@ -226,7 +226,7 @@
 				}
 				
 				<!-- this french language reduction reduces only the top level navigation -->
-				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 75%; }</xsl:if>				
+				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 70%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
