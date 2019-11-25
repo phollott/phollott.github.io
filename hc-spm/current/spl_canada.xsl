@@ -86,22 +86,11 @@
 						<div><xsl:text>Email: </xsl:text>
 						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
 					</xsl:for-each>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'www.')]">
+					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:')]">
 						<div><xsl:text>Web: </xsl:text>
 						<xsl:value-of select="."/></div>
 					</xsl:for-each>
-<!--					<div><xsl:text>Email: </xsl:text>
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/></div>
-					<div><xsl:text>Web: </xsl:text>
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'www')][1], 'www')"/></div> -->
 				</td>
-<!--				<td class="formItem">
-					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
-					<div style="display:none">
-						<xsl:attribute name="id"><xsl:text>contactMailId</xsl:text></xsl:attribute>
-						<xsl:value-of select=" substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
-					</div>
-				</td> -->
 			</tr>
 		</xsl:for-each>
 	</xsl:template>	
@@ -679,7 +668,7 @@
 						<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
 						<xsl:variable name="tri-code-value" select="substring(v3:code/@code, string-length(v3:code/@code)-2)"/>
 						<xsl:choose>
-							<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
+							<xsl:when test="v3:code[@code='MP']">
 								<!-- PRODUCT DETAIL -->
 								<section class="hide-in-print card" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
