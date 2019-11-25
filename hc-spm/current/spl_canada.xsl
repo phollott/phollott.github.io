@@ -32,7 +32,6 @@
 					<td colspan="4" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/labeler[@lang = $lang]"/> -&#160;</span>
 						<xsl:value-of select="./v3:name"/> 
-						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -46,8 +45,7 @@
 				<tr>
 					<td colspan="4" class="formHeadingReg">
 						<span class="formHeadingTitle"><xsl:value-of select="$labels/registrant[@lang = $lang]"/> -&#160;</span>
-						<xsl:value-of select="./v3:name"/>
-						<xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
+						<xsl:value-of select="./v3:name"/><xsl:if test="./v3:id/@extension"> (<xsl:value-of select="./v3:id/@extension"/>)</xsl:if>
 					</td>
 				</tr>
 				<xsl:call-template name="data-contactParty"/>
@@ -65,7 +63,7 @@
 			</xsl:if>
 			<tr class="formTableRowAlt">
 				<td class="formItem">		
-<!--				<xsl:apply-templates mode="format" select="v3:addr"/> -->
+<!--					<xsl:apply-templates mode="format" select="v3:addr"/> -->
 					<table>
 						<tr><td><xsl:value-of select="v3:addr/v3:streetAddressLine"/></td></tr>
 						<tr><td>
@@ -88,11 +86,22 @@
 						<div><xsl:text>Email: </xsl:text>
 						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
 					</xsl:for-each>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:')]">
+					<xsl:for-each select="v3:telecom/@value[starts-with(.,'www.')]">
 						<div><xsl:text>Web: </xsl:text>
 						<xsl:value-of select="."/></div>
 					</xsl:for-each>
+<!--					<div><xsl:text>Email: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/></div>
+					<div><xsl:text>Web: </xsl:text>
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'www')][1], 'www')"/></div> -->
 				</td>
+<!--				<td class="formItem">
+					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
+					<div style="display:none">
+						<xsl:attribute name="id"><xsl:text>contactMailId</xsl:text></xsl:attribute>
+						<xsl:value-of select=" substring-after(v3:telecom/@value[starts-with(.,'mailto:')][1], 'mailto:')"/>
+					</div>
+				</td> -->
 			</tr>
 		</xsl:for-each>
 	</xsl:template>	
@@ -260,14 +269,11 @@
 					</xsl:attribute>
 					<xsl:for-each select="(v3:ingredientSubstance|v3:inactiveIngredientSubstance)[1]">
 						<td class="formItem">
-							<!-- TODO is this correct for more than one code? is the cardinality guaranteed [1..1]? -->							
-							<xsl:for-each select="v3:code">
-								<strong><xsl:value-of select="@displayName"/></strong>								
-								<xsl:text> (</xsl:text>
-									<xsl:value-of select="@code"/>
-								<xsl:text>) </xsl:text>
-								<xsl:if test="position()!=last()"><xsl:value-of select="$labels/andConnective[@lang = $lang]"/></xsl:if>
-							</xsl:for-each>
+							<strong>
+								<xsl:for-each select="v3:code">
+									<xsl:value-of select="@displayName"/>
+								</xsl:for-each>
+							</strong>
 						</td>
 					</xsl:for-each>
 					<td class="formItem">

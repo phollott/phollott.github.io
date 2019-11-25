@@ -2,10 +2,8 @@
 
 Samples from Dropbox
  - HC Samples For Testing
- - current/spl_canada.xsl
- - current/spl_canada_screen.xsl
- - current/spl_canada_i18n.xsl
- - current/FDA spl_stylesheet_6_2
+ - Development
+ - FDA spl_stylesheet_6_2
  
 The spl_canada.xsl stylesheet references its siblings, spl_canada_screen.xsl, and spl_canada_i18n.xsl,
 and it also relies on the templates in FDA spl_stylesheet_6_2. The spl_canada.xsl stylesheet contains the 
@@ -14,7 +12,7 @@ The other two stylesheets provide templates for onscreen navigation and bilingua
 
 2. This should be the only processing instruction referenced in the SPM XML:
 
-<?xml-stylesheet type="text/xsl" href="../../../current/spl_canada.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../../Development/spl_canada.xsl"?>
 
 Once you change the stylesheet processing instruction in one of the SPM XML files, 
 you should be able to open it in Internet Explorer or Edge, and it will transform 
