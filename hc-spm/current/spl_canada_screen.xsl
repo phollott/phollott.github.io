@@ -222,7 +222,7 @@
 				#side .nav-link.active,
 				#side .nav-link:hover,
 				#side .nav-link:focus{
-					color: #AF3C43;
+					color: #137991;
 				}
 				
 				<!-- this french language reduction reduces only the top level navigation -->
@@ -236,8 +236,8 @@
 
 				/* Aurora Swatches */
 
-				.bg-aurora-accent1 { background-color: #26374A;	}
-				.bg-aurora-accent2 { background-color: #AF3C43;	}
+				.bg-aurora-accent1 { background-color: #002D42;	}
+				.bg-aurora-accent2 { background-color: #137991;	}
 				.bg-aurora-light   { background-color: #F5F5F5;	}
 
 				.TitlePage p  { text-align: center !important; }
