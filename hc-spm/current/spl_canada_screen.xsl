@@ -67,7 +67,8 @@
 			
 			
 <!--				<h5 class="p-3"><xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/></h5> -->
-				<div style="height: 95vh; overflow-y: scroll; transform: scaleX(-1);">
+				<div style="height: calc(100vh - 50px); overflow-y: scroll; transform: scaleX(-1);">
+<!-- 500:				<div style="height: 95vh; overflow-y: scroll; transform: scaleX(-1);"> -->
 				  <ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); ">
 					<xsl:for-each select="v3:component/v3:section">
 						<xsl:variable name="unique-section-id"><xsl:value-of select="@ID"/></xsl:variable>
@@ -215,7 +216,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>500:<xsl:value-of select="v3:title"/></title>
+			<title>500+:<xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
