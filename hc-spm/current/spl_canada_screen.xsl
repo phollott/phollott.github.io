@@ -240,12 +240,15 @@
 				.bg-aurora-accent2 { background-color: #AF3C43;	}
 				.bg-aurora-light   { background-color: #F5F5F5;	}
 
+				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
+				 * This is partly due to trying to put the first section on its own page.
+				 */
 				@media print {		
-					.hide-in-print { display: none; }			
-					.ForcePageBreak { page-break-after: always; }
-					.SuppressPageBreak { page-break-after: avoid; }
-					.card { border-width: 0; }
-					.card-header { display: none; }
+					.hide-in-print { display: none !important; }		
+/*					.ForcePageBreak { page-break-after: always; }
+					.SuppressPageBreak { page-break-after: avoid; } */
+					.card { border-width: 0 !important; }
+					.card-header { display: none !important; }
 				}
 				
 				@media screen {
