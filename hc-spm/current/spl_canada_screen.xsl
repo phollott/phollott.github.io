@@ -12,8 +12,8 @@
 			<h6 class="card-header p-0 bg-aurora-accent2">
 <!--				<div class="text-white text-left d-none d-md-block p-2">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
-				</div> --> <!--  dropdown-toggle below caused problems with rwd -->
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+				</div> --> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
@@ -30,8 +30,8 @@
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="card">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<h6 class="card-header p-0 bg-aurora-accent2"> <!--  dropdown-toggle below caused problems with rwd -->
-				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
+			<h6 class="card-header p-0 bg-aurora-accent2"> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
