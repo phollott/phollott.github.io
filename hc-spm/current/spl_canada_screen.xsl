@@ -209,7 +209,7 @@
 			<meta name="documentEffectiveTime">
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
-			<title>350px nav:<xsl:value-of select="v3:title"/></title>
+			<title><xsl:value-of select="v3:title"/></title>
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
@@ -254,7 +254,7 @@
 					.TitlePage h1 { text-align: center !important; }
 					.TitlePage h2 { text-align: center !important; }
 					.TitlePage h3 { text-align: center !important; }
-					#side { max-width: 350px; min-width: 350px; }
+					#side { max-width: 420px; min-width: 420px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 
