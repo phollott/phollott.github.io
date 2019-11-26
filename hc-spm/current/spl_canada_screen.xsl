@@ -254,6 +254,15 @@
 					.SuppressPageBreak { page-break-after: avoid; } */
 					.card { border-width: 0 !important; }
 					.card-header { display: none !important; }
+					
+					/* overriding FDA tables so they look nicer in print */
+					.spl .formTable { 					border: 1px solid #CCCCCC !important;	}
+					.spl .formTablePetite {				border: 1px solid #CCCCCC !important;	}
+					.spl .formTableMorePetite {			border: 1px solid #CCCCCC !important;	}
+					.spl .formTitle {					border: 1px solid #CCCCCC !important;	}
+					.spl .formHeadingReg {				border: 1px solid #CCCCCC !important;	}
+					.spl .formLabel {					border: 1px solid #CCCCCC !important;	}
+					.spl .formItem {					border: 1px solid #CCCCCC !important;	}
 				}
 				
 				@media screen {
@@ -263,6 +272,7 @@
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 					.Section > h1 {display: none; }
 				}
+				
 			</style>
 		</head>
 	</xsl:template>	
