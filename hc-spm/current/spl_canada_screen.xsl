@@ -10,14 +10,17 @@
 	<xsl:template match="//v3:author/v3:assignedEntity/v3:representedOrganization" mode="card">
 		<section class="card m-2" id="company-details">
 			<h6 class="card-header p-0 bg-aurora-accent2">
+				<div class="text-white text-left p-2">
+					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
+				</div>
 <!--				<div class="text-white text-left d-none d-md-block p-2">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
 				</div> --> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
-				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
+<!--				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
-				</button>
+				</button> -->
 			</h6>
 			<div id="collapse-company-details" class="collapse show spl" data-parent="#product-accordion">
 				<xsl:apply-templates mode="subjects" select="."/>
@@ -31,13 +34,18 @@
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
 			<h6 class="card-header p-0 bg-aurora-accent2"> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
-				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
+				<div class="text-white text-left p-2">
+					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
+						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
+					</xsl:apply-templates>
+				</div>
+<!--				<button class="btn bg-aurora-accent2 text-white text-left" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
 					<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
 						<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
 					</xsl:apply-templates>
-				</button>
+				</button> -->
 			</h6>
 			<div id="collapse-{$unique-product-id}" class="collapse spl" data-parent="#product-accordion">
 				<xsl:apply-templates mode="subjects" select="."/>
