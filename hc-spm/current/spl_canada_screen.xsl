@@ -240,6 +240,11 @@
 				.bg-aurora-accent2 { background-color: #AF3C43;	}
 				.bg-aurora-light   { background-color: #F5F5F5;	}
 
+				.TitlePage p  { text-align: center !important; }
+				.TitlePage h1 { text-align: center !important; }
+				.TitlePage h2 { text-align: center !important; }
+				.TitlePage h3 { text-align: center !important; }
+
 				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
 				 * This is partly due to trying to put the first section on its own page.
 				 */
@@ -253,14 +258,9 @@
 				
 				@media screen {
 					.hide-in-screen { display: none; }
-					.TitlePage p  { text-align: center !important; }
-					.TitlePage h1 { text-align: center !important; }
-					.TitlePage h2 { text-align: center !important; }
-					.TitlePage h3 { text-align: center !important; }
 					#side { max-width: 420px; min-width: 420px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
-
 					.Section > h1 {display: none; }
 				}
 			</style>
