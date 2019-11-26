@@ -688,22 +688,22 @@
 							</xsl:when>
 							<xsl:when test="v3:code[@code='2']|v3:code[@code='TP']">
 								<!-- LEGACY TITLE PAGE -->
-								<section class="card m-2" id="{$unique-section-id}">
+								<section class="card m-2 ForcePageBreak" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
-									<div class="spl TitlePage ForcePageBreak">
+									<div class="spl TitlePage">
 										<xsl:apply-templates select="."/>
 									</div>
 								</section>
 							</xsl:when>
 							<xsl:when test="$tri-code-value = '001'">
 								<!-- TITLE PAGE -->
-								<section class="card m-2" id="{$unique-section-id}">
+								<section class="card m-2 ForcePageBreak" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
-									<div class="spl TitlePage ForcePageBreak">
+									<div class="spl TitlePage">
 										<xsl:apply-templates select="."/>
 									</div>
 								</section>

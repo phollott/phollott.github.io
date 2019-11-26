@@ -250,8 +250,8 @@
 				 */
 				@media print {		
 					.hide-in-print { display: none !important; }		
-/*					.ForcePageBreak { page-break-after: always; }
-					.SuppressPageBreak { page-break-after: avoid; } */
+					.ForcePageBreak { page-break-after: always; }
+					.SuppressPageBreak { page-break-after: avoid; }
 					.card { border-width: 0 !important; }
 					.card-header { display: none !important; }
 					
