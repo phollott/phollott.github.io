@@ -67,3 +67,9 @@ be internationalized. These are necessary for any fields that are Required but n
    
  - We are currently working with CSS3 Paged Media to support a print view, as opposed to using XSL:FO
    to generate a separate PDF document. Both are viable options, but Paged Media is a simplied approach.
+
+7. Known Issues
+
+ - Print Title Page is not shown on a page by itself, and the Print TOC does not exist.
+ - Large images cause a problem with responsive resizing.
+ - Print Tables render oddly because some of the styling in the FDA is white.

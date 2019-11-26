@@ -74,7 +74,7 @@
 								<xsl:if test="string-length(v3:addr/v3:postalCode)>0">,&#160;<xsl:value-of select="v3:addr/v3:postalCode"/></xsl:if>
 							</td>
 						</tr>
-						<tr><td><xsl:value-of select="v3:addr/v3:country"/></td></tr>
+						<tr><td><xsl:value-of select="v3:addr/v3:country/@displayName"/></td></tr>
 					</table>
 				</td>
 				<td class="formItem">
