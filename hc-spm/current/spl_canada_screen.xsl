@@ -236,7 +236,9 @@
 
 				img { max-width: 100%; height: auto; }					
 
-				/* Aurora Swatches */
+				/* Aurora Swatches 
+				 * These should really be called bg-aurora-primary and bg-aurora-accent1
+				 */
 
 				.bg-aurora-accent1 { background-color: #002D42;	}
 				.bg-aurora-accent2 { background-color: #4D5D6C;	}
@@ -252,8 +254,8 @@
 				 */
 				@media print {		
 					.hide-in-print { display: none !important; }		
-					.ForcePageBreak { page-break-after: always; }
-					.SuppressPageBreak { page-break-after: avoid; }
+					.force-page-break { page-break-after: always; }
+					.suppress-page-break { page-break-after: avoid; }
 					.card { border-width: 0 !important; }
 					.card-header { display: none !important; }
 					

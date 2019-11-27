@@ -675,7 +675,7 @@
 						<xsl:choose>
 							<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
 								<!-- PRODUCT DETAIL -->
-								<section class="hide-in-print card" id="{$unique-section-id}">
+								<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 									</h5>
@@ -688,7 +688,7 @@
 							</xsl:when>
 							<xsl:when test="v3:code[@code='2']|v3:code[@code='TP']">
 								<!-- LEGACY TITLE PAGE -->
-								<section class="card m-2 ForcePageBreak" id="{$unique-section-id}">
+								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
@@ -699,7 +699,7 @@
 							</xsl:when>
 							<xsl:when test="$tri-code-value = '001'">
 								<!-- TITLE PAGE -->
-								<section class="card m-2 ForcePageBreak" id="{$unique-section-id}">
+								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
@@ -710,7 +710,7 @@
 							</xsl:when>
 							<xsl:otherwise>
 								<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-								<section class="card m-2" id="{$unique-section-id}">
+								<section class="card mb-2" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
