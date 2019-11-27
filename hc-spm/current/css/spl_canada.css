@@ -48,7 +48,7 @@ be represented
 }
 
 /*
- * Print Styles added to support Canadian Aurora version
+ * Tests Print Styles added to support Canadian Aurora version
  */
 .hide-in-print { display: none !important; }		
 .force-page-break { page-break-after: always; }
@@ -58,8 +58,6 @@ be represented
 /*
  * End of Print Styles added to support Canadian Aurora version
  */
-
-
 
 .spl {
 	font-family: "Times New Roman", Times, serif;
