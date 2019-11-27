@@ -438,7 +438,6 @@
 		</table>
 	</xsl:template>
 
-
 	<!-- override packageInfo template to consolidate rows that have the same package number - some templating still specific to FDA business rules -->
 	<xsl:template name="packageInfo">
 		<xsl:param name="path"/>
@@ -482,7 +481,6 @@
 									<xsl:value-of select="@unit"/>
 								</xsl:if>
 							</xsl:for-each>
-<!--						<xsl:text> in </xsl:text> -->
 							<xsl:value-of select="$labels/inConnective[@lang = $lang]"/>
 							<xsl:for-each select="v3:denominator">
 								<xsl:value-of select="@value"/>
@@ -664,8 +662,7 @@
 		</xsl:if>
 	</xsl:template>	
 	
-	<!-- STUFF THAT MAKES THE PAGE WORK - MOVE TO SCREEN AS APPROPRIATE -->	
-		
+	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, withe Product Details at end -->	
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
 			<div class="row position-relative">
@@ -688,7 +685,7 @@
 								</section>
 							</xsl:when>
 							<xsl:when test="v3:code[@code='2']|v3:code[@code='TP']">
-								<!-- LEGACY TITLE PAGE -->
+								<!-- TODO REMOVE LEGACY TITLE PAGE -->
 								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
@@ -757,7 +754,8 @@
 		<xsl:apply-templates mode="subjects" select="."/>
 		<xsl:apply-templates mode="subjects" select="v3:assignedEntity/v3:assignedOrganization"/>	
 	</xsl:template>
-			
+
+	<!-- MAIN HTML PAGE TEMPLATING -->
 	<xsl:template match="/v3:document" priority="1">
 		<html>
 			<xsl:apply-templates select="." mode="html-head"/>
