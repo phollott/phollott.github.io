@@ -233,7 +233,6 @@
 				  position: sticky;
 				  top: 0;
 				}
-
 				img { max-width: 100%; height: auto; }					
 
 				/* Aurora Swatches 
@@ -252,12 +251,14 @@
 				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
 				 * This is partly due to trying to put the first section on its own page.
 				 */
-				@media print {		
+				@media print {	
+
+				/* these styles have been moved to spl_canada.css
 					.hide-in-print { display: none !important; }		
 					.force-page-break { page-break-after: always; }
 					.suppress-page-break { page-break-after: avoid; }
 					.card { border-width: 0 !important; }
-					.card-header { display: none !important; }
+					.card-header { display: none !important; } */
 					
 					/* overriding FDA tables so they look nicer in print */
 					.spl .formTable { 					border: 1px solid #CCCCCC !important;	}
