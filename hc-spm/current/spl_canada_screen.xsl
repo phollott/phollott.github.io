@@ -131,7 +131,7 @@
 	<xsl:template match="v3:component/v3:section" mode="sidebar-navigation">
 		<xsl:variable name="unique-subsection-id"><xsl:value-of select="@ID"/></xsl:variable>
 		<li class="nav-item">
-			<a href="#{$unique-subsection-id}" title="{$unique-subsection-id}" class="nav-link">
+			<a href="#{$unique-subsection-id}" class="nav-link">
 				<xsl:value-of select="v3:code/@displayName"/>
 			</a>
 			<xsl:if test="v3:component/v3:section">
@@ -145,7 +145,7 @@
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="sidebar-navigation">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<li class="nav-item">
-			<a href="#{$unique-product-id}" title="{$unique-product-id}" class="nav-link">
+			<a href="#{$unique-product-id}" class="nav-link">
 				<xsl:apply-templates select="v3:manufacturedProduct" mode="generateUniqueLabel">
 					<xsl:with-param name="position"><xsl:value-of select="position()"/></xsl:with-param>
 				</xsl:apply-templates>
