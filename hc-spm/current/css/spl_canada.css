@@ -33,15 +33,6 @@ be represented
 	margin-right: 1em;
 }
 
-/*
- * Styles added to support Canadian Aurora version
- */
-.hide-in-print { display: none !important; }		
-.force-page-break { page-break-after: always; }
-.suppress-page-break { page-break-after: avoid; }
-.card { border-width: 0 !important; }
-.card-header { display: none !important; }
-
 }
 							
 @media print {
@@ -55,6 +46,17 @@ be represented
 	orphans:4; 
 	widows:2;
 }
+
+/*
+ * Styles added to support Canadian Aurora version, followed by spl
+ */
+.hide-in-print { display: none !important; }		
+.force-page-break { page-break-after: always; }
+.suppress-page-break { page-break-after: avoid; }
+.card { border-width: 0 !important; }
+.card-header { display: none !important; }
+
+
 
 .spl {
 	font-family: "Times New Roman", Times, serif;
