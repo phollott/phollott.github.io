@@ -234,6 +234,8 @@
 				  top: 0;
 				}
 
+				img { max-width: 100%; height: auto; }					
+
 				/* Aurora Swatches */
 
 				.bg-aurora-accent1 { background-color: #002D42;	}
