@@ -70,7 +70,8 @@
 		<nonPropName lang="fr">Dénomination non exclusive</nonPropName>
 		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
 		<adminRoute lang="fr">Voie d’administration</adminRoute>
-		<dosageForm lang="fr">Forme pharmaceutique</dosageForm></activeIngredients>
+		<dosageForm lang="fr">Forme pharmaceutique</dosageForm>
+		<activeIngredients lang="fr">Principe actif/Fragment actif</activeIngredients>
 		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
 		<ingredientName lang="fr">Nom d’ingrédient</ingredientName>
 		<strength lang="fr">Concentration</strength>
@@ -95,7 +96,7 @@
 		<approvalDate lang="fr">Date d’approbation</approvalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
 		<marketingInfo lang="fr">Régime d’emploi homologué</marketingInfo>
-		<marketingCategory lang="frType d’activité de réglementation</marketingCategory>
+		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
 		<partNumber lang="fr">(francais) Part&#160;</partNumber>
