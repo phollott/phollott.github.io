@@ -8,7 +8,6 @@
 		<companyDetails lang="en">COMPANY DETAILS</companyDetails>
 		<labeler lang="en">Market Authorization Holder</labeler>
 		<registrant lang="en">Canadian Importer/Distributor</registrant>
-		<partyContact lang="en">Contact</partyContact>
 		<partyAddress lang="en">Contact Address</partyAddress>
 		<partyAdditional lang="en">Additional Contact Information</partyAdditional>
 		<partyEmail lang="en">Email</partyEmail>
@@ -62,7 +61,6 @@
 		<companyDetails lang="fr">RENSEIGNEMENTS SUR L’ENTREPRISE</companyDetails>
 		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>
 		<registrant lang="fr">Importateur/distributeur canadien</registrant>
-		<partyContact lang="fr">(francais) Contact</partyContact>
 		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
 		<partyTelephone lang="fr">Autres coordonnées</partyTelephone>
 		<partyEmail lang="fr">Couriel&#160;</partyEmail>
@@ -103,7 +101,7 @@
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
-		<partNumber lang="fr">(francais) Part&#160;</partNumber>
+		<partNumber lang="fr">Élément&#160;</partNumber>
 		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
 		<noPackageFound lang="fr">(francais) Package Information Not Applicable</noPackageFound>
