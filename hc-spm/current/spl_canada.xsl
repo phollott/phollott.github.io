@@ -555,7 +555,7 @@
 			<td>
 				<table width="100%" cellspacing="0" cellpadding="5">
 					<tr>
-						<td class="contentTableTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
+						<td class="contentTableTitle"><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="count(../preceding-sibling::v3:part)+1"/><xsl:value-of select="$labels/ofConnective[@lang = $lang]"/><xsl:value-of select="count(../../v3:part)"/></td>
 					</tr>
 					<xsl:call-template name="piMedNames"/>
 				</table>
