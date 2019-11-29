@@ -584,7 +584,7 @@
 				<td colspan="5" class="formHeadingTitle"><xsl:value-of select="$labels/partQuantity[@lang = $lang]"/></td>
 			</tr>
 			<tr>
-				<th scope="col" width="5" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/>&#160;#</th>
+				<th scope="col" width="5" class="formTitle"><xsl:value-of select="$labels/partNumber[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/pkgQuantity[@lang = $lang]"/></th>
 				<th scope="col" class="formTitle"><xsl:value-of select="$labels/ttlProdQty[@lang = $lang]"/></th>
 			</tr>
@@ -597,7 +597,7 @@
 						</xsl:choose>
 					</xsl:attribute>
 					<td width="5" class="formItem">
-						<strong><xsl:value-of select="$labels/partNumber[@lang = $lang]"/> <xsl:value-of select="position()"/></strong>
+						<strong><xsl:value-of select="$labels/part[@lang = $lang]"/> <xsl:value-of select="position()"/></strong>
 					</td>
 					<td class="formItem">
 						<!-- TODO cleanup - are there ever going to be multiple quantities? what is the cardinality here? -->

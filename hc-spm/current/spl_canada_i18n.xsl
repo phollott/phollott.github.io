@@ -48,7 +48,8 @@
 		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
 		<applicationNumber lang="en">Control Number</applicationNumber>
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
-		<partNumber lang="en">Part&#160;</partNumber>
+		<partNumber lang="en">Part&#160;#</partNumber>
+		<part lang="en">Part&#160;</part>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
 		<noPackageFound lang="en">Package Information Not Applicable</noPackageFound>
@@ -101,7 +102,8 @@
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
-		<partNumber lang="fr">Élément&#160;</partNumber>
+		<partNumber lang="fr">No&#160;d’élément</partNumber>
+		<part lang="fr">Élément&#160;</part>
 		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
 		<noPackageFound lang="fr">(francais) Package Information Not Applicable</noPackageFound>
