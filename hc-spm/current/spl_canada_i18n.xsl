@@ -10,8 +10,10 @@
 		<registrant lang="en">Canadian Importer/Distributor</registrant>
 		<partyContact lang="en">Contact</partyContact>
 		<partyAddress lang="en">Contact Address</partyAddress>
-		<partyTelephone lang="en">Additional Contact Information</partyTelephone>
-		<partyEmailAddr lang="en">Email Address</partyEmailAddr>
+		<partyAdditional lang="en">Additional Contact Information</partyAdditional>
+		<partyEmail lang="en">Email</partyEmail>
+		<partyTel lang="en">Tel</partyTel>
+		<partyWeb lang="en">Web</partyWeb>
 		<product lang="en">Product</product>
 		<productInfo lang="en">Product Information</productInfo>
 		<brandName lang="en">Brand Name</brandName>
@@ -63,7 +65,9 @@
 		<partyContact lang="fr">(francais) Contact</partyContact>
 		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
 		<partyTelephone lang="fr">Autres coordonnées</partyTelephone>
-		<partyEmailAddr lang="fr">(francais) Email Address</partyEmailAddr>
+		<partyEmail lang="fr">Couriel&#160;</partyEmail>
+		<partyTel lang="fr">Tél.&#160;</partyTel>
+		<partyWeb lang="fr">Site Web&#160;</partyWeb>
 		<product lang="fr">Produit</product>
 		<productInfo lang="fr">Renseignements sur le produit</productInfo>
 		<brandName lang="fr">Nom de marque</brandName>

@@ -61,7 +61,7 @@
 			<xsl:if test="position() = 1">
 				<tr>
 					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAddress[@lang = $lang]"/></th>
-					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyTelephone[@lang = $lang]"/></th>
+					<th scope="col" class="formTitle"><xsl:value-of select="$labels/partyAdditional[@lang = $lang]"/></th>
 				</tr>
 			</xsl:if>
 			<tr class="formTableRowAlt">
@@ -79,18 +79,18 @@
 					</table>
 				</td>
 				<td class="formItem">
-					<div><xsl:text>Tel: </xsl:text>
+					<div><xsl:value-of select="$labels/partyTel[@lang = $lang]"/><xsl:text>: </xsl:text>
 					<xsl:value-of select="substring-after(v3:telecom/@value[starts-with(.,'tel:')][1], 'tel:')"/></div>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'fax:')]">
 						<div><xsl:text>Fax: </xsl:text>
 						<xsl:value-of select="substring-after(., 'fax:')"/></div>
 					</xsl:for-each>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'mailto:')]">
-						<div><xsl:text>Email: </xsl:text>
+						<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
 						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
 					</xsl:for-each>
 					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:')]">
-						<div><xsl:text>Web: </xsl:text>
+						<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
 						<xsl:value-of select="."/></div>
 					</xsl:for-each>
 				</td>
