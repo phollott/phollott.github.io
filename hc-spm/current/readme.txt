@@ -73,3 +73,8 @@ be internationalized. These are necessary for any fields that are Required but n
  - Print TOC does not exist.
  - There is a minor problem with responsive resizing at some screen resolutions which causes content to render under the navigation sidebar.
  - Print Tables render oddly because some of the styling in the FDA is white - this is fixed, but perhaps not ideally.
+ 
+ If we host our XSL on Github Pages, there is a limitation for Chrome, because Chrome serves XSL as application/xml,
+ rather than text/xml, as described at the bottom of this thread:
+ https://stackoverflow.com/questions/2981524/how-can-i-make-xslt-work-in-chrome
+ 
