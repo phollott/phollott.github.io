@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:v3="urn:hl7-org:v3" xmlns:str="http://exslt.org/strings" 
 	xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -310,4 +310,4 @@
 		</script>
 	</xsl:template>
 	
-</xsl:transform>
+</xsl:stylesheet>
