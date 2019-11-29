@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:v3="urn:hl7-org:v3" xmlns:str="http://exslt.org/strings" 
 	xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" 
+	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="exsl msxsl v3 xsl xsi str">
 	<xsl:import href="FDA spl_stylesheet_6_2/spl-common.xsl"/>
 	<xsl:import href="spl_canada_screen.xsl"/>
@@ -793,4 +794,4 @@
 		</html>
 	</xsl:template>
 	
-</xsl:stylesheet>
+</xsl:transform>
