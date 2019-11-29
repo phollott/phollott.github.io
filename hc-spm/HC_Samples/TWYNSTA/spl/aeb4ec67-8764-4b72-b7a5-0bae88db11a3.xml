@@ -3,7 +3,7 @@
 <document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
   <templateId extension="NDS" root="2.16.840.1.113883.2.20.6.37"/>
-  <id root="7f363dae-0612-4be7-bb92-a8381fa1da35"/>
+  <id root="aeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10"
     displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
   <title>
@@ -15,7 +15,7 @@
     <originalText description="Date of Initial Approval">20190807</originalText>
   </effectiveTime>
   <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
-  <setId root="aeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
+  <setId root="dd76ec67-9064-4b72-b7a5-0bae88db11a3"/>
   <versionNumber value="1"/>
   <author>
     <!--Organization Information-->
@@ -31,7 +31,7 @@
             <city>Burlington</city>
             <state>Ontario</state>
             <postalCode>L7L 5H4</postalCode>
-            <country code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
+            <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
           </addr>
           <telecom value="tel:+18002635103"/>
           <telecom value="mailto:test@boehringer.ca"/>
@@ -48,7 +48,7 @@
         <!-- Manufactured Product Information -->
         <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
           <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
-          <code code="1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
+          <code code="MP" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
           <effectiveTime value="20170101"/>
           <subject>
             <manufacturedProduct>
@@ -626,7 +626,7 @@
               <subjectOf>
                 <characteristic>
                   <code code="9" codeSystem="2.16.840.1.113883.2.20.6.23"
-                    displayName="Pharmaceutical Standard"/>
+                    displayName="PHARMACEUTICAL STANDARD"/>
                   <value code="4" codeSystem="2.16.840.1.113883.2.20.6.5" displayName="MFR"
                     xsi:type="CV"/>
                 </characteristic>
@@ -867,7 +867,7 @@
               <!--Characteristics of this product-->
               <subjectOf>
                 <characteristic>
-                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT CLASS"/>
+                  <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
                   <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                     displayName="PHARMACEUTICAL" xsi:type="CV">
                     <originalText>PHARMACEUTICAL</originalText>
@@ -1280,13 +1280,13 @@
         <!--Title Page section-->
         <section ID="d8d30d86-e343-48f4-9cec-524834b3803b">
           <id root="eed00b53-cdb2-4aa6-9e82-88b7d793b208"/>
-          <code code="TP" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE PAGE"/>
+          <code code="60001" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE PAGE"/>
           <title>Title Page</title>
           <effectiveTime value="20180101"/>
           <component>
             <section ID="be75cfb9-3131-4903-800b-267427388a13">
               <id root="b9db4be0-3f46-437a-bd7b-4a33010adaad"/>
-              <code code="TP-1.1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE"/>
+              <code code="60002" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="TITLE"/>
               <title>title</title>
               <text>
                 <paragraph>
@@ -1301,7 +1301,7 @@
           <component>
             <section ID="f187daf9-5e75-425a-9de6-f6ce1af2a965">
               <id root="ac26f58c-721a-4c51-8bbc-c9dddb1f1233"/>
-              <code code="TP-1.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60003" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="COMPANY NAME AND ADDRESS"/>
               <title>Company Name and Address</title>
               <text>
@@ -1314,7 +1314,7 @@
           <component>
             <section ID="bf2dab4e-fd04-4ec9-9cdc-247188622d0f">
               <id root="a5f1dea3-d907-4664-b46f-e1d9736d47af"/>
-              <code code="TP-1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60004" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="DATE OF INITIAL APPROVAL"/>
               <title>Date of Initial Approval</title>
               <text>
@@ -1326,7 +1326,7 @@
           <component>
             <section ID="b0184119-8fd7-4378-af77-b227c39e8445">
               <id root="ad78301c-29a9-41af-96f8-d58815fed296"/>
-              <code code="TP-1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60005" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="DATE OF REVISION"/>
               <title>Date of Revision</title>
               <text>
@@ -1338,7 +1338,7 @@
           <component>
             <section ID="ebc3f3dc-71be-424f-91ef-8aca8c138b21">
               <id root="efd8c4c1-d0dd-434d-b1c2-4daa18752fa8"/>
-              <code code="TP-1.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60006" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="CONTROL NUMBER"/>
               <title>Control Number</title>
               <text>
@@ -1353,7 +1353,7 @@
         <!-- Recent Major Changes -->
         <section ID="a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1">
           <id root="dd1e1c43-f0d3-4ba8-b1f5-ad009a5dd5a8"/>
-          <code code="RMLC" codeSystem="2.16.840.1.113883.2.20.6.60"
+          <code code="60007" codeSystem="2.16.840.1.113883.2.20.6.60"
             displayName="RECENT MAJOR LABEL CHANGES"/>
           <title>Recent Major Label Changes</title>
           <text>
@@ -1367,14 +1367,14 @@
         <!-- Part I: Health Professional Information -->
         <section ID="c16a947e-e2be-45c0-8b2e-15d0d0eebea8">
           <id root="e6bb83b9-2602-4f96-9077-b8b9535c254e"/>
-          <code code="P1" codeSystem="2.16.840.1.113883.2.20.6.60"
+          <code code="60008" codeSystem="2.16.840.1.113883.2.20.6.60"
             displayName="PART I: HEALTH PROFESSIONAL INFORMATION"/>
           <title>Part I: Health Professional Information</title>
           <effectiveTime value="20180101"/>
           <component>
             <section ID="a52ea4fa-2b79-4dbc-8d99-6843adc2dec8">
               <id root="9a3f869a-7734-425a-85d8-b8bd4d3500a5"/>
-              <code code="P1-1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="1 INDICATIONS"/>
+              <code code="60009" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="1 INDICATIONS"/>
               <title>1 Indications</title>
               <text>
                 <paragraph> sample text </paragraph>
@@ -1383,7 +1383,7 @@
               <component>
                 <section ID="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32">
                   <id root="b9d44be0-3f46-437a-bd7b-4a3e010adaad"/>
-                  <code code="P1-1.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60010" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="1.1 PEDIATRICS"/>
                   <title>1.1 Pediatrics</title>
                   <text>
@@ -1413,7 +1413,7 @@
               <component>
                 <section ID="be75cfb9-3132-4903-800b-267427388a13">
                   <id root="b9db4be0-3f46-447a-bd7b-4a3e010adaad"/>
-                  <code code="P1-1.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60011" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="1.2 GERIATRICS"/>
                   <title>1.2 Geriatrics</title>
                   <text>
@@ -1427,7 +1427,7 @@
           <component>
             <section ID="be75cfb9-3132-4903-801b-267427388a13">
               <id root="b9db4be0-3f46-437a-bd7b-4a3e070adaad"/>
-              <code code="P1-2" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60012" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="2 CONTRAINDICATIONS"/>
               <title>2 Contraindications</title>
               <text>
@@ -1439,7 +1439,7 @@
           <component>
             <section ID="be75cfb9-3131-4903-800b-267427398a13">
               <id root="b9db4be0-3746-437a-bd7b-4a3e010adaad"/>
-              <code code="P1-3" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60013" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="3 SERIOUS WARNINGS AND PRECAUTIONS BOX"/>
               <title>3 Serious Warnings and Precautions Box</title>
               <text>
@@ -1491,7 +1491,7 @@
           <component>
             <section ID="be75cfb9-3131-4903-800b-267727398a13">
               <id root="b9db4be0-3f46-437a-bd7b-4a3ee10adaad"/>
-              <code code="P1-4" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60014" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="4 DOSAGE AND ADMINISTRATION"/>
               <title>4 Dosage and Administration</title>
               <text>
@@ -1501,7 +1501,7 @@
               <component>
                 <section ID="be75cfb9-3131-4103-800b-267727398a13">
                   <id root="b9db1be0-3f46-437a-bd7b-4a3e010adaad"/>
-                  <code code="P1-4.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60015" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="4.1 DOSING CONSIDERATIONS"/>
                   <title>4.1 Dosing Considerations</title>
                   <text>
@@ -1513,7 +1513,7 @@
               <component>
                 <section ID="b3d876c1-c36c-4ed5-8993-c507e3ab9f2e">
                   <id root="da2d22a3-b5c2-4a62-b138-9594dd0491bb"/>
-                  <code code="P1-4.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60016" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="4.2 RECOMMENDED DOSE AND DOSAGE ADJUSTMENT"/>
                   <title>4.2 Recommended Dose and Dosage Adjustment</title>
                   <text>
@@ -1524,8 +1524,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f3a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-4.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf00343"/>
+                  <code code="60017" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="4.3 ADMINISTRATION"/>
                   <title>4.3 Administration</title>
                   <text>sample text</text>
@@ -1534,8 +1534,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f4a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-4.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-2b7b6c100e43"/>
+                  <code code="60018" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName=".4 RECONSTITUTION"/>
                   <title>4.4 Reconstitution</title>
                   <text>
@@ -1546,8 +1546,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f5a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-4.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e276-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60019" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="4.5 MISSED DOSE"/>
                   <title>4.5 Missed Dose</title>
                   <text>
@@ -1560,8 +1560,8 @@
           </component>
           <component>
             <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f6a">
-              <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-              <code code="P1-5" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="5 OVERDOSAGE"/>
+              <id root="a473c162-e176-44d0-b797-2b7b6ce00e43"/>
+              <code code="60020" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="5 OVERDOSAGE"/>
               <title>5 Overdosage</title>
               <text>
                 <paragraph> sample text </paragraph>
@@ -1571,8 +1571,8 @@
           </component>
           <component>
             <section ID="a63c33a5-e08a-472c-b8a2-a12dba105f7a">
-              <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-              <code code="P1-6" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="a473c162-e176-44d0-b797-2b7b6cf08e43"/>
+              <code code="60021" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="6 DOSAGE FORMS"/>
               <title>6 Dosage Forms, Strengths, Composition and Packaging</title>
               <text>sample text</text>
@@ -1581,8 +1581,8 @@
           </component>
           <component>
             <section ID="a47ddb1b-4d6c-4f0b-97d7-7feb718963e1">
-              <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-              <code code="P1-7" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="a473c162-e176-44d0-b797-2b7b6cfa0e43"/>
+              <code code="60022" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="7 WARNINGS AND PRECAUTIONS"/>
               <title>7 Warnings and Precautions</title>
               <text>
@@ -1591,8 +1591,8 @@
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="e7f348e6-c9c4-43d5-950e-2a754092a1fa">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-7.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473d162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60023" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="7.1 SPECIAL POPULATIONS"/>
                   <title>7.1 Special Populations</title>
                   <text>
@@ -1601,8 +1601,8 @@
                   <effectiveTime value="20180101"/>
                   <component>
                     <section ID="e94dc526-7275-40e3-8386-c43f0018b303">
-                      <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                      <code code="P1-7.1.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                      <id root="a473c162-e176-44d0-b297-2b7b6cf00e43"/>
+                      <code code="60024" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="7.1.1 PREGNANT WOMEN"/>
                       <title>7.1.1 Pregnant Women</title>
                       <text>
@@ -1613,8 +1613,8 @@
                   </component>
                   <component>
                     <section ID="a63c33a5-e08a-472c-b8a2-b12dbd115f7a">
-                      <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                      <code code="P1-7.1.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                      <id root="a473c162-e176-44d0-b797-2b7c6cf00e43"/>
+                      <code code="60025" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="7.1.2 BREAST-FEEDING"/>
                       <title>7.1.2 Breast-feeding</title>
                       <text>
@@ -1625,8 +1625,8 @@
                   </component>
                   <component>
                     <section ID="db71c420-7743-43da-8386-5463a89b0f93">
-                      <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                      <code code="P1-7.1.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                      <id root="a423c162-e176-44d0-b797-2b7b6cf00e43"/>
+                      <code code="60026" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="7.1.3 PEDIATRICS"/>
                       <title>7.1.3 Pediatrics</title>
                       <text>
@@ -1637,8 +1637,8 @@
                   </component>
                   <component>
                     <section ID="ee781ef0-be0c-406f-95f9-1122d8bf9968">
-                      <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                      <code code="P1-7.1.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                      <id root="a473c162-e176-44d0-b797-2b7b6c000e43"/>
+                      <code code="60027" codeSystem="2.16.840.1.113883.2.20.6.60"
                         displayName="7.1.4 GERIATRICS"/>
                       <title>7.1.4 Geriatrics</title>
                       <text>
@@ -1653,8 +1653,8 @@
           </component>
           <component>
             <section ID="fa8186fe-cc41-11e9-a32f-2a2ae2dbcce4">
-              <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-              <code code="P1-8" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="a473c162-e176-44d0-b797-2b7b6cf00e73"/>
+              <code code="60028" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName=" ADVERSE REACTIONS"/>
               <title>8 Adverse Reactions.</title>
               <text>
@@ -1662,9 +1662,9 @@
               </text>
               <effectiveTime value="20180101"/>
               <component>
-                <section ID="b238395c-cc41-11e9-a32f-2a2ae2dbcce4">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                <section ID="b238395c-cc41-11e9-a32f-2a2ae2dbdce4">
+                  <id root="a473c162-e176-44d0-c797-2b7b6cf00e43"/>
+                  <code code="60029" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.1 ADVERSE REACTION OVERVIEW"/>
                   <title>8.1 Adverse Reaction Overview</title>
                   <text>
@@ -1675,8 +1675,8 @@
               </component>
               <component>
                 <section ID="a98b942a-cc41-11e9-a32f-2a2ae2dbcce4">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-4ad0-b797-2b7b6cf00e43"/>
+                  <code code="60030" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.2 CLINICAL TRIAL ADVERSE REACTIONS"/>
                   <title>8.2 Clinical Trial Adverse Reactions</title>
                   <text>
@@ -1687,8 +1687,8 @@
               </component>
               <component>
                 <section ID="a0065926-cc41-11e9-a32f-2a2ae2dbcce4">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a4a3c162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60031" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.3 LESS COMMON CLINICAL TRIAL ADVERSE REACTIONS"/>
                   <title>8.3 Less Common Clinical Trial Adverse Reactions</title>
                   <text>
@@ -1699,8 +1699,8 @@
               </component>
               <component>
                 <section ID="a6d30f16-cc41-11e9-a32f-2a2ae2dbcce4">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a463c162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60032" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.4 ABNORMAL LABORATORY FINDINGS: HEMATOLOGIC"/>
                   <title>8.4 Abnormal Laboratory Findings: Hematologic, Clinical Chemistry and Other
                     Quantitative Data</title>
@@ -1712,8 +1712,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-473c-b8a2-b32dbd215f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473e162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60033" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.5 CLINICAL TRIAL ADVERSE REACTIONS (PEDIATRICS)"/>
                   <title>8.5 Clinical Trial Adverse Reactions (Pediatrics)</title>
                   <text>
@@ -1724,8 +1724,8 @@
               </component>
               <component>
                 <section ID="c2b713f2-cc40-11e9-a32f-2a2ae2dbcce4">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-8.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-3b7b6cf00e43"/>
+                  <code code="60034" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="8.6 POST-MARKET ADVERSE REACTIONS"/>
                   <title>8.6 Post-Market Adverse Reactions</title>
                   <text>
@@ -1738,8 +1738,8 @@
           </component>
           <component>
             <section ID="f3daf956-cc41-11e9-a32f-2a2ae2dbcce4">
-              <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-              <code code="P1-9" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="a473c162-e176-44d0-b797-2b7b6cf00343"/>
+              <code code="60035" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="9 DRUG INTERACTIONS"/>
               <title>9 Drug Interactions</title>
               <text>
@@ -1749,7 +1749,7 @@
               <component>
                 <section ID="be75cfb9-3131-4903-800b-267527398a13">
                   <id root="b8db4be0-3f46-437a-bd7b-4a3e010adaad"/>
-                  <code code="P1-9.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60036" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.1 SERIOUS DRUG INTERACTIONS BOX"/>
                   <title>9.1 Serious Drug Interactions Box</title>
                   <text>
@@ -1760,8 +1760,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-473c-b8a2-b14dbd315f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-9.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-2b7bfcf00e43"/>
+                  <code code="60037" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.2 OVERVIEW"/>
                   <title>9.2 Overview</title>
                   <text>
@@ -1772,8 +1772,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-473c-b8d2-b14dbd315f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-9.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e33"/>
+                  <code code="60038" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.3 DRUG-DRUG INTERACTIONS"/>
                   <title>9.3 Drug-Drug Interactions</title>
                   <text>
@@ -1784,8 +1784,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e0aa-473c-b8a2-b14dbd315f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-9.4" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="d473c162-e176-44d0-b797-2b7b6cf00e43"/>
+                  <code code="60039" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.4 DRUG-FOOD INTERACTIONS"/>
                   <title>9.4 Drug-Food Interactions</title>
                   <text>
@@ -1796,8 +1796,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e08a-47bc-b8d2-b14dbd315f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-9.5" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-94d0-b797-2b7b6cf00e43"/>
+                  <code code="60040" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.5 DRUG-HERB INTERACTIONS"/>
                   <title>9.5 Drug-Herb Interactions</title>
                   <text>
@@ -1809,7 +1809,7 @@
               <component>
                 <section ID="be78cfb9-3131-4903-800b-267527398a13">
                   <id root="b9db4be0-3f46-437a-be7b-4a3e010adaad"/>
-                  <code code="P1-9.6" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <code code="60041" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.6 DRUG-LABORATORY TEST INTERACTIONS"/>
                   <title>9.6 Drug-Laboratory Test Interactions</title>
                   <text>
@@ -1820,8 +1820,8 @@
               </component>
               <component>
                 <section ID="a63c33a5-e0aa-473c-b8a2-b14dcd315f7a">
-                  <id root="a473c162-e176-44d0-b797-2b7b6cf00e43"/>
-                  <code code="P1-9.7" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="a473c162-e176-44d0-b797-2b7b6af00e43"/>
+                  <code code="60042" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="9.7 DRUG-LIFESTYLE INTERACTIONS"/>
                   <title>9.7 Drug-Lifestyle Interactions</title>
                   <text>
@@ -1834,8 +1834,8 @@
           </component>
           <component>
             <section ID="fa324c26-b939-4c3a-901d-516ccc314522">
-              <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-              <code code="P1-10" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="dc0d2dd9-1c53-49dc-bbd3-d6b420d064e9"/>
+              <code code="60043" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="10 ACTION AND CLINICAL PHARMACOLOGY"/>
               <title>10 Action and Clinical Pharmacology</title>
               <text>
@@ -1844,8 +1844,8 @@
               <effectiveTime value="20180101"/>
               <component>
                 <section ID="aa324c26-b939-4c3a-901e-516ccc314522">
-                  <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                  <code code="P1-10.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="dc0d2dd9-1c53-49dc-cad3-d6b420d064e9"/>
+                  <code code="60044" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="10.1 MECHANISM OF ACTION"/>
                   <title>10.1 Mechanism of Action</title>
                   <text>
@@ -1856,8 +1856,8 @@
               </component>
               <component>
                 <section ID="da324c26-b939-4d3a-901e-516ccc314522">
-                  <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                  <code code="P1-10.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="dc0d2dd9-1c53-49dc-bad4-d6b420d064e9"/>
+                  <code code="60045" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="10.2 PHARMACODYNAMICS"/>
                   <title>10.2 Pharmacodynamics</title>
                   <text>
@@ -1868,8 +1868,8 @@
               </component>
               <component>
                 <section ID="ba324c26-b939-4d4a-901e-516ccc314522">
-                  <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-                  <code code="P1-10.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="dc0d2dd9-1c53-49dc-bad3-d6b420d004e9"/>
+                  <code code="60046" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="10.3 PHARMACOKINETICS"/>
                   <title>10.3 Pharmacokinetics</title>
                   <text>
@@ -1883,7 +1883,7 @@
           <component>
             <section ID="aa324d26-c939-443a-901e-526dcc314522">
               <id root="ec0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-              <code code="P1-11" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60047" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="11 STORAGE, STABILITY AND DISPOSAL"/>
               <title>11 Storage, Stability and Disposal</title>
               <text>
@@ -1895,7 +1895,7 @@
           <component>
             <section ID="aa325d26-c939-443a-901e-526dcc314522">
               <id root="cc0d2dd9-1c53-49dc-bad3-d6b420d064e9"/>
-              <code code="P1-12" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60048" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="12 SPECIAL HANDLING INSTRUCTIONS"/>
               <title>12 Special Handling Instructions</title>
               <text>
@@ -1910,14 +1910,14 @@
         <!-- Part II: Scientific Information -->
         <section ID="b6a947eb-e2be-45c0-8b2e-15d0d0eebed8">
           <id root="d91389e0-c234-44d9-8327-91b121723a8f"/>
-          <code code="P2" codeSystem="2.16.840.1.113883.2.20.6.60"
+          <code code="60049" codeSystem="2.16.840.1.113883.2.20.6.60"
             displayName="PART II: SCIENTIFIC INFORMATION"/>
           <title>Part II: Scientific Information</title>
           <effectiveTime value="20170101"/>
           <component>
             <section ID="c2875272-8229-4c12-919e-827854dcd76a">
               <id root="a134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-              <code code="P2-13" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60050" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="13 PHARMACEUTICAL INFORMATION"/>
               <title>13 Pharmaceutical Information</title>
               <text>
@@ -1974,7 +1974,7 @@
           <component>
             <section ID="a3287527-8229-4c12-919e-827854ddd76a">
               <id root="f134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-              <code code="P2-14" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60051" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="14 CLINICAL TRIALS"/>
               <title>14 Clinical Trials</title>
               <text>
@@ -2094,8 +2094,8 @@
               <effectiveTime value="20170101"/>
               <component>
                 <section ID="e3287527-8229-4c12-919e-827854ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="P2-14.1" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d93a"/>
+                  <code code="60052" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="14.1 TRIAL DESIGN AND STUDY DEMOGRAPHICS"/>
                   <title>14.1 Trial Design and Study Demographics</title>
                   <text>
@@ -2106,8 +2106,8 @@
               </component>
               <component>
                 <section ID="a2875272-8229-4c12-919e-827854ddd78a">
-                  <id root="0134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="P2-14.2" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="0134a52c-f9d4-4698-a082-84b29ee3d95a"/>
+                  <code code="60053" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="14.2 STUDY RESULTS"/>
                   <title>14.2 Study Results</title>
                   <text>
@@ -2118,8 +2118,8 @@
               </component>
               <component>
                 <section ID="a4287527-8229-4c12-919e-827954ddd78a">
-                  <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-                  <code code="P2-14.3" codeSystem="2.16.840.1.113883.2.20.6.60"
+                  <id root="c134d52c-f9d4-4698-a082-14b29ee3d95a"/>
+                  <code code="60054" codeSystem="2.16.840.1.113883.2.20.6.60"
                     displayName="14.3 COMPARATIVE BIOAVAILABILITY STUDIES"/>
                   <title>14.3 Comparative Bioavailability Studies</title>
                   <text>
@@ -2140,8 +2140,8 @@
           </component>
           <component>
             <section ID="a2875272-8229-4c12-a19e-827954ddd78a">
-              <id root="c134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-              <code code="P2-15" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="c134d52c-f9d4-4698-a082-84b29eeed95a"/>
+              <code code="60055" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="15 MICROBIOLOGY"/>
               <title>15 Microbiology</title>
               <text>
@@ -2153,7 +2153,7 @@
           <component>
             <section ID="a42a7527-8229-4c12-a19e-827954ddd78a">
               <id root="d134d52c-f9d4-4698-a082-84b29ee3d95a"/>
-              <code code="P2-16" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <code code="60056" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="16 NON-CLINICAL TOXICOLOGY"/>
               <title>16 Non-clinical Toxicology</title>
               <text>
@@ -2164,8 +2164,8 @@
           </component>
           <component>
             <section ID="b8a4d498-0fc3-4e44-b4b6-550140d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P2-17" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321a381456"/>
+              <code code="60057" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="17 SUPPORTING PRODUCT MONOGRAPHS"/>
               <title>17 Supporting Product Monographs</title>
               <text>
@@ -2179,15 +2179,15 @@
       <component>
         <!-- Part III: Patient Medication Information -->
         <section ID="baa4d498-0fc3-4e44-b4b6-550140d4de5d">
-          <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-          <code code="P3" codeSystem="2.16.840.1.113883.2.20.6.60"
+          <id root="be74b5e6-c431-4a5f-a18e-ed321b381456"/>
+          <code code="60058" codeSystem="2.16.840.1.113883.2.20.6.60"
             displayName="PART III: PATIENT MEDICATION INFORMATION"/>
           <title>Part III: Patient Medication Information</title>
           <effectiveTime value="20170101"/>
           <component>
             <section ID="baa4d498-0fc3-4e44-b4b6-550140dde5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="BRAND NAME"/>
+              <id root="be74b6e6-c431-4a5f-a18e-ede21b381456"/>
+              <code code="60059" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="BRAND NAME"/>
               <title>Brand Name</title>
               <text>
                 <paragraph>
@@ -2203,8 +2203,8 @@
           </component>
           <component>
             <section ID="baa4d498-0fc3-4e44-b4b6-550140d4e5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-2" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be7476e6-c431-4a5f-a18e-ed321b381456"/>
+              <code code="60060" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="PROPER NAME IN FINAL DOSAGE FORMS"/>
               <title>Proper Name in final dosage forms</title>
               <text>
@@ -2215,8 +2215,8 @@
           </component>
           <component>
             <section ID="baa4d498-0gc3-4e44-bcb6-550140d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-3" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b321456"/>
+              <code code="60061" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="WHAT IS MEDICATION USED FOR ?"/>
               <title>What is this medication used for?</title>
               <text>
@@ -2229,8 +2229,8 @@
           </component>
           <component>
             <section ID="bca4d498-0gc3-4e44-bcb6-550140d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-4" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-fd321b381456"/>
+              <code code="60062" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="How does this medication work?"/>
               <title>HOW DOES THIS MEDICATION WORK?</title>
               <text>
@@ -2250,8 +2250,8 @@
           </component>
           <component>
             <section ID="bca4d498-0gc3-4e44-bcb6-55013024de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-5" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a1f-a18e-ed321b381456"/>
+              <code code="60063" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="WHAT ARE THE INGREDIENTS IN THIS MEDICATION?"/>
               <title>What are the ingredients in this medication?</title>
               <text>
@@ -2266,8 +2266,8 @@
           </component>
           <component>
             <section ID="bca4d498-0gc3-4e54-bcb6-550130d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-6" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed32bb381456"/>
+              <code code="60064" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="MEDICATION COMES IN THE FOLLOWING DOSAGE FORMS:"/>
               <title>This medication comes in the following dosage forms:</title>
               <text>
@@ -2278,8 +2278,8 @@
           </component>
           <component>
             <section ID="bca4c498-0gc3-4e44-bcb6-550134d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-7" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-445f-a18e-ed321b381456"/>
+              <code code="60065" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="DO NOT USE THIS MEDICATION IF:"/>
               <title>Do not use this medication if:</title>
               <text>
@@ -2334,8 +2334,8 @@
           </component>
           <component>
             <section ID="b6b37351-bbc9-46d9-b148-27ba3cb0a75e">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-8" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b281456"/>
+              <code code="60066" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="TO HELP AVOID SIDE EFFECTS AND ENSURE PROPER USE, TALK TO YOUR HEALTHCARE PROFESSIONAL BEFORE YOU TAKE MEDICATION. TALK ABOUT ANY HEALTH CONDITIONS OR PROBLEMS YOU MAY HAVE, INCLUDING IF YOU:"/>
               <title>To help avoid side effects and ensure proper use, talk to your healthcare
                 professional before you take this medication. Talk about any health conditions or
@@ -2348,8 +2348,8 @@
           </component>
           <component>
             <section ID="edac0d6f-3c91-48b5-99c0-e0f940925d37">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-9" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b181456"/>
+              <code code="60067" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="OTHER WARNINGS YOU SHOULD KNOW ABOUT:"/>
               <title>Other warnings you should know about:</title>
               <text>
@@ -2360,8 +2360,8 @@
           </component>
           <component>
             <section ID="f040bb1e-8989-42c8-82dc-53a855e88f0f">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-10" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b301456"/>
+              <code code="60068" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="TELL YOUR HEALTHCARE PROFESSIONAL ABOUT ALL THE MEDICINES YOU TAKE, INCLUDING ANY DRUGS, VITAMINS, MINERALS, NATURAL SUPPLEMENTS OR ALTERNATIVE MEDICINES."/>
               <title>Tell your healthcare professional about all the medicines you take, including
                 any drugs, vitamins, minerals, natural supplements or alternative medicines.</title>
@@ -2373,8 +2373,8 @@
           </component>
           <component>
             <section ID="bca40498-0gc3-4e44-bcb6-550134d4de5d">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-11" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b301456"/>
+              <code code="60069" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="THE FOLLOWING MAY INTERACT WITH MEDICATION:"/>
               <title>The following may interact with medication:</title>
               <text>
@@ -2428,8 +2428,8 @@
           </component>
           <component>
             <section ID="e23321cd-5111-4aa3-b650-74f93bcda261">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-12" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed324b381456"/>
+              <code code="60070" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="HOW TO TAKE THIS MEDICATION:"/>
               <title>How to take this medication:</title>
               <text>
@@ -2444,8 +2444,8 @@
           </component>
           <component>
             <section ID="cd0892a2-0e32-4fb7-9cc9-1bbfff60dee7">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-13" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="USUAL DOSE:"/>
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b371456"/>
+              <code code="60071" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="USUAL DOSE:"/>
               <title>Usual dose:</title>
               <text>
                 <paragraph> The usual dose of TWYNSTA is one tablet once a day. <br/><br/> If your
@@ -2457,8 +2457,8 @@
           </component>
           <component>
             <section ID="beaaa5b8-6693-4d4c-a897-fa5c9562b1be">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-14" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="OVERDOSE:"/>
+              <id root="be74b6e6-c431-4aaf-a18e-ed321b381456"/>
+              <code code="60072" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="OVERDOSE:"/>
               <title>Overdose:</title>
               <text>
                 <table ID="t2" border="1" cellpadding="6" cellspacing="1" width="80%">
@@ -2478,8 +2478,8 @@
           </component>
           <component>
             <section ID="ffd59b8d-fe66-4d86-a54f-0613d4168199">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-15" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MISSED DOSE:"/>
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b3b1456"/>
+              <code code="60073" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MISSED DOSE:"/>
               <title>Missed Dose:</title>
               <text>
                 <paragraph> If you have forgotten to take your dose during the day, carry on with
@@ -2490,8 +2490,8 @@
           </component>
           <component>
             <section ID="cb61f530-b95a-4047-b8ea-861c5a7a05e8">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-16" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b301456"/>
+              <code code="60074" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="WHAT ARE POSSIBLE SIDE EFFECTS FROM USING MEDICATION?"/>
               <title>What are possible side effects from using medication?</title>
               <text>
@@ -2531,8 +2531,8 @@
           </component>
           <component>
             <section ID="ee37dfa5-6d8c-4490-b4a5-c6f2d73aa041">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-17" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-eda21b381456"/>
+              <code code="60075" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="SERIOUS SIDE EFFECTS AND WHAT TO DO ABOUT THEM"/>
               <title>Serious side effects and what to do about them</title>
               <text>
@@ -2543,8 +2543,8 @@
           </component>
           <component>
             <section ID="c9d75711-2ce9-451e-aa51-91026ec1555e">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-18" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="STORAGE:"/>
+              <id root="be74b6e6-c431-4a5f-a18e-ed321ba81456"/>
+              <code code="60076" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="STORAGE:"/>
               <title>Storage:</title>
               <text>
                 <paragraph>Keep out of reach and sight of children. <br/><br/> Do not use TWYNSTA
@@ -2579,8 +2579,8 @@
           </component>
           <component>
             <section ID="f6693e7a-21c9-492f-833b-4e8f3911d3a5">
-              <id root="be74b6e6-c431-4a5f-a18e-ed321b381456"/>
-              <code code="P3-19" codeSystem="2.16.840.1.113883.2.20.6.60"
+              <id root="be74b6e6-c431-4a5f-a18e-ed321b380456"/>
+              <code code="60077" codeSystem="2.16.840.1.113883.2.20.6.60"
                 displayName="IF YOU WANT MORE INFORMATION ABOUT MEDICATION:"/>
               <title>If you want more information about medication:</title>
               <text>

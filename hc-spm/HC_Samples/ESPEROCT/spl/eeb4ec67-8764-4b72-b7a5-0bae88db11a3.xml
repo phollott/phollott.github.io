@@ -3,7 +3,7 @@
 <document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="urn:hl7-org:v3 https://raw.githubusercontent.com/HealthCanada/HPFB/master/Structured-Product-Labeling-(SPL)/Schema/current/SPL.xsd">
   <templateId extension="NDS" root="2.16.840.1.113883.2.20.6.37"/>
-  <id root="ff363dae-0612-4be7-bb92-a8381fa1da35"/>
+  <id root="eeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
   <code code="1" codeSystem="2.16.840.1.113883.2.20.6.10"
     displayName="2016 PRODUCT MONOGRAPH TEMPLATE - STANDARD"/>
   <title> ESPEROCT<sup>®</sup>
@@ -15,7 +15,7 @@
     <originalText description="Date of Initial Approval">20190704</originalText>
   </effectiveTime>
   <languageCode code="1" codeSystem="2.16.840.1.113883.2.20.6.29" displayName="ENGLISH"/>
-  <setId root="eeb4ec67-8764-4b72-b7a5-0bae88db11a3"/>
+  <setId root="d3b4ec67-c764-ab72-66a5-0bae88db11a3"/>
   <versionNumber value="1"/>
   <author>
     <!--Organization Information-->
@@ -30,7 +30,7 @@
             <city>Mississauga</city>
             <state>Ontario</state>
             <postalCode>L5N 6M1</postalCode>
-            <country code="1" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
+            <country code="CAN" codeSystem="2.16.840.1.113883.2.20.6.17" displayName="CANADA"/>
           </addr>
           <telecom value="tel:+18662342345"/>
           <telecom value="mailto:test@novonordisk.ca"/>
@@ -47,7 +47,7 @@
         <!-- Manufactured Product Information -->
         <section ID="f6ac9de5-be91-442c-9579-5bc9ebd36902">
           <id root="bdeefc11-4315-41e3-8c56-83e8bf4f770b"/>
-          <code code="1" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
+          <code code="MP" codeSystem="2.16.840.1.113883.2.20.6.60" displayName="MANUFACTURED PRODUCT"/>
           <effectiveTime value="20190704"/>
           <subject>
             <manufacturedProduct>
@@ -95,14 +95,14 @@
                         <denominator value="1" unit="1"/>
                       </quantity>
                       <ingredientSubstance>
-                        <code code="11907" codeSystem="2.16.840.1.113883.2.20.6.14"
-                          displayName="turoctocog alfa pegol"/>
-                        <name>turoctocog alfa pegol</name>
+                        <code code="22548" codeSystem="2.16.840.1.113883.2.20.6.14"
+                          displayName="TUROCTOCOG ALFA"/>
+                        <name>TUROCTOCOG ALFA</name>
                         <activeMoiety>
                           <activeMoiety>
                             <code code="xx" codeSystem="2.16.840.1.113883.2.20.6.14"
-                              displayName="turoctocog alfa pegol"/>
-                            <name>turoctocog alfa pegol</name>
+                              displayName="TUROCTOCOG ALFA"/>
+                            <name>TUROCTOCOG ALFAl</name>
                           </activeMoiety>
                         </activeMoiety>
                       </ingredientSubstance>
@@ -303,7 +303,7 @@
                   <!--Characteristics of this product-->
                   <subjectOf>
                     <characteristic>
-                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT CLASS"/>
+                      <code code="1" codeSystem="2.16.840.1.113883.2.20.6.23" displayName="PRODUCT TYPE"/>
                       <value code="1" codeSystem="2.16.840.1.113883.2.20.6.53"
                         displayName="PHARMACEUTICAL" xsi:type="CV">
                         <originalText>PHARMACEUTICAL</originalText>

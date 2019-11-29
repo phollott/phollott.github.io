@@ -248,6 +248,20 @@
 				.TitlePage h2 { text-align: center !important; }
 				.TitlePage h3 { text-align: center !important; }
 
+				/* FDA fonts override - temporary
+				.spl {
+					font-family: 'Rubik, sans-serif;
+				}
+				.spl div.Section h1 {	
+					font-family: 'Rubik', sans-serif;
+				}
+				.spl h2 {	
+					font-family: 'Rubik', sans-serif;
+				}
+				.spl div.Highlights {
+					font-family: 'Rubik', sans-serif;
+				} */
+
 				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
 				 * This is partly due to trying to put the first section on its own page.
 				 */
@@ -274,7 +288,7 @@
 					#side { max-width: 420px; min-width: 420px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
-					.Section > h1 {display: none; }
+					.Section > h1 {display: none; }					
 				}
 				
 			</style>

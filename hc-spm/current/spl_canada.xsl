@@ -684,25 +684,44 @@
 									</div>
 								</section>
 							</xsl:when>
-							<xsl:when test="v3:code[@code='2']|v3:code[@code='TP']">
-								<!-- TODO REMOVE LEGACY TITLE PAGE -->
-								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
-									<h5 class="card-header text-white bg-aurora-accent1">
-										<xsl:value-of select="v3:code/@displayName"/>
-									</h5>
-									<div class="spl TitlePage">
-										<xsl:apply-templates select="."/>
-									</div>
-								</section>
-							</xsl:when>
 							<xsl:when test="$tri-code-value = '001'">
 								<!-- TITLE PAGE -->
 								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
-									<div class="spl TitlePage">
+									<div class="spl TitlePage hide-in-print">
 										<xsl:apply-templates select="."/>
+									</div>
+									<div class="spl TitlePage p-5 hide-in-screen">
+										<xsl:for-each select="v3:component[1]/v3:section">
+											<xsl:apply-templates select="v3:title"/>
+											<xsl:apply-templates select="v3:text"/>
+										</xsl:for-each>
+									</div>
+									<div class="spl container p-5 hide-in-screen">
+									  <div class="row">
+										<div class="col-6 offset-1">
+											<xsl:for-each select="v3:component[2]/v3:section">
+												<xsl:apply-templates select="v3:title"/>
+												<xsl:apply-templates select="v3:text"/>
+											</xsl:for-each>
+										</div>
+										<div class="col-5">
+											<xsl:for-each select="v3:component[3]/v3:section">
+												<xsl:apply-templates select="v3:title"/>
+												<xsl:apply-templates select="v3:text"/>
+											</xsl:for-each>
+											<xsl:for-each select="v3:component[4]/v3:section">
+												<xsl:apply-templates select="v3:title"/>
+												<xsl:apply-templates select="v3:text"/>
+											</xsl:for-each>
+											<xsl:for-each select="v3:component[5]/v3:section">
+												<xsl:apply-templates select="v3:title"/>
+												<xsl:apply-templates select="v3:text"/>
+											</xsl:for-each>
+										</div>
+									  </div>
 									</div>
 								</section>
 							</xsl:when>
