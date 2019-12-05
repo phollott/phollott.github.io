@@ -700,7 +700,7 @@
 											<xsl:apply-templates select="v3:text"/>
 										</xsl:for-each>
 									</div>
-									<div class="spl container p-5 hide-in-screen">
+									<div class="spl container p-5">
 									  <div class="row">
 										<div class="col-6">
 											<xsl:for-each select="v3:component[2]/v3:section">
