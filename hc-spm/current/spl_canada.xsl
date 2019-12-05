@@ -690,10 +690,11 @@
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
+									<!-- Removing separate Title Page Rendering for screen
 									<div class="spl TitlePage hide-in-print">
 										<xsl:apply-templates select="."/>
-									</div>
-									<div class="spl TitlePage p-5 hide-in-screen">
+									</div> -->
+									<div class="spl TitlePage p-5">
 										<xsl:for-each select="v3:component[1]/v3:section">
 											<xsl:apply-templates select="v3:title"/>
 											<xsl:apply-templates select="v3:text"/>
@@ -701,13 +702,13 @@
 									</div>
 									<div class="spl container p-5 hide-in-screen">
 									  <div class="row">
-										<div class="col-6 offset-1">
+										<div class="col-6">
 											<xsl:for-each select="v3:component[2]/v3:section">
 												<xsl:apply-templates select="v3:title"/>
 												<xsl:apply-templates select="v3:text"/>
 											</xsl:for-each>
 										</div>
-										<div class="col-5">
+										<div class="col-6">
 											<xsl:for-each select="v3:component[3]/v3:section">
 												<xsl:apply-templates select="v3:title"/>
 												<xsl:apply-templates select="v3:text"/>
