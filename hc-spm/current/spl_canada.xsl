@@ -18,7 +18,8 @@
 			<xsl:when test="v3:document/v3:languageCode[@code='2']">fr</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:output method="html" encoding="iso-8859-1" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
+<!--	<xsl:output method="html" encoding="iso-8859-1" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/> -->
+	<xsl:output method="html" encoding="UTF-8" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
     <xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
     <xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
 	<xsl:variable name="alphanumeric" select="'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-'"/>
@@ -686,7 +687,7 @@
 							</xsl:when>
 							<xsl:when test="$tri-code-value = '001'">
 								<!-- TITLE PAGE - Note: force-page-break here does not work on FireFox -->
-								<div class="card mb-2 force-page-break" id="{$unique-section-id}">
+								<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
@@ -724,7 +725,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</section>
 							</xsl:when>
 							<xsl:otherwise>
 								<!-- NAVIGATION FOR DIFFERENT PARTS -->								
