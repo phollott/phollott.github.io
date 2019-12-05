@@ -18,7 +18,6 @@
 			<xsl:when test="v3:document/v3:languageCode[@code='2']">fr</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
-<!--	<xsl:output method="html" encoding="iso-8859-1" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/> -->
 	<xsl:output method="html" encoding="UTF-8" version="4.0" doctype-public="-//W3C//DTD HTML 4.01//EN" indent="no"/>
     <xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
     <xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
@@ -691,11 +690,7 @@
 									<h5 class="card-header text-white bg-aurora-accent1">
 										<xsl:value-of select="v3:code/@displayName"/>
 									</h5>
-									<!-- Removing separate Title Page Rendering for screen
-									<div class="spl TitlePage hide-in-print">
-										<xsl:apply-templates select="."/>
-									</div> -->
-									<div class="spl TitlePage p-5">
+									<div class="spl TitlePage p-3">
 										<xsl:for-each select="v3:component[1]/v3:section">
 											<xsl:apply-templates select="v3:title"/>
 											<xsl:apply-templates select="v3:text"/>
