@@ -77,7 +77,7 @@
 									<xsl:when test="v3:code[@code='1']|v3:code[@code='MP']">
 										<!-- PRODUCT DETAIL NAVIGATION -->
 										<li class="nav-item">
-											<a href="#drop-{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
+											<a href="#drop-{$unique-section-id}" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">
 												<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 											</a>
 											<ul id="drop-{$unique-section-id}" 
@@ -94,7 +94,7 @@
 									<!-- TITLE PAGE OR RECENT MAJOR LABEL CHANGE NAVIGATION -->
 									<xsl:when test="$tri-code-value = '001' or $tri-code-value = '007'">
 										<li class="nav-item">
-											<a href="#{$unique-section-id}" class="nav-link">
+											<a href="#{$unique-section-id}" class="nav-link nav-top">
 												<xsl:value-of select="v3:code/@displayName"/>
 											</a>
 										</li>
@@ -102,7 +102,7 @@
 									<!-- LEGACY - REMOVE WHEN THESE CODES ARE FULLY DEPRECATED -->
 									<xsl:when test="v3:code[@code='TP']|v3:code[@code='RMLC']">
 										<li class="nav-item">
-											<a href="#{$unique-section-id}" class="nav-link">
+											<a href="#{$unique-section-id}" class="nav-link nav-top">
 												<xsl:value-of select="v3:code/@displayName"/>
 											</a>
 										</li>
@@ -110,7 +110,7 @@
 									<xsl:otherwise>
 										<!-- NAVIGATION FOR DIFFERENT PARTS -->
 										<li class="nav-item">
-											<a href="#drop-{$unique-section-id}" class="nav-link dropdown-toggle" data-toggle="collapse">
+											<a href="#drop-{$unique-section-id}" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">
 												<xsl:value-of select="v3:code/@displayName"/>
 											</a>
 											<xsl:if test="v3:component/v3:section">
@@ -227,8 +227,7 @@
 				}
 				
 				<!-- this french language reduction reduces only the top level navigation -->
-<!--				<xsl:if test="$lang='fr'">#navigation-sidebar > .nav-item > .nav-link { font-size: 75%; }</xsl:if> -->
-				<xsl:if test="$lang='fr'">#side .nav-link { font-size: 75%; }</xsl:if>				
+				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
