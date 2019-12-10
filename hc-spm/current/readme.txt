@@ -62,8 +62,8 @@ be internationalized. These are necessary for any fields that are Required but n
    require any of the common FDA elements.
    
  - We are currently referencing FDA, Bootstrap and some local CSS. In the final version, there will 
-   only be a requirement for two CSS files, the bootstrap.css, and a separate CSS file, which blends 
-   .spl classes with aurora classes and some scaffolding for our screen and print views.
+   only be a requirement for two CSS files, the bootstrap.css, and a separate spl_canada.css file, 
+   which blends .spl classes with aurora classes and some scaffolding for our screen and print views.
    
  - We are currently working with CSS3 Paged Media to support a print view, as opposed to using XSL:FO
    to generate a separate PDF document. Both are viable options, but Paged Media is a simplied approach.

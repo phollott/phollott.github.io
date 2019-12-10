@@ -1,0 +1,314 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"><head xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="documentId" content="ceb4ec67-8764-4b72-b7a5-0bae88db11a3"></meta><meta name="documentSetId" content="dfb4ec67-8764-4372-b7a5-0bae12db11a3"></meta><meta name="documentVersionNumber" content="1"></meta><meta name="documentEffectiveTime" content=""></meta><title>AFLURIA®TETRA  Quadrivalent Inactivated Influenza Vaccine (Split
+    Virion) 20XX/20XX Strains: A/Official strain (H1N1)-like virus A/Official
+    strain (H3N2)-like virus B/Official strain-like virus B/Official strain-like
+    virus Suspension for Injection Active Immunizing Agent for the Prevention of
+    Influenza ATC Code: J07B B</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link><link rel="stylesheet" type="text/css" href="http://www.accessdata.fda.gov/spl/stylesheet/spl.css"></link><style>
+				/* ScrollSpy and Navigation */
+			  
+				html {
+					scroll-behavior: smooth;
+				}
+				
+				#side .nav-link.active,
+				#side .nav-link:hover,
+				#side .nav-link:focus{
+					color: #4D5D6C;
+				}
+				
+				
+								
+				
+				.sticky {
+				  position: -webkit-sticky;
+				  position: sticky;
+				  top: 0;
+				}
+				img { max-width: 100%; height: auto; }					
+
+				/* Aurora Swatches 
+				 * These should really be called bg-aurora-primary and bg-aurora-accent1
+				 */
+
+				.bg-aurora-accent1 { background-color: #002D42;	}
+				.bg-aurora-accent2 { background-color: #4D5D6C;	}
+				.bg-aurora-light   { background-color: #CECECE;	}
+
+				.TitlePage p  { text-align: center !important; }
+				.TitlePage h1 { text-align: center !important; }
+				.TitlePage h2 { text-align: center !important; }
+				.TitlePage h3 { text-align: center !important; }
+
+				/* FDA fonts override - temporary
+				.spl {
+					font-family: 'Rubik, sans-serif;
+				}
+				.spl div.Section h1 {	
+					font-family: 'Rubik', sans-serif;
+				}
+				.spl h2 {	
+					font-family: 'Rubik', sans-serif;
+				}
+				.spl div.Highlights {
+					font-family: 'Rubik', sans-serif;
+				} */
+
+				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
+				 * This is partly due to trying to put the first section on its own page.
+				 */
+				@media print {	
+
+					.hide-in-print { display: none !important; }		
+					.force-page-break { page-break-after: always; }
+					.suppress-page-break { page-break-after: avoid; }
+					.card { border-width: 0 !important; }
+					.card-header { display: none !important; }
+					
+					/* overriding FDA tables so they look nicer in print */
+					.spl .formTable { 					border: 1px solid #CCCCCC !important;	}
+					.spl .formTablePetite {				border: 1px solid #CCCCCC !important;	}
+					.spl .formTableMorePetite {			border: 1px solid #CCCCCC !important;	}
+					.spl .formTitle {					border: 1px solid #CCCCCC !important;	}
+					.spl .formHeadingReg {				border: 1px solid #CCCCCC !important;	}
+					.spl .formLabel {					border: 1px solid #CCCCCC !important;	}
+					.spl .formItem {					border: 1px solid #CCCCCC !important;	}
+				}
+				
+				@media screen {
+					.hide-in-screen { display: none; }
+					#side { max-width: 420px; min-width: 420px; }
+					#navigation-sidebar li { padding-left: 10px !important; }
+					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
+					.Section &gt; h1 {display: none; }					
+				}
+				
+			</style></head><body data-spy="scroll" data-target="#navigation-sidebar" data-offset="1"><div class="bg-aurora-accent1 hide-in-print"><h2 class="text-white text-center p-2">AFLURIA<sup xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">®</sup>TETRA <br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br><br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> Quadrivalent Inactivated Influenza Vaccine (Split
+    Virion)<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br><br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> 20XX/20XX Strains:<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> A/Official strain (H1N1)-like virus<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> A/Official
+    strain (H3N2)-like virus<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> B/Official strain-like virus<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> B/Official strain-like
+    virus<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br><br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> Suspension for Injection<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br><br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> Active Immunizing Agent for the Prevention of
+    Influenza<br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br><br xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></br> ATC Code: J07B B</h2></div><div class="container-fluid position-relative" id="content"><div class="row h-100"><aside xmlns="http://www.w3.org/1999/xhtml" class="bg-aurora-light hide-in-print" id="left"><div class="sticky-top sticky d-none d-md-block hide-in-print" id="side"><section class="card"><h5 class="card-header text-white bg-aurora-accent1">TABLE OF CONTENTS</h5><div style="transform: scaleX(-1);" id="navigation-scrollbar"><ul class="navbar-nav" id="navigation-sidebar" style="transform: scaleX(-1); "><li class="nav-item"><a href="#drop-f6ac9de5-be91-442c-9579-5bc9ebd36902" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">PRODUCT DETAILS</a><ul id="drop-f6ac9de5-be91-442c-9579-5bc9ebd36902" class="navbar-nav small collapse"><li class="nav-item"><a href="#company-details" class="nav-link active">COMPANY DETAILS</a></li><li class="nav-item"><a href="#product-1" class="nav-link">Product #1 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</a></li><li class="nav-item"><a href="#product-2" class="nav-link">Product #2 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</a></li></ul></li><li class="nav-item"><a href="#d8d30d86-e343-48f4-9cec-524834b3803b" class="nav-link nav-top">TITLE PAGE</a></li><li class="nav-item"><a href="#a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1" class="nav-link nav-top">RECENT MAJOR LABEL CHANGES</a></li><li class="nav-item"><a href="#drop-b16a947e-e2be-45c0-8b2e-15d0d0eebea8" class="nav-link nav-top dropdown-toggle" data-toggle="collapse">PART I: HEALTH PROFESSIONAL INFORMATION</a><ul id="drop-b16a947e-e2be-45c0-8b2e-15d0d0eebea8" class="navbar-nav small collapse"><li class="nav-item"><a href="#e2ea4fad-2b79-4dbc-8d99-6843adc2dec8" class="nav-link">1 INDICATIONS</a><ul class="navbar-nav"><li class="nav-item"><a href="#f2aa7e0e-2042-4a4c-a783-9ad4e8717a32" class="nav-link">1.1 PEDIATRICS</a></li></ul></li><li class="nav-item"><a href="#dbe75cfb-3131-4903-800b-367427388a13" class="nav-link">2 CONTRAINDICATIONS</a></li></ul></li></ul></div></section></div></aside><main class="col"><div class="row position-relative"><div class="col"><section class="card mb-2 hide-in-print" id="f6ac9de5-be91-442c-9579-5bc9ebd36902"><h5 class="card-header text-white bg-aurora-accent1">PRODUCT DETAILS</h5><div id="product-accordion"><section xmlns="http://www.w3.org/1999/xhtml" class="card m-2" id="company-details"><h6 class="card-header p-0 bg-aurora-accent2"><button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" data-toggle="collapse" data-target="#collapse-company-details" aria-expanded="true" aria-controls="collapse-company-details">COMPANY DETAILS</button></h6><div id="collapse-company-details" class="collapse show spl" data-parent="#product-accordion"><table xmlns="" width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Market Authorization Holder -&nbsp;</span>Seqirus Pty Ltd (xx)</td></tr><tr><th scope="col" class="formTitle">Contact Address</th><th scope="col" class="formTitle">Additional Contact Information</th></tr><tr class="formTableRowAlt"><td class="formItem"><table><tr><td>63 Poplar Road</td></tr><tr><td>Parkville,&nbsp;Victoria,&nbsp;3052</td></tr><tr><td>AUSTRALIA</td></tr></table></td><td class="formItem"><div>Tel: +18553588966</div><div>Email: customerservice.us@seqirus.com</div><div>Web: http://www.seqirus.com</div></td></tr></table><table xmlns="" width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Canadian Importer/Distributor -&nbsp;</span>Seqirus Canada Inc. (xx)</td></tr><tr><th scope="col" class="formTitle">Contact Address</th><th scope="col" class="formTitle">Additional Contact Information</th></tr><tr class="formTableRowAlt"><td class="formItem"><table><tr><td>6766 TransCanada Highway, Suite 504</td></tr><tr><td>Kirkland,&nbsp;Quebec,&nbsp;H9H 4M7</td></tr><tr><td>CANADA</td></tr></table></td><td class="formItem"><div>Tel: +18443928582</div><div>Email: ca.medicalinformation@seqirus.com</div><div>Web: http://www.seqirus.ca</div></td></tr></table></div></section><section xmlns="http://www.w3.org/1999/xhtml" class="card m-2" id="product-1"><h6 class="card-header p-0 bg-aurora-accent2"><button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" data-toggle="collapse" data-target="#collapse-product-1" aria-expanded="true" aria-controls="collapse-product-1">Product #1 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</button></h6><div id="collapse-product-1" class="collapse spl" data-parent="#product-accordion"><table xmlns="" class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="contentTableTitle"><strong>AFLURIA&nbsp;		
+					</strong><br><span class="contentTableReg">influenza a/brisbane/02/2018 (h1n1)pdm09-like virus (a/ brisbane/02/2018
+                      (ivr-190)), influenza a/kansas/14/2017 (h3n2)-like virus
+                      (a/kansas/14/2017(x-327)), influenza b/colorado/06/2017-like virus
+                      (b/maryland/15/2016), influenza b/phuket/3073/2013-like virus
+                      (b/phuket/3073/2013 (bvr-1b)) injection, suspension</span></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Product Information</td></tr><tr class="formTableRowAlt"><td class="formLabel">Brand Name</td><td class="formItem">AFLURIA</td></tr><tr class="formTableRow"><td class="formLabel">Non-Proprietary Name</td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</td></tr><tr class="formTableRowAlt"><td class="formLabel">Drug Identification Number (DIN)</td><td class="formItem">123456</td></tr><tr class="formTableRow"><td class="formLabel">Route of Administration</td><td class="formItem">ORAL</td></tr><tr class="formTableRowAlt"><td class="formLabel">Dosage Form</td><td class="formItem">INJECTION, SUSPENSION</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="3" class="formHeadingTitle">Active Ingredient/Active Moiety</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Basis of Strength</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx1a)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx1b) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</strong> (xx2a)  (INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327)) - xx2b) </td><td class="formItem">INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</strong> (xx3a)  (INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016) - xx3b) </td><td class="formItem">INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</strong> (xx4a)  (INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B)) - xx4b) </td><td class="formItem">INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Inactive Ingredients</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>CALCIUM CHLORIDE</strong> (1) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</strong> (2) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>MONOBASIC POTASSIUM PHOSPHATE</strong> (3) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>POTASSIUM CHLORIDE</strong> (4) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>SODIUM CHLORIDE</strong> (5) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>WATER FOR INJECTION</strong> (6) </td><td class="formItem">&nbsp;</td></tr></table></td></tr><tr><td><table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="formHeadingTitle" colspan="2">Product Characteristics</td></tr><tr class="formTableRow"><td class="formLabel">Product Type</td><td class="formItem">BIOLOGIC</td></tr><tr class="formTableRowAlt"><td class="formLabel">Colour</td><td class="formItem">CLEAR (slightly opaque)</td></tr><tr class="formTableRow"><td class="formLabel">Shape</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Size</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Score</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Imprint</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Flavour</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Combination Product</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Pharmaceutical Standard</td><td class="formItem">USP</td></tr><tr class="formTableRowAlt"><td class="formLabel">Schedule</td><td class="formItem">SCHEDULE D</td></tr><tr class="formTableRow"><td class="formLabel">Therapeutic Class</td><td class="formItem">ACTIVE IMMUNIZING AGENT</td></tr></tbody></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="5" class="formHeadingTitle">Packaging</td></tr><tr><th scope="col" width="1" class="formTitle">#</th><th scope="col" class="formTitle">Package Identifier</th><th scope="col" class="formTitle">Package Description</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><th scope="row" class="formItem">1</th><td class="formItem">ABC-1234<br>ABC-1234<br></td><td class="formItem">10 &nbsp;in&nbsp;1 CARTON<br>0.5 mL&nbsp;in&nbsp;1 SYRINGE, GLASS<br></td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr><tr><td></td></tr><tr><td class="normalizer"><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Regulatory Status</span></td></tr><tr><th scope="col" class="formTitle">Regulatory Activity Type</th><th scope="col" class="formTitle">Control Number</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><td class="formItem">NDS</td><td class="formItem">230311</td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr></tbody></table></div></section><section xmlns="http://www.w3.org/1999/xhtml" class="card m-2" id="product-2"><h6 class="card-header p-0 bg-aurora-accent2"><button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" data-toggle="collapse" data-target="#collapse-product-2" aria-expanded="true" aria-controls="collapse-product-2">Product #2 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</button></h6><div id="collapse-product-2" class="collapse spl" data-parent="#product-accordion"><table xmlns="" class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="contentTableTitle"><strong>AFLURIA&nbsp;		
+					</strong><br><span class="contentTableReg">influenza a/brisbane/02/2018 (h1n1)pdm09-like virus (a/ brisbane/02/2018
+                      (ivr-190)), influenza a/kansas/14/2017 (h3n2)-like virus
+                      (a/kansas/14/2017(x-327)), influenza b/colorado/06/2017-like virus
+                      (b/maryland/15/2016), influenza b/phuket/3073/2013-like virus
+                      (b/phuket/3073/2013 (bvr-1b)) injection, suspension</span></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Product Information</td></tr><tr class="formTableRowAlt"><td class="formLabel">Brand Name</td><td class="formItem">AFLURIA</td></tr><tr class="formTableRow"><td class="formLabel">Non-Proprietary Name</td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</td></tr><tr class="formTableRowAlt"><td class="formLabel">Drug Identification Number (DIN)</td><td class="formItem">12345600</td></tr><tr class="formTableRow"><td class="formLabel">Route of Administration</td><td class="formItem">SOFT TISSUE INJECTION</td></tr><tr class="formTableRowAlt"><td class="formLabel">Dosage Form</td><td class="formItem">INJECTION, SUSPENSION</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="3" class="formHeadingTitle">Active Ingredient/Active Moiety</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Basis of Strength</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx1a)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx1b) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</strong> (xx2a)  (INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327)) - xx2b) </td><td class="formItem">INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</strong> (xx3a)  (INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016) - xx3b) </td><td class="formItem">INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</strong> (xx4a)  (INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B)) - xx4b) </td><td class="formItem">INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Inactive Ingredients</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>CALCIUM CHLORIDE</strong> (1) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</strong> (2) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>MONOBASIC POTASSIUM PHOSPHATE</strong> (3) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>POTASSIUM CHLORIDE</strong> (4) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>SODIUM CHLORIDE</strong> (5) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>THIMEROSAL</strong> (6) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>WATER FOR INJECTION</strong> (7) </td><td class="formItem">&nbsp;</td></tr></table></td></tr><tr><td><table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="formHeadingTitle" colspan="2">Product Characteristics</td></tr><tr class="formTableRow"><td class="formLabel">Product Type</td><td class="formItem">BIOLOGIC</td></tr><tr class="formTableRowAlt"><td class="formLabel">Colour</td><td class="formItem">CLEAR (slightly opaque)</td></tr><tr class="formTableRow"><td class="formLabel">Shape</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Size</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Score</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Imprint</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Flavour</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Combination Product</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Pharmaceutical Standard</td><td class="formItem">USP</td></tr><tr class="formTableRowAlt"><td class="formLabel">Schedule</td><td class="formItem">SCHEDULE D</td></tr><tr class="formTableRow"><td class="formLabel">Therapeutic Class</td><td class="formItem">ACTIVE IMMUNIZING AGENT</td></tr></tbody></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="5" class="formHeadingTitle">Packaging</td></tr><tr><th scope="col" width="1" class="formTitle">#</th><th scope="col" class="formTitle">Package Identifier</th><th scope="col" class="formTitle">Package Description</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><th scope="row" class="formItem">1</th><td class="formItem">ABC-1234<br>ABC-1234<br></td><td class="formItem">1 &nbsp;in&nbsp;1 CARTON<br>5 mL&nbsp;in&nbsp;1 VIAL, MULTI-DOSE<br></td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr><tr><td></td></tr><tr><td class="normalizer"><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Regulatory Status</span></td></tr><tr><th scope="col" class="formTitle">Regulatory Activity Type</th><th scope="col" class="formTitle">Control Number</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><td class="formItem">NDS</td><td class="formItem">230311</td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr></tbody></table></div></section></div></section><section class="card mb-2 force-page-break" id="d8d30d86-e343-48f4-9cec-524834b3803b"><h5 class="card-header text-white bg-aurora-accent1">TITLE PAGE</h5><div class="spl TitlePage p-3"><h2>TITLE</h2><p class="First"> AFLURIA<span class="Sup">®</span>TETRA <br><br> Quadrivalent Inactivated Influenza
+                  Vaccine (Split Virion)<br><br> 20XX/20XX Strains:<br> A/Official strain
+                  (H1N1)-like virus<br> A/Official strain (H3N2)-like virus<br> B/Official
+                  strain-like virus<br> B/Official strain-like virus<br><br> Suspension for
+                  Injection<br><br> Active Immunizing Agent for the Prevention of
+                  Influenza<br><br> ATC Code: J07B B</p></div><div class="spl container p-5"><div class="row"><div class="col-6"><h2>COMPANY NAME AND ADDRESS</h2><p class="First"><span class="Bold">Sponsor:</span><br> Seqirus Pty Ltd<br> 63
+                  Poplar Road<br> Parkville VIC 3052<br> Australia </p><p><span class="Bold">Distributed by:</span><br> Seqirus Canada Inc.<br>
+                  16766 TransCanada Highway, Suite 504 Kirkland, Quebec,<br> H9H 4M7 </p></div><div class="col-6"><h2>DATE OF INITIAL APPROVAL</h2><p class="First">20190222</p><h2>DATE OF REVISION</h2><p class="First">20190807</p><h2>CONTROL NUMBER</h2><p class="First">230311</p></div></div></div></section><section class="card mb-2" id="a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1"><h5 class="card-header text-white bg-aurora-accent1">RECENT MAJOR LABEL CHANGES</h5><div class="spl"><div xmlns="http://www.w3.org/1999/xhtml" class="Section" data-sectionCode="60007" id="a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1"><a name="a7cee5c8-7ee9-4fd2-884e-7a50c06b27e1"></a><a name="section-3"></a><p></p><h1 xmlns="">RECENT MAJOR LABEL CHANGES</h1><p xmlns="" class="First"> Section Heading, Subsection heading (Section or Subsection number), yyyymmdd
+            </p></div></div></section><section class="card mb-2" id="b16a947e-e2be-45c0-8b2e-15d0d0eebea8"><h5 class="card-header text-white bg-aurora-accent1">PART I: HEALTH PROFESSIONAL INFORMATION</h5><div class="spl"><div xmlns="http://www.w3.org/1999/xhtml" class="Section" data-sectionCode="60008" id="b16a947e-e2be-45c0-8b2e-15d0d0eebea8"><a name="b16a947e-e2be-45c0-8b2e-15d0d0eebea8"></a><a name="section-4"></a><p></p><h1 xmlns="">PART I: HEALTH PROFESSIONAL INFORMATION</h1><div class="Section" data-sectionCode="60009" id="e2ea4fad-2b79-4dbc-8d99-6843adc2dec8"><a name="e2ea4fad-2b79-4dbc-8d99-6843adc2dec8"></a><a name="section-4.1"></a><p></p><h2 xmlns="">1 INDICATIONS</h2><p xmlns="" class="First">AFLURIA<span class="Sup">®</span> TETRA is indicated for the active immunization of
+                  adults and children aged 5 years or older for the prevention of influenza disease
+                  caused by influenza virus types A and B contained in the vaccine. The National
+                  Advisory Committee on Immunization (NACI) provides additional guidance on the use
+                  of the influenza vaccine in Canada. Please refer to the published Statement on
+                  Seasonal Influenza Vaccine for the current season.</p><div class="Section" data-sectionCode="60010" id="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32"><a name="f2aa7e0e-2042-4a4c-a783-9ad4e8717a32"></a><a name="section-4.1.1"></a><p></p><h3 xmlns="">1.1 PEDIATRICS</h3><p xmlns="" class="First"><span class="Bold">Pediatrics (5 to &lt;18 years):</span>
+                      Based on the data submitted and reviewed by Health Canada, the safety and
+                      efficacy of AFLURIA® TETRA in pediatric patients has been established in
+                      children 5 years of age and older; therefore, Health Canada has authorized an
+                      indication for pediatric use. (See Sections 7.1.3 Pediatrics, 8.3 Clinical
+                      Trial Adverse Reactions (Pediatrics) and 13.2 Study Results).<br><br>
+                      Clinical data have not been evaluated for use of AFLURIA® TETRA in children
+                      under 5 years of age.</p></div></div><div class="Section" data-sectionCode="60011" id="dbe75cfb-3131-4903-800b-367427388a13"><a name="dbe75cfb-3131-4903-800b-367427388a13"></a><a name="section-4.2"></a><p></p><h2 xmlns="">2 CONTRAINDICATIONS</h2><p xmlns="" class="First"> AFLURIA® TETRA is contraindicated in individuals with known severe
+                  allergic reactions (e.g., anaphylaxis) to any component of the vaccine, or to a
+                  previous dose of any influenza vaccine. For a complete listing, see Section 5
+                  Dosage Forms, Strengths, Composition and Packaging.</p></div></div></div></section><section class="hide-in-screen card" id="print-product-details"><h5 class="card-header text-white">PRODUCT DETAILS</h5><div class="spl"><section><div class="Section"><p></p><h2>Product #1 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</h2><table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="contentTableTitle"><strong>AFLURIA&nbsp;		
+					</strong><br><span class="contentTableReg">influenza a/brisbane/02/2018 (h1n1)pdm09-like virus (a/ brisbane/02/2018
+                      (ivr-190)), influenza a/kansas/14/2017 (h3n2)-like virus
+                      (a/kansas/14/2017(x-327)), influenza b/colorado/06/2017-like virus
+                      (b/maryland/15/2016), influenza b/phuket/3073/2013-like virus
+                      (b/phuket/3073/2013 (bvr-1b)) injection, suspension</span></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Product Information</td></tr><tr class="formTableRowAlt"><td class="formLabel">Brand Name</td><td class="formItem">AFLURIA</td></tr><tr class="formTableRow"><td class="formLabel">Non-Proprietary Name</td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</td></tr><tr class="formTableRowAlt"><td class="formLabel">Drug Identification Number (DIN)</td><td class="formItem">123456</td></tr><tr class="formTableRow"><td class="formLabel">Route of Administration</td><td class="formItem">ORAL</td></tr><tr class="formTableRowAlt"><td class="formLabel">Dosage Form</td><td class="formItem">INJECTION, SUSPENSION</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="3" class="formHeadingTitle">Active Ingredient/Active Moiety</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Basis of Strength</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx1a)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx1b) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</strong> (xx2a)  (INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327)) - xx2b) </td><td class="formItem">INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</strong> (xx3a)  (INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016) - xx3b) </td><td class="formItem">INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</strong> (xx4a)  (INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B)) - xx4b) </td><td class="formItem">INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Inactive Ingredients</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>CALCIUM CHLORIDE</strong> (1) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</strong> (2) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>MONOBASIC POTASSIUM PHOSPHATE</strong> (3) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>POTASSIUM CHLORIDE</strong> (4) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>SODIUM CHLORIDE</strong> (5) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>WATER FOR INJECTION</strong> (6) </td><td class="formItem">&nbsp;</td></tr></table></td></tr><tr><td><table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="formHeadingTitle" colspan="2">Product Characteristics</td></tr><tr class="formTableRow"><td class="formLabel">Product Type</td><td class="formItem">BIOLOGIC</td></tr><tr class="formTableRowAlt"><td class="formLabel">Colour</td><td class="formItem">CLEAR (slightly opaque)</td></tr><tr class="formTableRow"><td class="formLabel">Shape</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Size</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Score</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Imprint</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Flavour</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Combination Product</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Pharmaceutical Standard</td><td class="formItem">USP</td></tr><tr class="formTableRowAlt"><td class="formLabel">Schedule</td><td class="formItem">SCHEDULE D</td></tr><tr class="formTableRow"><td class="formLabel">Therapeutic Class</td><td class="formItem">ACTIVE IMMUNIZING AGENT</td></tr></tbody></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="5" class="formHeadingTitle">Packaging</td></tr><tr><th scope="col" width="1" class="formTitle">#</th><th scope="col" class="formTitle">Package Identifier</th><th scope="col" class="formTitle">Package Description</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><th scope="row" class="formItem">1</th><td class="formItem">ABC-1234<br>ABC-1234<br></td><td class="formItem">10 &nbsp;in&nbsp;1 CARTON<br>0.5 mL&nbsp;in&nbsp;1 SYRINGE, GLASS<br></td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr><tr><td></td></tr><tr><td class="normalizer"><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Regulatory Status</span></td></tr><tr><th scope="col" class="formTitle">Regulatory Activity Type</th><th scope="col" class="formTitle">Control Number</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><td class="formItem">NDS</td><td class="formItem">230311</td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr></tbody></table></div></section><section><div class="Section"><p></p><h2>Product #2 AFLURIA 
+		(INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))), 		
+		INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		/ INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B))&nbsp;
+			15&nbsp;
+			ug&nbsp;
+		INJECTION, SUSPENSION</h2><table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="contentTableTitle"><strong>AFLURIA&nbsp;		
+					</strong><br><span class="contentTableReg">influenza a/brisbane/02/2018 (h1n1)pdm09-like virus (a/ brisbane/02/2018
+                      (ivr-190)), influenza a/kansas/14/2017 (h3n2)-like virus
+                      (a/kansas/14/2017(x-327)), influenza b/colorado/06/2017-like virus
+                      (b/maryland/15/2016), influenza b/phuket/3073/2013-like virus
+                      (b/phuket/3073/2013 (bvr-1b)) injection, suspension</span></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Product Information</td></tr><tr class="formTableRowAlt"><td class="formLabel">Brand Name</td><td class="formItem">AFLURIA</td></tr><tr class="formTableRow"><td class="formLabel">Non-Proprietary Name</td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190)), INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327)), INFLUENZA B/COLORADO/06/2017-LIKE VIRUS
+                      (B/MARYLAND/15/2016), INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS
+                      (B/PHUKET/3073/2013 (BVR-1B))</td></tr><tr class="formTableRowAlt"><td class="formLabel">Drug Identification Number (DIN)</td><td class="formItem">12345600</td></tr><tr class="formTableRow"><td class="formLabel">Route of Administration</td><td class="formItem">SOFT TISSUE INJECTION</td></tr><tr class="formTableRowAlt"><td class="formLabel">Dosage Form</td><td class="formItem">INJECTION, SUSPENSION</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="3" class="formHeadingTitle">Active Ingredient/Active Moiety</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Basis of Strength</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018
+                      (IVR-190))</strong> (xx1a)  (INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/ BRISBANE/02/2018 (IVR-190)) - xx1b) </td><td class="formItem">INFLUENZA A/BRISBANE/02/2018 (H1N1)PDM09-LIKE VIRUS (A/
+                          BRISBANE/02/2018 (IVR-190))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                      (A/KANSAS/14/2017(X-327))</strong> (xx2a)  (INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS (A/KANSAS/14/2017(X-327)) - xx2b) </td><td class="formItem">INFLUENZA A/KANSAS/14/2017 (H3N2)-LIKE VIRUS
+                          (A/KANSAS/14/2017(X-327))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRow"><td class="formItem"><strong>INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</strong> (xx3a)  (INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016) - xx3b) </td><td class="formItem">INFLUENZA B/COLORADO/06/2017-LIKE VIRUS (B/MARYLAND/15/2016)</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                      (BVR-1B))</strong> (xx4a)  (INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013 (BVR-1B)) - xx4b) </td><td class="formItem">INFLUENZA B/PHUKET/3073/2013-LIKE VIRUS (B/PHUKET/3073/2013
+                          (BVR-1B))</td><td class="formItem">15&nbsp;ug&nbsp;in&nbsp;0.5&nbsp;mL</td></tr></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="2" class="formHeadingTitle">Inactive Ingredients</td></tr><tr><th class="formTitle" scope="col">Ingredient Name</th><th class="formTitle" scope="col">Strength</th></tr><tr class="formTableRowAlt"><td class="formItem"><strong>CALCIUM CHLORIDE</strong> (1) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>DIBASIC SODIUM PHOSPHATE (ANHYDROUS)</strong> (2) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>MONOBASIC POTASSIUM PHOSPHATE</strong> (3) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>POTASSIUM CHLORIDE</strong> (4) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>SODIUM CHLORIDE</strong> (5) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRow"><td class="formItem"><strong>THIMEROSAL</strong> (6) </td><td class="formItem">&nbsp;</td></tr><tr class="formTableRowAlt"><td class="formItem"><strong>WATER FOR INJECTION</strong> (7) </td><td class="formItem">&nbsp;</td></tr></table></td></tr><tr><td><table class="formTablePetite" cellSpacing="0" cellPadding="3" width="100%"><tbody><tr><td class="formHeadingTitle" colspan="2">Product Characteristics</td></tr><tr class="formTableRow"><td class="formLabel">Product Type</td><td class="formItem">BIOLOGIC</td></tr><tr class="formTableRowAlt"><td class="formLabel">Colour</td><td class="formItem">CLEAR (slightly opaque)</td></tr><tr class="formTableRow"><td class="formLabel">Shape</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Size</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Score</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Imprint</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Flavour</td><td class="formItem"></td></tr><tr class="formTableRowAlt"><td class="formLabel">Combination Product</td><td class="formItem"></td></tr><tr class="formTableRow"><td class="formLabel">Pharmaceutical Standard</td><td class="formItem">USP</td></tr><tr class="formTableRowAlt"><td class="formLabel">Schedule</td><td class="formItem">SCHEDULE D</td></tr><tr class="formTableRow"><td class="formLabel">Therapeutic Class</td><td class="formItem">ACTIVE IMMUNIZING AGENT</td></tr></tbody></table></td></tr><tr><td><table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite"><tr><td colspan="5" class="formHeadingTitle">Packaging</td></tr><tr><th scope="col" width="1" class="formTitle">#</th><th scope="col" class="formTitle">Package Identifier</th><th scope="col" class="formTitle">Package Description</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><th scope="row" class="formItem">1</th><td class="formItem">ABC-1234<br>ABC-1234<br></td><td class="formItem">1 &nbsp;in&nbsp;1 CARTON<br>5 mL&nbsp;in&nbsp;1 VIAL, MULTI-DOSE<br></td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr><tr><td></td></tr><tr><td class="normalizer"><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Regulatory Status</span></td></tr><tr><th scope="col" class="formTitle">Regulatory Activity Type</th><th scope="col" class="formTitle">Control Number</th><th scope="col" class="formTitle">Date of Approval</th><th scope="col" class="formTitle">Date of Cancellation</th></tr><tr class="formTableRowAlt"><td class="formItem">NDS</td><td class="formItem">230311</td><td class="formItem">2019-02-22</td><td class="formItem"></td></tr></table></td></tr></tbody></table></div></section></div></section></div></div></main></div></div><script xmlns="http://www.w3.org/1999/xhtml" src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script><script xmlns="http://www.w3.org/1999/xhtml" src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.0.5/stickyfill.min.js"></script><script xmlns="http://www.w3.org/1999/xhtml">
+			try {
+			  var elements = document.querySelectorAll('.sticky');
+			  Stickyfill.add(elements);
+			} catch (e) {
+			  console.log(e)
+			}
+		</script></body></html>

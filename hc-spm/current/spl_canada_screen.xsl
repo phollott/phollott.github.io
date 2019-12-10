@@ -282,8 +282,16 @@
 					.spl .formHeadingReg {				border: 1px solid #CCCCCC !important;	}
 					.spl .formLabel {					border: 1px solid #CCCCCC !important;	}
 					.spl .formItem {					border: 1px solid #CCCCCC !important;	}
-				}
-				
+
+					/* table of contents? */
+					@page {
+					  @bottom-left {
+							content: counter(pages);
+					  }
+					}
+
+				}	
+	
 				@media screen {
 					.hide-in-screen { display: none; }
 					#side { max-width: 420px; min-width: 420px; }
