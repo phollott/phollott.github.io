@@ -666,7 +666,7 @@
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, withe Product Details at end -->	
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
-			<div class="container-fluid">
+			<div class="container-fluid" style="max-width: 970px; background-color: red;">
 				<div class="row position-relative">
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">
@@ -782,7 +782,7 @@
 				<div class="bg-aurora-accent1 hide-in-print">
 					<h2 class="text-white text-center p-2"><xsl:copy-of select="v3:title/node()"/></h2>
 				</div>
-					<div class="container position-relative" id="content">
+					<div class="container-fluid position-relative" id="content">
 					<div class="row h-100">
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="sidebar-navigation"/>
 						<xsl:apply-templates select="v3:component/v3:structuredBody" mode="main-document"/>
