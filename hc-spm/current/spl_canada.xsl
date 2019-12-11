@@ -90,7 +90,7 @@
 						<div><xsl:value-of select="$labels/partyEmail[@lang = $lang]"/><xsl:text>: </xsl:text>
 						<xsl:value-of select="substring-after(., 'mailto:')"/></div>
 					</xsl:for-each>
-					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:')]">
+					<xsl:for-each select="v3:telecom/@value[starts-with(.,'http:') or starts-with(.,'https:')]">
 						<div><xsl:value-of select="$labels/partyWeb[@lang = $lang]"/><xsl:text>: </xsl:text>
 						<xsl:value-of select="."/></div>
 					</xsl:for-each>
