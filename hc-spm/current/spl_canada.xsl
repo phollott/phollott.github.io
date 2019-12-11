@@ -665,8 +665,8 @@
 	
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, withe Product Details at end -->	
 	<xsl:template match="v3:structuredBody" mode="main-document">
-		<main class="col" id="main">
-<!--			<div class="container-fluid" id="main"> -->
+		<main class="col">
+			<div class="container-fluid" id="main">
 				<div class="row position-relative">
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">
@@ -749,7 +749,7 @@
 						</section>
 					</div>
 				</div>				
-<!--			</div> -->
+			</div>
 		</main>	
 	</xsl:template>
 
