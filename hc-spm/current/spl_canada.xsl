@@ -666,7 +666,7 @@
 	<!-- This is the main page content, which renders for both screen, with Product Details in front, and print, withe Product Details at end -->	
 	<xsl:template match="v3:structuredBody" mode="main-document">
 		<main class="col">
-			<div class="container-fluid" style="max-width: 970px; background-color: red;">
+			<div class="container-fluid" id="main">
 				<div class="row position-relative">
 					<div class="col">
 						<xsl:for-each select="v3:component/v3:section">

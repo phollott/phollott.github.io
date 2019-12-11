@@ -293,6 +293,7 @@
 				@media screen {
 					.hide-in-screen { display: none; }
 					#side { max-width: 420px; min-width: 420px; }
+					#main { max-width: 970px; }
 					#navigation-sidebar li { padding-left: 10px !important; }
 					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
 					.Section > h1 {display: none; }					
