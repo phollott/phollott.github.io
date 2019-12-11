@@ -226,8 +226,6 @@
 					color: #4D5D6C;
 				}
 				
-				<!-- this french language reduction reduces only the top level navigation -->
-				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 				
 				.sticky {
 				  position: -webkit-sticky;
@@ -300,6 +298,10 @@
 					.Section > h1 {display: none; }					
 				}
 				
+			</style>
+			<style>
+				<!-- this french language reduction reduces only the top level navigation -->
+				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
 		</head>
 	</xsl:template>	
