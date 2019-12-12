@@ -283,10 +283,7 @@
 
 					/* table of contents? */
 					@page {
-						margin: 3cm;
-/*					  @bottom-left {
-							content: counter(pages);
-					  } */
+						margin: 1cm;
 					}
 
 				}	
