@@ -226,7 +226,7 @@
 				}
 
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
-/*				@media print {
+				@media print {
 				
 				@page { 
 					size:8.5in 11in !important; 
@@ -240,7 +240,7 @@
 					.col, *[class^="col-"] {		
 						max-width: none !important; 
 					}
-				} */
+				}
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
 				
