@@ -235,11 +235,11 @@
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
 				
-				#print-table-of-contents a::before {
+/*				#print-table-of-contents a::before {
 					content: target-text(attr(href)); 
-				}
+				} */
 				#print-table-of-contents a::after {
-					content: target-counter(attr(href), page);
+					content: " test 8 " target-counter(attr(href), page);
 					float: right;
 				}
 
