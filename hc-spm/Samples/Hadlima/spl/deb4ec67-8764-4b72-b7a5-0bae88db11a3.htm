@@ -14,12 +14,12 @@
 				}
 
 /* pmh - I do not think this is going to work: */
-a::after {
-content: ", page " target-counter(attr(href), page );
-}
-/*.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
+/*a::after {
+	content: ", page " target-counter(attr(href), page );
+}*/
+.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
 .bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
-@page { counter-increment: page }
+/*@page { counter-increment: page }
 #pageNumber { content: counter(page) } */
 
 /* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */

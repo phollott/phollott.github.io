@@ -225,15 +225,6 @@
 					top: 0;
 				}
 
-/* pmh - I do not think this is going to work: */
-/*a::after {
-	content: ", page " target-counter(attr(href), page );
-}*/
-.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
-.bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
-/*@page { counter-increment: page }
-#pageNumber { content: counter(page) } */
-
 /* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 
 @media print {
@@ -242,6 +233,22 @@
 	max-width: none !important;  
 }
 }
+#print-table-of-contents a::before {
+	content: target-text(attr(href)); 
+}
+#print-table-of-contents a::after {
+	content: target-counter(attr(href), page);
+	float: right; 
+}
+
+/*.bodymatter a::after {
+	content: ", page " target-counter(attr(href), page );
+}
+.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
+.bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
+@page { counter-increment: page }
+#pageNumber { content: counter(page) } */
+
 
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
