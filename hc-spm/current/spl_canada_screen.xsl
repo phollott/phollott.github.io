@@ -234,6 +234,19 @@ content: ", page " target-counter(attr(href), page );
 @page { counter-increment: page }
 #pageNumber { content: counter(page) } */
 
+/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
+.col,
+*[class^="col-"] {
+	border: 1px solid #eee;
+}
+
+@media print {
+.col,
+*[class^="col-"] {
+	max-width: none !important;  
+}
+}
+
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
