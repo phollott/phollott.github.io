@@ -731,9 +731,9 @@
 											</ol>
 										</div>
 									</section>
-									<section class="force-page-break" id="test-page">
+<!--									<section class="force-page-break" id="test-page">
 										<h2 id="a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Test Page</h2>
-									</section>
+									</section> -->
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '007'">
 									<!-- RECENT MAJOR LABEL CHANGES -->
@@ -748,14 +748,14 @@
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-<!--									<section class="card mb-2" id="{$unique-section-id}">
+									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section> -->
+									</section>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
