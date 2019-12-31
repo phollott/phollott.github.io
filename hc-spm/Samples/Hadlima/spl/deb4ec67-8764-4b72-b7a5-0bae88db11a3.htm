@@ -18,6 +18,18 @@
 					content: ", test page 7: " target-counter(attr(href), page);
 					float: right;
 				}
+				
+				@media print {
+				@page { 
+				size: Letter; 
+				margin:0pt;
+				margin-left:0pt;
+				margin-right:0pt;
+				margin-top:0pt;
+				margin-bottom:0pt;
+				orphans:4; 
+				widows:2;
+				}
 
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 				@media print {

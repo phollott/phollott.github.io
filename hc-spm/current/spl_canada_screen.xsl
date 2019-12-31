@@ -225,32 +225,24 @@
 					top: 0;
 				}
 
-				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
-				#print-table-of-contents a::after {
-					content: ", test page 7: " target-counter(attr(href), page);
-					float: right;
-				}
-				
-				@media print {
-				@page { 
-				size: Letter; 
-				margin:0pt;
-				margin-left:0pt;
-				margin-right:0pt;
-				margin-top:0pt;
-				margin-bottom:0pt;
-				orphans:4; 
-				widows:2;
-				}
-
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 				@media print {
 					.col,
 					*[class^="col-"] {
 						max-width: none !important;  
-					}
-				
+					}				
 				}
+
+				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
+				
+				#print-table-of-contents a::before {
+					content: target-text(attr(href)); 
+				}
+				#print-table-of-contents a::after {
+					content: target-counter(attr(href), page);
+					float: right;
+				}
+
 
 /*#print-table-of-contents a::before {
 	content: target-text(attr(href)); 
