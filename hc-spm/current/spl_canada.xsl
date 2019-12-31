@@ -721,12 +721,12 @@
 										</div>
 									</section>
 									<!-- PRINT ONLY TOC ON A SEPARATE PAGE -->
-<!--									<section class="force-page-break hide-in-screen card" id="print-table-of-contents">
+									<section class="force-page-break hide-in-screen card" id="print-table-of-contents">
 										<div class="spl">
 											<h5 class="card-header text-white">
 												<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
 											</h5>
-											<h6>009</h6>
+											<h6>011</h6>
 											<ul>
 												<li class="bodymatter"><a href="#cd8d3086-e343-48f4-9cec-524834b3803b">Title Page</a></li>
 												<li class="bodymatter"><a href="#a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Part one</a></li>
@@ -734,7 +734,7 @@
 												<li class="bodymatter"><a href="#baa4d498-0fc3-4e44-b4b6-550140d4de5d">Part threebody</a></li>
 											</ul>
 										</div>
-									</section> -->
+									</section>
 <!--									<section class="force-page-break" id="test-page">
 										<h2 id="a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Test Page</h2>
 									</section> -->

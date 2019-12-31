@@ -247,12 +247,11 @@
 				
 /*				#print-table-of-contents a::before {
 					content: target-text(attr(href)); 
-				}
+				} */
 				#print-table-of-contents a::after {
-					content: " test 10 " target-counter(attr(href), page);
+					content: " test 11 " target-counter(attr(href), page);
 					float: right;
 				}
-*/
 
 /*#print-table-of-contents a::before {	content: target-text(attr(href)); }
 #print-table-of-contents a::after {
