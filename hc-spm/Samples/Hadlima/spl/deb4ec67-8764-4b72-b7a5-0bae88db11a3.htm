@@ -23,10 +23,6 @@ content: ", page " target-counter(attr(href), page );
 #pageNumber { content: counter(page) } */
 
 /* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
-.col,
-*[class^="col-"] {
-	border: 1px solid #eee;
-}
 
 @media print {
 .col,

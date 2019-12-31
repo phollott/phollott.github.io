@@ -728,10 +728,9 @@
 											</h5>
 											<ol>
 												<li class="frontmatter"><a href="#cd8d3086-e343-48f4-9cec-524834b3803b">Title Page</a></li>
-<!--												<li class="frontmatter"><a href="#a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Part one</a></li>
+												<li class="frontmatter"><a href="#a16a94eb-e2be-45c0-8b2e-15d0d0eebea8">Part one</a></li>
 												<li class="frontmatter"><a href="#d6a947eb-e2be-45c0-8b2e-15d0d0eebed8">Part two</a></li>
 												<li class="bodymatter"><a href="#baa4d498-0fc3-4e44-b4b6-550140d4de5d">Part threebody</a></li>
--->
 											</ol>
 										</div>
 									</section>
@@ -752,14 +751,14 @@
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-<!--									<section class="card mb-2" id="{$unique-section-id}">
+									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section>-->
+									</section>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
