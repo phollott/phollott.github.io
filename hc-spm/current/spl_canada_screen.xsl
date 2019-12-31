@@ -31,7 +31,7 @@
 	<xsl:template match="v3:subject/v3:manufacturedProduct" mode="card">
 		<xsl:variable name="unique-product-id">product-<xsl:value-of select="position()"/></xsl:variable>
 		<section class="card m-2" id="{$unique-product-id}">
-			<h6 class="card-header p-0 bg-aurora-accent2"> <!--  dropdown-toggle below caused problems with rwd, and possibly w-100 -->
+			<h6 class="card-header p-0 bg-aurora-accent2"> <!-- dropdown-toggle below caused problems with rwd, and possibly w-100 -->
 				<button class="btn bg-aurora-accent2 text-white text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-{$unique-product-id}" 
 				aria-expanded="true" aria-controls="collapse-{$unique-product-id}">
@@ -53,12 +53,11 @@
 		<xsl:for-each select="v3:ingredient[starts-with(@classCode,'ACTI')]">
 			<xsl:if test="position() > 1">/ </xsl:if>
 			<xsl:value-of select="v3:ingredientSubstance/v3:activeMoiety/v3:activeMoiety/v3:code/@displayName"/>&#160;
-			<xsl:value-of select="v3:quantity/v3:numerator/@value"/>&#160;
-			<xsl:value-of select="v3:quantity/v3:numerator/@unit"/>&#160;
+			<xsl:apply-templates select="v3:quantity/v3:numerator"/>&#160;
 		</xsl:for-each>
 		<xsl:value-of select="v3:formCode[@codeSystem='2.16.840.1.113883.2.20.6.3']/@displayName"/>
 	</xsl:template>
-
+	
 	<!-- This is a fairly decent navigation sidebar menu -->
 	<xsl:template match="v3:structuredBody" mode="sidebar-navigation">
 		<aside class="bg-aurora-light hide-in-print" id="left">
@@ -214,91 +213,27 @@
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
-				/* ScrollSpy and Navigation */
+				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */
 			  
 				html {
 					scroll-behavior: smooth;
 				}
-				
-				#side .nav-link.active,
-				#side .nav-link:hover,
-				#side .nav-link:focus{
-					color: #4D5D6C;
-				}
-				
-				
+								
 				.sticky {
-				  position: -webkit-sticky;
-				  position: sticky;
-				  top: 0;
+					position: -webkit-sticky;
+					position: sticky;
+					top: 0;
 				}
-				img { max-width: 100%; height: auto; }					
 
-				/* Aurora Swatches 
-				 * These should really be called bg-aurora-primary and bg-aurora-accent1
-				 */
+/* pmh - I do not think this is going to work: */
+/*a::after {
+content: ", page " target-counter(attr(href), page );
+}
+.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
+.bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
+@page { counter-increment: page }
+#pageNumber { content: counter(page) } */
 
-				.bg-aurora-accent1 { background-color: #002D42;	}
-				.bg-aurora-accent2 { background-color: #4D5D6C;	}
-				.bg-aurora-light   { background-color: #CECECE;	}
-
-				.TitlePage p  { text-align: center !important; }
-				.TitlePage h1 { text-align: center !important; }
-				.TitlePage h2 { text-align: center !important; }
-				.TitlePage h3 { text-align: center !important; }
-
-				/* FDA fonts override - temporary
-				.spl {
-					font-family: 'Rubik, sans-serif;
-				}
-				.spl div.Section h1 {	
-					font-family: 'Rubik', sans-serif;
-				}
-				.spl h2 {	
-					font-family: 'Rubik', sans-serif;
-				}
-				.spl div.Highlights {
-					font-family: 'Rubik', sans-serif;
-				} */
-
-				/* TODO I wonder why my mockup does not require !important to suppress a blank first page?
-				 * This is partly due to trying to put the first section on its own page.
-				 */
-				@media print {	
-
-					.hide-in-print { display: none !important; }		
-					.force-page-break { page-break-after: always; }
-					.suppress-page-break { page-break-after: avoid; }
-					.card { border-width: 0 !important; }
-					.card-header { display: none !important; }
-					
-					/* overriding FDA tables so they look nicer in print */
-					.spl .formTable { 					border: 1px solid #CCCCCC !important;	}
-					.spl .formTablePetite {				border: 1px solid #CCCCCC !important;	}
-					.spl .formTableMorePetite {			border: 1px solid #CCCCCC !important;	}
-					.spl .formTitle {					border: 1px solid #CCCCCC !important;	}
-					.spl .formHeadingReg {				border: 1px solid #CCCCCC !important;	}
-					.spl .formLabel {					border: 1px solid #CCCCCC !important;	}
-					.spl .formItem {					border: 1px solid #CCCCCC !important;	}
-
-					/* table of contents? */
-					@page {
-						margin: 1cm;
-					}
-
-				}	
-	
-				@media screen {
-					.hide-in-screen { display: none; }
-					#side { max-width: 420px; min-width: 420px; }
-					#main { max-width: 1000px; }
-					#navigation-sidebar li { padding-left: 10px !important; }
-					#navigation-scrollbar {	height: calc(100vh - 50px); overflow-y: scroll; }
-					.Section > h1 {display: none; }					
-				}
-				
-			</style>
-			<style>
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
 			</style>
@@ -306,6 +241,7 @@
 	</xsl:template>	
 	
 	<xsl:template name="canada-screen-body-footer">
+		<!-- <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script> -->
 		<!-- perhaps Stickyfill should have cross origin integrity? Bootstrap Bundle contains Popper, and 4.1.3 is the current "Aurora" version of Bootstrap -->
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>

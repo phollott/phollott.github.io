@@ -31,18 +31,20 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 							 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 							 exclude-result-prefixes="exsl msxsl v3 xsl xsi str v">
 	<xsl:import href="xml-verbatim.xsl"/>
+<!-- pmh deprecated unused:
 	<xsl:import href="mixin.xsl"/>
 	<xsl:import href="substance.xsl"/>
-	<xsl:import href="pesticide.xsl"/>
+	<xsl:import href="pesticide.xsl"/> -->
 	<xsl:param name="show-subjects-xml" select="1"/>
 	<xsl:param name="show-data" select="/.."/>
 	<xsl:param name="show-section-numbers" select="/.."/>
 	<xsl:param name="update-check-url-base" select="/.."/>
 	<xsl:param name="standardSections" select="document('plr-sections.xml')/*"/>
+<!-- pmh deprecated unused:
 	<xsl:param name="itemCodeSystems" select="document('item-code-systems.xml')/*"/>
 	<xsl:param name="disclaimers" select="document('disclaimers.xml')/*"/>
 	<xsl:param name="documentTypes" select="document('doc-types.xml')/*"/>
-	<xsl:param name="indexingDocumentTypes" select="document('indexing-doc-types.xml')/*"/>
+	<xsl:param name="indexingDocumentTypes" select="document('indexing-doc-types.xml')/*"/> -->
 	<xsl:param name="root" select="/"/>
 	<xsl:param name="css" select="'./spl.css'"/>
 	<xsl:param name="process-mixins" select="/.."/>
@@ -134,6 +136,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 	<!-- GS: the document title should not be processed in normal mode. 
 			 This is really should be revisited when the top-level template gets refactored. --> 
 	<xsl:template match="/v3:document/v3:title" priority="1"/>
+	<!-- pmh - commenting all of the main document targets for now, since spl_canada has its own:
 	<xsl:template mode="user-management" match="/v3:document">
 		<html>
 			<head>
@@ -141,7 +144,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				<meta name="documentSetId" content="{/v3:document/v3:setId/@root}"/>
 				<meta name="documentVersionNumber" content="{/v3:document/v3:versionNumber/@value}"/>
 				<meta name="documentEffectiveTime" content="{/v3:document/v3:effectiveTime/@value}"/>
-				<title><!-- GS: this isn't right because the title can have markup -->
+				<title><!- - GS: this isn't right because the title can have markup - ->
 					<xsl:value-of select="v3:title"/>
 				</title>
 				<link rel="stylesheet" type="text/css" href="{$css}"/>
@@ -258,16 +261,17 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</xsl:if>
 			</body>
 		</html>
-	</xsl:template>
+	</xsl:template> -->
+	<!-- pmh - commenting all of the main document targets for now, since spl_canada has its own:
 	<xsl:template mode="form3911" match="/v3:document">
-		<!-- GS: this template needs thorough refactoring -->
+		<!- - GS: this template needs thorough refactoring - ->
 		<html>
 			<head>
 				<meta name="documentId" content="{/v3:document/v3:id/@root}"/>
 				<meta name="documentSetId" content="{/v3:document/v3:setId/@root}"/>
 				<meta name="documentVersionNumber" content="{/v3:document/v3:versionNumber/@value}"/>
 				<meta name="documentEffectiveTime" content="{/v3:document/v3:effectiveTime/@value}"/>
-				<title><!-- GS: this isn't right because the title can have markup -->
+				<title><!- - GS: this isn't right because the title can have markup - ->
 					<xsl:value-of select="v3:title"/>
 				</title>
 				<link rel="stylesheet" type="text/css" href="{$css}"/>
@@ -342,7 +346,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 											</xsl:if>
 										</xsl:when>
 										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
+											<!- - XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ - ->
 											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
 										</xsl:otherwise>
 									</xsl:choose>
@@ -387,7 +391,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 											</xsl:if>
 										</xsl:when>
 										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
+											<!- - XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ - ->
 											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
 										</xsl:otherwise>
 									</xsl:choose>
@@ -572,7 +576,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 											</xsl:if>
 										</xsl:when>
 										<xsl:otherwise>
-											<!-- XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ -->
+											<!- - XSLT 2 would be thus: xsl:apply-templates select="$mixinRtf/*"/ - ->
 											<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
 										</xsl:otherwise>
 									</xsl:choose>
@@ -626,14 +630,14 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 		</html>
 	</xsl:template>	
 	<xsl:template match="/v3:document">
-		<!-- GS: this template needs thorough refactoring -->
+		<!- - GS: this template needs thorough refactoring - ->
 		<html>
 			<head>
 				<meta name="documentId" content="{/v3:document/v3:id/@root}"/>
 				<meta name="documentSetId" content="{/v3:document/v3:setId/@root}"/>
 				<meta name="documentVersionNumber" content="{/v3:document/v3:versionNumber/@value}"/>
 				<meta name="documentEffectiveTime" content="{/v3:document/v3:effectiveTime/@value}"/>
-				<title><!-- GS: this isn't right because the title can have markup -->
+				<title><!- - GS: this isn't right because the title can have markup - ->
 					<xsl:value-of select="v3:title"/>
 				</title>
 				<link rel="stylesheet" type="text/css" href="{$css}"/>
@@ -665,7 +669,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 								<xsl:message terminate="yes">required function node-set is not available, this XSLT processor cannot handle the transform</xsl:message>
 							</xsl:otherwise>
 						</xsl:choose>
-						<!-- Generate the Table of Contents only if the SPL is PLR. -->
+						<!- - Generate the Table of Contents only if the SPL is PLR. - ->
 						<xsl:variable name="indexRtf">
 							<xsl:apply-templates mode="index" select="."/>
 						</xsl:variable>
@@ -699,7 +703,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				<xsl:if test="boolean($show-data)">
 					<div class="DataElementsTables">
 						<xsl:call-template name="PLRIndications"/>
-						<!--xsl:call-template name="PLRInteractions"/-->
+						<!- -xsl:call-template name="PLRInteractions"/- ->
 						<xsl:if test="//v3:*[self::v3:ingredientSubstance[starts-with(../@classCode,'ACTI')] or self::v3:identifiedSubstance[not($root/v3:document/v3:code/@code = '64124-1')]]">
 							<xsl:call-template name="PharmacologicalClass"/>
 						</xsl:if>
@@ -745,8 +749,9 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</xsl:if>
 			</body>
 		</html>
-	</xsl:template>
+	</xsl:template> -->
 	<!--INDEXING - PESTICIDE RESIDUE TOLERANCE Start -->
+<!-- pmh deprecate anything that refers to pesticides:
 	<xsl:template match="v3:subject[v3:identifiedSubstance][/v3:document/v3:code/@code = '3565717']">
 			<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
 				<tr>
@@ -802,7 +807,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 					</td>
 				</tr>
 			</table>
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template match="v3:observationCriterion">
 			<tr>
 				<xsl:attribute name="class">
@@ -857,6 +862,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 	</xsl:template>
 	<!--INDEXING - PESTICIDE RESIDUE TOLERANCE End -->
 	<!-- Pesticide Labeling Start-->
+<!-- pmh deprecate anything related to pesticides:
 	<xsl:template match="v3:subject/v3:manufacturedProduct/v3:manufacturedProduct[/v3:document/v3:code/@code = '3565715'] | v3:subject/v3:substanceAdministration1[/v3:document/v3:code/@code = '3565715']">
 		<table class="contentTablePetite" cellSpacing="0" cellPadding="3" width="100%">
 			<xsl:if test="../../../v3:code/@code = '3144190'">
@@ -1039,7 +1045,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				</tr>
 			</xsl:if>
 		</table>
-	</xsl:template>
+	</xsl:template> -->
 	<!-- Pesticide Labeling End-->
 	<!-- REMS templates start -->
 	<xsl:template match="v3:subject2[v3:substanceAdministration/v3:subjectOf/v3:issue]">
@@ -1315,6 +1321,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 			<xsl:when test="position() &lt; last() - 1">, </xsl:when>
 		</xsl:choose>
 	</xsl:template>
+	<!-- pmh - moved this into a localization file spl_canada_i18n.xsl to support international requirements
 	<xsl:template name="string-to-date">
 		<xsl:param name="text"/>
 		<xsl:param name="displayMonth">true</xsl:param>
@@ -1325,7 +1332,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 			<xsl:variable name="year" select="substring($text,1,4)"/>
 			<xsl:variable name="month" select="substring($text,5,2)"/>
 			<xsl:variable name="day" select="substring($text,7,2)"/>
-			<!-- changed by Brian Suggs 11-13-05.  Changes made to display date in MM/DD/YYYY format instead of DD/MM/YYYY format -->
+			<!- - changed by Brian Suggs 11-13-05.  Changes made to display date in MM/DD/YYYY format instead of DD/MM/YYYY format - ->
 			<xsl:if test="$displayMonth = 'true'">
 				<xsl:value-of select="$month"/>
 				<xsl:value-of select="$delimiter"/>
@@ -1338,7 +1345,7 @@ TODO: Implementation guide needs to define linkHtml styleCodes.
 				<xsl:value-of select="$year"/>
 			</xsl:if>
 		</xsl:if>
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template name="recent-effectiveDate">
 		<xsl:param name="effectiveDateSequence" />
 		<xsl:for-each select="$effectiveDateSequence[string-length(.) &gt; 7]">
@@ -1836,6 +1843,7 @@ token.
 	</xsl:template>
 	<!-- DOCUMENT MODEL -->
 
+<!-- pmh can we remove this and the related controlled vocabulary?
 	<xsl:template mode="title" match="/|@*|node()"/>
 	<xsl:template mode="title" match="v3:document">
 		<div class="DocumentTitle">
@@ -1848,7 +1856,7 @@ token.
 					<xsl:text>User Profile</xsl:text>
 				</xsl:if>
 				<xsl:apply-templates select="./title/@*"/>
-				<!-- loop through all of the subject elements -->			
+				<!- - loop through all of the subject elements - ->			
 				<xsl:for-each select=".//v3:subject[not(/v3:document/v3:code/@code = '77648-4')][v3:manufacturedProduct[v3:manufacturedProduct|v3:manufacturedMedicine]]">
 					<xsl:variable name="prevProductHeaderString">
 						<xsl:for-each select="preceding::v3:manufacturedProduct/*[self::v3:manufacturedProduct or self::v3:manufacturedMedicine]">
@@ -1862,7 +1870,7 @@ token.
 						<xsl:when test="position() > 1 and contains($prevProductHeaderString, $curProductHeaderString)">
 
 						</xsl:when>
-						<!-- otherwise display all the information for this subject -->
+						<!- - otherwise display all the information for this subject - ->
 						<xsl:otherwise>
 							<xsl:if test="position() > 1">
 								<br/>
@@ -1945,10 +1953,10 @@ token.
 					 </xsl:if> 
 				</b>
 		   </xsl:if>
-			<p>----------</p>
+			<p>- - - - - - - - - -</p>
 		</div>
 	</xsl:template>
-
+-->
 	<xsl:template match="v3:relatedDocument[not(/v3:document/v3:code/@code = '82351-8')][@typeCode = 'DRIV' or @typeCode = 'RPLC']/v3:relatedDocument/v3:setId/@root[string-length(.) = 36]"> 
 		<xsl:text>Reference Label Set Id: </xsl:text>
 		<a href="{concat('../', ., '.view')}"><xsl:value-of select="."/></a>
@@ -2229,6 +2237,7 @@ token.
 	<!-- SECTION NUMBER MODE -->
 	<!-- Special mode to construct a section number. Apply to a sequence of sections on the ancestor-or-self axis. -->
 	<!-- Shallow null-transform for anything but sections. -->
+	<!-- pmh - we could move this to spl_canada.xsl, but it contains child apply-templates -->
 	<xsl:template mode="sectionNumber" match="/|@*|node()"/>
 	<xsl:template mode="sectionNumber" match="v3:section">
 		<!-- Using Standard Section Numbers can be confusing if the sections are mixed standard/non-stancard
@@ -2246,10 +2255,11 @@ token.
 		<xsl:value-of select="concat('.',count(parent::v3:component/preceding-sibling::v3:component[v3:section[not(v3:code[@code=$unnumberedSectionCodes])]])+1)"/>
 		<!-- /xsl:otherwise>
 		</xsl:choose -->
-	</xsl:template> 
+	</xsl:template>
 	<xsl:variable name="unnumberedSectionCodes" select="$standardSections//v3:section[not(number(@number) > 0) and not(@numbered='yes')]/@code"/>
 
 	<!-- SECTION MODEL -->
+	<!-- pmh - section model is overridden in spl_canada.xsl:
 	<xsl:template match="v3:section">
 		<xsl:param name="standardSection" select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
 		<xsl:param name="sectionLevel" select="count(ancestor-or-self::v3:section)"/>
@@ -2281,7 +2291,7 @@ token.
 				<xsl:call-template name="flushSectionTitleFootnotes"/>
 			</div>
 		</xsl:if>
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template match="v3:section[v3:code[descendant-or-self::*[self::v3:code or self::v3:translation][@codeSystem='2.16.840.1.113883.6.1' and @code='34066-1']]]" priority="2">
 		<!-- boxed warning -->
 		<xsl:param name="standardSection" select="$standardSections//v3:section[@code=current()/v3:code/descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1']/@code]"/>
@@ -2310,6 +2320,7 @@ token.
 	<xsl:template match="v3:section[v3:code[descendant-or-self::*[(self::v3:code or self::v3:translation) and @codeSystem='2.16.840.1.113883.6.1' and @code='43683-2']]]" priority="2">
 		<!-- don't display the Recent Major Change section within the FPI -->
 	</xsl:template>
+	<!-- pmh - we could move this to spl_canada.xsl, but it has child apply-templates -->
 	<xsl:template match="v3:title">
 		<xsl:param name="sectionLevel" select="count(ancestor::v3:section)"/>
 		<xsl:param name="sectionNumber" select="/.."/>
@@ -2327,6 +2338,7 @@ token.
 			<xsl:apply-templates mode="mixed" select="node()"/>
 		</xsl:element>	
 	</xsl:template>
+	<!-- pmh - we could move this to spl_canada.xsl, but it contains child apply-templates -->
 	<xsl:template match="v3:text[not(parent::v3:observationMedia)]">
 		<xsl:apply-templates select="@*"/>
 		<xsl:apply-templates mode="mixed" select="node()"/>
@@ -3210,7 +3222,7 @@ token.
 			</td>
 		</tr>
 	</xsl:template>
-
+<!-- pmh - overridden in spl_canada.xsl:
 	<xsl:template name="ProductInfoBasic">
 		<tr>
 			<td>
@@ -3222,7 +3234,7 @@ token.
 						<xsl:if test="not(../../v3:part)">
 							<td class="formLabel">Product Type</td>
 							<td class="formItem">
-								<!-- XXX: can't do in XSLT 1.0: xsl:value-of select="replace($documentTypes/v3:document[@code = $root/v3:document/v3:code/@code]/v3:title,'(^| )label( |$)',' ','i')"/ -->
+								<!- - XXX: can't do in XSLT 1.0: xsl:value-of select="replace($documentTypes/v3:document[@code = $root/v3:document/v3:code/@code]/v3:title,'(^| )label( |$)',' ','i')"/ - ->
 								<xsl:value-of select="$documentTypes/v3:document[@code = $root/v3:document/v3:code/@code]/v3:title"/>
 							</td>
 						</xsl:if>
@@ -3297,7 +3309,7 @@ token.
 				</table>
 			</td>
 		</tr>
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template name="ProductInfoIng">		
 		<xsl:if test="v3:ingredient[starts-with(@classCode,'ACTI')]|v3:activeIngredient">
 			<tr>
@@ -3354,8 +3366,9 @@ token.
 		</xsl:if>
 	</xsl:template>	
 
+<!-- pmh - overridden in spl_canada.xsl:
 	<xsl:template mode="subjects" match="v3:part/v3:partProduct|v3:part/v3:partMedicine">
-		<!-- only display the outer part packaging once -->
+		<!- - only display the outer part packaging once - ->
 		<xsl:if test="not(../preceding-sibling::v3:part)">
 			<xsl:if test="../../v3:asContent">
 				<tr>
@@ -3398,9 +3411,10 @@ token.
 				<xsl:call-template name="MarketingInfo"/>
 			</td>
 		</tr>
-	</xsl:template>
+	</xsl:template> -->
 
 	<!-- display the ingredient information (both active and inactive) -->
+<!-- pmh - overridden in spl_canada.xsl:
 	<xsl:template name="ActiveIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
@@ -3477,11 +3491,12 @@ token.
 				</tr>
 			</xsl:for-each>
 		</table>
-	</xsl:template>
+	</xsl:template> -->
+	<!-- pmh - overridden in spl_canada.xsl:
 	<xsl:template name="InactiveIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
-				<!-- see PCR 801, just make the header bigger -->
+				<!- - see PCR 801, just make the header bigger - ->
 				<td colspan="2" class="formHeadingTitle">Inactive Ingredients</td>
 			</tr>
 			<tr>
@@ -3523,7 +3538,7 @@ token.
 				</tr>
 			</xsl:for-each>
 		</table>
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template name="otherIngredients">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
@@ -3583,6 +3598,7 @@ token.
 	</xsl:template>
 	<!-- display the imprint information in the specified order.  a apply-template could be used here but then we would not be able to control what order the
 			 imprint information is displayed in since there isn't a requirement specifying that the characteristic must be programmed in a certain order-->
+	<!-- pmh overridden in spl_canada.xsl:
 	<xsl:template name="characteristics-old">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
 			<tr>
@@ -3638,7 +3654,7 @@ token.
 				<xsl:sort select="count($CHARACTERISTICS/*/*/v3:characteristic[v3:code[@code = current()/v3:code/@code and @codeSystem = current()/v3:code/@codeSystem]][1]/preceding::*)"/>
 			</xsl:apply-templates>
 		</table>
-	</xsl:template>
+	</xsl:template> -->
 
 	<xsl:template mode="characteristics" match="/|@*|node()">
 		<xsl:apply-templates mode="characteristics" select="@*|node()"/>
@@ -3816,6 +3832,8 @@ token.
 		<xsl:if test="not($path/v3:value)">&#160;&#160;&#160;&#160;</xsl:if>
 	</td>
 </xsl:template>
+	
+<!-- pmh overridden in spl_canada.xsl:
 <xsl:template name="partQuantity">
 	<xsl:param name="path" select="."/>
 	<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
@@ -3856,7 +3874,8 @@ token.
 			</tr>
 		</xsl:for-each>
 	</table>
-</xsl:template>
+</xsl:template> -->
+<!-- pmh overridden in spl-canada.xsl:
 <xsl:template name="packaging">
 	<xsl:param name="path" select="."/>
 	<table width="100%" cellpadding="3" cellspacing="0" class="formTablePetite">
@@ -3884,7 +3903,8 @@ token.
 			</tr>
 		</xsl:if>
 	</table>
-</xsl:template>
+</xsl:template> -->
+<!-- pmh overridden in spl_canada.xsl:
 <xsl:template name="packageInfo">
 	<xsl:param name="path"/>
 	<xsl:param name="number" select="1"/>
@@ -3963,8 +3983,7 @@ token.
 			</td>
 		</tr>
 	</xsl:for-each>
-</xsl:template>
-
+</xsl:template> -->
 
 <!-- MODE: ldd - lot distribution data -->
 <!-- Note: this is a model how to make these tables right, with apply-templates instead of all these call-template. -->
@@ -4066,6 +4085,7 @@ token.
 	</tr>
 </xsl:template>
 
+<!-- pmh overriden in spl_canada:
 <xsl:template name="MarketingInfo">
 	<xsl:if test="../v3:subjectOf/v3:approval|../v3:subjectOf/v3:marketingAct">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
@@ -4106,9 +4126,9 @@ token.
 			</tr>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>	-->
 
-
+<!-- pmh this template has been moved to spl_canada.xsl:
 <xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization">	
 	<xsl:if test="(count(./v3:name)>0)">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
@@ -4152,7 +4172,9 @@ token.
 			<xsl:call-template name="data-contactParty"/>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>	-->
+
+<!-- pmh - this template has been overridden in spl_canada.xsl:
 <xsl:template name="data-contactParty">
 	<xsl:for-each select="v3:contactParty">
 		<xsl:if test="position() = 1">
@@ -4187,8 +4209,9 @@ token.
 			</td>
 		</tr>
 	</xsl:for-each>
-</xsl:template>
+</xsl:template> -->
 
+<!-- pmh - this template has been overridden in spl_canada.xsl:
 <xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization">	
 	<xsl:if test="./v3:name">
 		<table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite">
@@ -4205,7 +4228,7 @@ token.
 			<xsl:call-template name="data-contactParty"/>
 		</table>
 	</xsl:if>
-</xsl:template>	
+</xsl:template>	-->
 
 <xsl:template mode="subjects" match="//v3:author/v3:assignedEntity/v3:representedOrganization/v3:assignedEntity/v3:assignedOrganization/v3:assignedEntity/v3:assignedOrganization">	
 	<xsl:if test="./v3:name">
