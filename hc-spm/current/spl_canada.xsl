@@ -673,7 +673,7 @@
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='MP']">
 									<!-- PRODUCT DETAIL -->
-<!--									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
+									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</h5>
@@ -681,7 +681,7 @@
 											<xsl:apply-templates select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization" mode="card"/>
 											<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="card"/>
 										</div>
-									</section> -->
+									</section>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break here does not work on FireFox -->
@@ -763,7 +763,7 @@
 							</xsl:choose>
 						</xsl:for-each>
 						<!-- PRINT VERSION OF MANUFACTURED PRODUCT -->
-<!--						<section class="hide-in-screen card" id="print-product-details">
+						<section class="hide-in-screen card" id="print-product-details">
 							<h5 class="card-header text-white">
 								<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 							</h5>
@@ -771,7 +771,7 @@
 								<xsl:apply-templates mode="print" select="v3:author/v3:assignedEntity/v3:representedOrganization"/>
 								<xsl:apply-templates mode="print" select="//v3:subject/v3:manufacturedProduct"/>
 							</div>
-						</section> -->
+						</section>
 					</div>
 				</div>				
 			</div>
