@@ -226,25 +226,24 @@
 				}
 
 /* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
-
 @media print {
 .col,
 *[class^="col-"] {
 	max-width: none !important;  
 }
 }
-#print-table-of-contents a::before {
+/*#print-table-of-contents a::before {
 	content: target-text(attr(href)); 
 }
 #print-table-of-contents a::after {
 	content: target-counter(attr(href), page);
 	float: right; 
-}
+}*/
 
-/*.bodymatter a::after {
-	content: ", page " target-counter(attr(href), page );
+a::after {
+	content: ", test 001 page " target-counter(attr(href), page );
 }
-.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
+/*.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
 .bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
 @page { counter-increment: page }
 #pageNumber { content: counter(page) } */
