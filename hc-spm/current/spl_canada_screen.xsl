@@ -232,8 +232,8 @@
 		max-width: none !important;  
 	}
 
-	a::after {
-		content: ", test 002 page " target-counter(attr(href), page );
+	#print-table-of-contents a::after {
+		content: ", test 003 page " target-counter(attr(href), page );
 	}
 }
 

@@ -15,11 +15,16 @@
 
 /* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 @media print {
-.col,
-*[class^="col-"] {
-	max-width: none !important;  
+	.col,
+	*[class^="col-"] {
+		max-width: none !important;  
+	}
+
+	a::after {
+		content: ", test 002 page " target-counter(attr(href), page );
+	}
 }
-}
+
 /*#print-table-of-contents a::before {
 	content: target-text(attr(href)); 
 }
@@ -28,9 +33,6 @@
 	float: right; 
 }*/
 
-a::after {
-	content: ", test 001 page " target-counter(attr(href), page );
-}
 /*.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
 .bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
 @page { counter-increment: page }
