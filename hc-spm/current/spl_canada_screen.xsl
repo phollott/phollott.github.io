@@ -227,13 +227,9 @@
 
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 				@media print {
-/*					.col, *[class^="col-"] {
-						max-width: none !important;  
-					}
+/*				.col, *[class^="col-"] {		max-width: none !important;  			}
 */
-					.row {
-						width: 10cm;
-					}
+					.row {						width: 10cm;					}
 				}
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
@@ -247,14 +243,11 @@
 				}
 */
 
-/*#print-table-of-contents a::before {
-	content: target-text(attr(href)); 
-}
+/*#print-table-of-contents a::before {	content: target-text(attr(href)); }
 #print-table-of-contents a::after {
 	content: target-counter(attr(href), page);
 	float: right; 
 }*/
-
 /*.frontmatter a::after { content: leader('.') target-counter(attr(href url), page, lower-roman) }
 .bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
 @page { counter-increment: page }
