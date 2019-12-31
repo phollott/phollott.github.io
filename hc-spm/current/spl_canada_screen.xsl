@@ -210,8 +210,8 @@
 				<xsl:attribute name="content"><xsl:value-of select="v3:effectiveTime/@value"/></xsl:attribute>
 			</meta>
 			<title><xsl:value-of select="v3:title"/></title>
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-			<link rel="stylesheet" type="text/css" href="{$css}"/>
+<!--			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/> -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">			<link rel="stylesheet" type="text/css" href="{$css}"/>
 			<style>
 				/* ScrollSpy, Stickiness/Affix, and French Navigation Reduction */
 			  
@@ -226,7 +226,7 @@
 				}
 
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
-				@media print {
+/*				@media print {
 				
 				@page { 
 					size:8.5in 11in !important; 
@@ -240,7 +240,7 @@
 					.col, *[class^="col-"] {		
 						max-width: none !important; 
 					}
-				}
+				} */
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
 				
