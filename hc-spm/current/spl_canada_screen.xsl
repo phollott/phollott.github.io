@@ -229,7 +229,7 @@
 				@media print {
 /*				.col, *[class^="col-"] {		max-width: none !important;  			}
 */
-					.row {						width: 10cm;					}
+					.row {						width: 20cm;					}
 				}
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
@@ -252,7 +252,6 @@
 .bodymatter a::after { content: leader('.') target-counter(attr(href url), page, decimal) }
 @page { counter-increment: page }
 #pageNumber { content: counter(page) } */
-
 
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				
