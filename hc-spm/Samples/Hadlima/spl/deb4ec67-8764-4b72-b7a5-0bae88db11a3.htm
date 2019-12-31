@@ -13,18 +13,18 @@
 					top: 0;
 				}
 
-/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
-@media print {
-	.col,
-	*[class^="col-"] {
-		max-width: none !important;  
-	}
-
-	#print-table-of-contents a::after {
-		content: target-counter(attr(href), page );
-		float: right;
-	}
-}
+				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
+				@media print {
+					.col,
+					*[class^="col-"] {
+						max-width: none !important;  
+					}
+				
+					#print-table-of-contents a::after {
+						content: "5:" target-counter(attr(href), page);
+						float: right;
+					}
+				}
 
 /*#print-table-of-contents a::before {
 	content: target-text(attr(href)); 
