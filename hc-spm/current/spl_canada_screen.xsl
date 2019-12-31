@@ -233,7 +233,7 @@
 	}
 
 	#print-table-of-contents a::after {
-		content: "test 004: " target-counter(attr(href), page );
+		content: target-counter(attr(href), page );
 		float: right;
 	}
 }
