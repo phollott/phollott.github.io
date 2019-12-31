@@ -685,7 +685,7 @@
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break here does not work on FireFox -->
-									<section class="card mb-2 force-page-break" id="{$unique-section-id}">
+<!--									<section class="card mb-2 force-page-break" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
@@ -704,7 +704,6 @@
 													</xsl:for-each>
 												</div>
 												<div class="col-6">
-													<!-- TODO - this should probably just render every subsection with position greater than [2] -->
 													<xsl:for-each select="v3:component[3]/v3:section">
 														<xsl:apply-templates select="v3:title"/>
 														<xsl:apply-templates select="v3:text"/>
@@ -720,9 +719,8 @@
 												</div>
 											</div>
 										</div>
-									</section>
+									</section> -->
 									<!-- PRINT ONLY TOC ON A SEPARATE PAGE -->
-									<!-- pmh - I do not think this is going to work -->
 									<section class="force-page-break hide-in-screen" id="print-table-of-contents">
 										<div class="spl">
 											TEST TEST TEST POC FOR TABLE OF CONTENTS from Hadlima deb4ec67-8764-4b72-b7a5-0bae88db11a3
@@ -747,14 +745,14 @@
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-<!--									<section class="card mb-2" id="{$unique-section-id}">
+									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section> -->
+									</section>
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
