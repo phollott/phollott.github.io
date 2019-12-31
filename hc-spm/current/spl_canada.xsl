@@ -752,9 +752,9 @@
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
-										<div class="spl">
+<!--										<div class="spl">
 											<xsl:apply-templates select="."/>
-										</div>
+										</div> -->
 									</section>
 								</xsl:otherwise>
 							</xsl:choose>
