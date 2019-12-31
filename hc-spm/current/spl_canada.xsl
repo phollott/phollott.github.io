@@ -673,16 +673,15 @@
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='MP']">
 									<!-- PRODUCT DETAIL -->
-									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
+<!--									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</h5>
-										<!-- Company Details and Product Details Accordion Cards -->
 										<div id="product-accordion">
 											<xsl:apply-templates select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization" mode="card"/>
 											<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="card"/>
 										</div>
-									</section>
+									</section> -->
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break here does not work on FireFox -->
@@ -723,7 +722,7 @@
 										</div>
 									</section>
 									<!-- PRINT ONLY TOC ON A SEPARATE PAGE -->
-									<!-- pmh - I do not think this is going to work
+									<!-- pmh - I do not think this is going to work -->
 									<section class="force-page-break hide-in-screen" id="print-table-of-contents">
 										<div class="spl">
 											TEST TEST TEST POC FOR TABLE OF CONTENTS from Hadlima deb4ec67-8764-4b72-b7a5-0bae88db11a3
@@ -733,29 +732,29 @@
 												<li class="bodymatter"><a href="#baa4d498-0fc3-4e44-b4b6-550140d4de5d">Part threebody</a></li>
 											</ol>
 										</div>
-									</section> -->
+									</section>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '007'">
 									<!-- RECENT MAJOR LABEL CHANGES -->
-									<section class="card mb-2" id="{$unique-section-id}">
+<!--									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section>
+									</section> -->
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
-									<section class="card mb-2" id="{$unique-section-id}">
+<!--									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section>
+									</section> -->
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:for-each>
