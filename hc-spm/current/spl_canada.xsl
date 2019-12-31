@@ -724,7 +724,7 @@
 									<section class="force-page-break hide-in-screen card" id="print-table-of-contents">
 										<div class="spl">
 											<h5 class="card-header text-white">
-												<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/>
+												<xsl:value-of select="$labels/tableOfContents[@lang = $lang]"/> 001
 											</h5>
 											<ol>
 												<li class="bodymatter"><a href="#cd8d3086-e343-48f4-9cec-524834b3803b">Title Page</a></li>
