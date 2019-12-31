@@ -231,7 +231,7 @@
 						max-width: none !important; 
 					}
 					.row {
-						width: 15cm !important;
+						width: 18cm !important;
 					}
 				}
 
@@ -241,7 +241,7 @@
 					content: target-text(attr(href)); 
 				}
 				#print-table-of-contents a::after {
-					content: " test 9 " target-counter(attr(href), page);
+					content: " test 10 " target-counter(attr(href), page);
 					float: right;
 				}
 */
