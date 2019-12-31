@@ -20,10 +20,11 @@
 						max-width: none !important;  
 					}
 				
-					#print-table-of-contents a::after {
-						content: "5:" target-counter(attr(href), page);
-						float: right;
-					}
+				}
+
+				#print-table-of-contents a::after {
+					content: ", test page 6: " target-counter(attr(href), page);
+					float: right;
 				}
 
 /*#print-table-of-contents a::before {
