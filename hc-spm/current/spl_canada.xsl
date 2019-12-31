@@ -673,7 +673,7 @@
 							<xsl:choose>
 								<xsl:when test="v3:code[@code='MP']">
 									<!-- PRODUCT DETAIL -->
-<!--									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
+									<section class="card mb-2 hide-in-print" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="$labels/productDetails[@lang = $lang]"/>
 										</h5>
@@ -681,7 +681,7 @@
 											<xsl:apply-templates select="/v3:document/v3:author/v3:assignedEntity/v3:representedOrganization" mode="card"/>
 											<xsl:apply-templates select="v3:subject/v3:manufacturedProduct" mode="card"/>
 										</div>
-									</section> -->
+									</section>
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '001'">
 									<!-- TITLE PAGE - Note: force-page-break here does not work on FireFox -->
@@ -740,14 +740,14 @@
 								</xsl:when>
 								<xsl:when test="$tri-code-value = '007'">
 									<!-- RECENT MAJOR LABEL CHANGES -->
-<!--									<section class="card mb-2" id="{$unique-section-id}">
+									<section class="card mb-2" id="{$unique-section-id}">
 										<h5 class="card-header text-white bg-aurora-accent1">
 											<xsl:value-of select="v3:code/@displayName"/>
 										</h5>
 										<div class="spl recent-changes">
 											<xsl:apply-templates select="."/>
 										</div>
-									</section> -->
+									</section>
 								</xsl:when>
 								<xsl:otherwise>
 									<!-- NAVIGATION FOR DIFFERENT PARTS -->								
