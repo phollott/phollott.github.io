@@ -231,7 +231,7 @@
 						max-width: none !important; 
 					}
 					.row {
-						width: 20cm !important;
+						width: 15cm !important;
 					}
 				}
 

@@ -15,9 +15,12 @@
 
 				/* pmh - WeasyPrint Bootstrap 4 column hack - see https://github.com/Kozea/WeasyPrint/issues/697 */
 				@media print {
-/*				.col, *[class^="col-"] {		max-width: none !important;  			}
-*/
-					.row {						width: 20cm;					}
+					.col, *[class^="col-"] {		
+						max-width: none !important; 
+					}
+					.row {
+						width: 20cm !important;
+					}
 				}
 
 				/* pmh - WeasyPrint cuts off right hand side, so I am moving things around to test some theories */
