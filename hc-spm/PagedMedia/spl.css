@@ -1,7 +1,29 @@
+/*
+The contents of this file are subject to the Health Level-7 Public
+License Version 1.0 (the "License"); you may not use this file
+except in compliance with the License. You may obtain a copy of the
+License at http://www.hl7.org/HPL/hpl.txt.
 
+Software distributed under the License is distributed on an "AS IS"
+basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+the License for the specific language governing rights and
+limitations under the License.
+
+The Original Code is all this file.
+
+The Initial Developer of the Original Code is Gunther Schadow.
+Portions created by Initial Developer are Copyright (C) 2002-2004
+Health Level Seven, Inc. All Rights Reserved.
+
+Revision: $Id: spl.css,v 1.44 2005/10/07 17:14:07 gschadow Exp $
+
+FIXME: All the combinations of styleCode attributes need to
+be represented
+*/
+/* pmh - this is not necessarily screen only, especially not if we are using Paged Media
 @media screen {
 .spl {
-	font-family: "Rubik", sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 12pt;	
 	background-color: rgba(255,255,255,0);
 	color: #000000;
@@ -9,18 +31,21 @@
 	margin-right: 1em;
 }
 }
-							
+
 @media print {
 @page { 
-    size: 8.5in 11in; 
-	margin-top: 0.5in;
-	margin-bottom: 0.5in;
-	orphans: 4; 
-	widows: 2;
+        size:8.5in 11in; 
+	margin:0pt;
+	margin-left:0pt;
+	margin-right:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	orphans:4; 
+	widows:2;
 }
 
 .spl {
-	font-family: "Rubik", sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 12pt;	
 	color: #000000;
 	margin-left: 0in;
@@ -38,7 +63,7 @@
      display:none;
 }
 
-}
+} */
 .header3911 {	
 	font-family: Century Gothic,sans-serif;
 	width: 60%;
@@ -81,7 +106,6 @@
 	font-weight: bold;
 	margin-bottom: 0ex;
 	text-align: left;
-	color: black;
 }
 
 .spl div.Section h1 {	
@@ -91,7 +115,7 @@
 	margin-top:4ex;
 	margin-bottom: 0ex;
 	text-align: left;
-	font-family: "Rubik", sans-serif;
+	font-family:"Times New Roman", Times, serif;
 }
 
 .spl div.Warning h1 {
@@ -105,8 +129,7 @@
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
-	font-family: "Rubik", sans-serif;
-	color:black;
+	font-family:"Times New Roman", Times, serif;
 }
 
 .spl h3 {	
@@ -116,7 +139,6 @@
 	margin-top: 2.2ex;
 	margin-bottom: 0ex;
 	text-align: left;
-	color: black;
 }
 
 .spl h4 {	
@@ -127,31 +149,7 @@
 	margin-bottom: 0ex;
 	text-align: left;
 	font-style: italic;
-	color: black;
 }
-
-/* pmh - h5 and h6 follow the same pattern as h3 and h4 - plain, and then italicized */
-.spl h5 {	
-	text-indent: 0em;
-	font-size: 100%;
-	font-weight: normal;
-	margin-top: 2.2ex;
-	margin-bottom: 0ex;
-	text-align: left;
-	color: black;
-}
-
-.spl h6 {	
-	text-indent: 0em;
-	font-size: 100%;
-	font-weight: normal;
-	margin-top: 2.2ex;
-	margin-bottom: 0ex;
-	text-align: left;
-	font-style: italic;
-	color: black;
-}
-
 
 .spl div.Warning h1 {
 	margin-top: 0pt;
@@ -401,8 +399,7 @@
 	margin-top: 3ex;
 	margin-bottom: 3ex;
 	border-collapse: collapse;
-/*  pmh align border color with Product Detail tables */
-    border-color: #CCCCCC;
+	border-color: black;
 	border-width: thin;
 }
 
@@ -416,26 +413,20 @@
 	margin-top: 10px; /* Gecko needs this, IE doesn't add any extra */
 	text-align: center;
 	font-weight: bold;
-	font-size: 100%;
-    /* pmh - override Bootstrap default to put captions below tables and black instead of dark gray */
-    caption-side: top !important;
-    color: black !important; 
+	font-size: 100%
 }
 
-.spl th {
-    /* pmh always make table headers consistent with Product Detail colour scheme */
-    	background-color: #EAEAEA;
-}
+
+
 				
 .spl th, 
 .spl td { 
-	border-top-style: none;
+`	border-top-style: none;
 	border-bottom-style: none;
 	border-right-style: none;
 	border-left-style: none;
 	border-collapse: collapse;
-/*  pmh align border color with Product Detail tables, no longer black */
-    border-color: #CCCCCC;
+	border-color: black;
 	border-width: thin;
 /*
 	padding-top: 1px;
@@ -471,12 +462,11 @@
 	border-bottom-width: thin;
 }
 
-/* Removing the heavy top and bottom table rule
 .spl thead tr.First td,
 .spl thead tr.First th {
     border-top-style: solid;
 	border-top-width: medium;
-} */
+}
 
 .spl thead tr.Botrule td,
 .spl thead tr.Botrule th {
@@ -492,23 +482,22 @@
 
 .spl thead tr.Last td, 
 .spl thead tr.Last th {
-    border-bottom-style: solid;
+        border-bottom-style: solid;
 	border-bottom-width: thin;
   /* rule here might fail with rowspan headers */
 } 
 
 .spl tbody tr.First td, 
 .spl tbody tr.First th  { 
-    border-top-style: solid;
+        border-top-style: solid;
 	border-top-width: thin;
 }	 
 
-/* Removing the heavy top and bottom table rule
 .spl tbody.Headless tr.First td, 
 .spl tbody.Headless tr.First th  { 
-    border-top-style: solid;
+        border-top-style: solid;
 	border-top-width: medium;
-} */
+}	 
 
 .spl tbody tr.Botrule td, 
 .spl tbody tr.Botrule th { 
@@ -516,12 +505,12 @@
 	border-bottom-width: thin;
 }	 
 
-/* Removing the heavy top and bottom table rule
+
 .spl tbody tr.Last td,
 .spl tbody tr.Last th { 
 	border-bottom-style: solid;
 	border-bottom-width: medium;
-} */
+}
 
 .spl tbody tr td.Last,
 .spl tbody tr th.Last { 
@@ -714,7 +703,7 @@
 .spl .contentTablePetite {
 	border: 1px solid #999999;
 	background-color: #EAEAEA;
-	font-size: 80%;	
+	font-size: 80%;
 }
 .spl .contentTableTitle {
 	border-bottom: 1px solid #999999;
@@ -763,10 +752,7 @@
 	background-color: #FFFFFF;
 }
 .spl .formTableRowAlt {
- 	background-color: #FFFFFF;
-/* pmh - removed the banding the FDA was using for this 
-  background-color: #F2F2F2;
- */
+	background-color: #F2F2F2;
 }
 .spl .formLabel {
 	border: 1px solid #FFFFFF;
@@ -808,8 +794,7 @@
 
 .spl div.Highlights {
 	font-size: 80%; 
-	font-family: "Rubik", sans-serif;
-/*     font-family: "Times New Roman", Times, serif; */
+    font-family: "Times New Roman", Times, serif;
 }
 
 .spl div.HighlightsDisclaimer {
@@ -856,126 +841,3 @@
 	font-weight: normal;
 }
 
-/* Health Canada and Aurora Specific Styles and Swatches */
-
-/* Centre items on the Title Page for both Screen and Print, and fix Recent Changes tables */
-.title-page, 
-.title-page h2 { 
-    text-align: center !important; 
-}
-/* non-Bootstrap styles for XML Notepad and DocuBridge */
-.title-page-row {
-    padding: 0.25in;
-}
-.title-page-rule
-{
-    border-top: 1px solid; 
-    border-bottom: 1px solid;
-    border-color: lightgrey;
-}
-.title-page-left {
-    float: left;
-    width: 60%;
-}
-.title-page-right {
-    margin-left: 40%;
-}
-
-/* Removing any top and bottom table rule for this section only */
-.recent-changes table, 
-.recent-changes th, 
-.recent-changes td {
-	border-top-style: none !important;
-	border-bottom-style: none !important;
-}
-
-/* Image Fix - the FDA breaks out when images are too large */
-img { max-width: 100%; height: auto; }					
-
-/* round buttons */
-.btn-circle.btn-sm { 
-    width: 24px; 
-    height: 24px; 
-    padding: 1px 0px; 
-    border-radius: 12px; 
-    font-size: 14px; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-.btn-circle.btn-md { 
-    width: 48px; 
-    height: 48px; 
-    padding: 7px 10px; 
-    border-radius: 24px; 
-    font-size: 10px; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-} 
-.btn-circle.btn-lg { 
-    width: 70px; 
-    height: 70px; 
-    padding: 10px 16px; 
-    border-radius: 35px; 
-    font-size: 12px; 
-    text-align: center; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-} 
-#btnTopDiv {
-    position:fixed; 
-    bottom:0; 
-    right:0; 
-    width:60px; 
-    height:60px;
-}
-
-@media screen {
-
-.bg-aurora-accent1 { background-color: #002D42;	}
-.bg-aurora-accent2 { background-color: #4D5D6C;	}
-.bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
-
-#side .nav-link.active,
-#side .nav-link:hover,
-#side .nav-link:focus {
-	color: #4D5D6C;
-}
-
-.hide-in-screen { display: none; }
-.Section h1 {display: none; } /* hide top level section headings on screen */
-#main { max-width: 1000px; }
-#side { max-width: 420px; min-width: 420px; }
-#navigation-sidebar li { padding-left: 10px !important; }
-#navigation-scrollbar { height: calc(100vh - 50px); overflow-y: scroll; }
-				
-}
-	
-/* Only pad top and bottom margins for the last table in the main content to prevent double margins */
-.spl table.formTablePetite {
-margin-top: 2ex;
-margin-bottom: 0ex;
-}
-.spl table.formTablePetite:lastchild {
-margin-top: 2ex;
-margin-bottom: 2ex;
-}
-
-@media print {	
-
-.hide-in-print { display: none !important; }		
-.force-page-break-before { page-break-before: always; }
-.force-page-break-after { page-break-after: always; }
-.suppress-page-break { page-break-after: avoid; }
-.card { border-width: 0 !important; }
-.card-header { display: none !important; }
-	
-/* override FDA tables so they look nicer in print */
-.spl .formTable, 
-.spl .formTablePetite,
-.spl .formTableMorePetite,
-.spl .formTitle,
-.spl .formHeadingReg,
-.spl .formLabel {
-    border: 1px solid #CCCCCC !important;
-}
-
-}	
