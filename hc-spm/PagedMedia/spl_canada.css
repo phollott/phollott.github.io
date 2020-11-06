@@ -927,12 +927,12 @@ img { max-width: 100%; height: auto; }
     width:60px; 
     height:60px;
 }
-
+/*
 @media screen {
 
 .bg-aurora-accent1 { background-color: #002D42;	}
 .bg-aurora-accent2 { background-color: #4D5D6C;	}
-.bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}*/
+.bg-aurora-light   { background-color: #EAEAEA; } /*  matched to the base colour int the tables #CECECE;	}* /
 
 #side .nav-link.active,
 #side .nav-link:hover,
@@ -941,7 +941,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .hide-in-screen { display: none; }
-.Section h1 {display: none; } /* hide top level section headings on screen */
+.Section h1 {display: none; } /* hide top level section headings on screen * /
 #main { max-width: 1000px; }
 #side { max-width: 420px; min-width: 420px; }
 #navigation-sidebar li { padding-left: 10px !important; }
@@ -949,7 +949,7 @@ img { max-width: 100%; height: auto; }
 				
 }
 	
-/* Only pad top and bottom margins for the last table in the main content to prevent double margins */
+/* Only pad top and bottom margins for the last table in the main content to prevent double margins * /
 .spl table.formTablePetite {
 margin-top: 2ex;
 margin-bottom: 0ex;
@@ -968,7 +968,7 @@ margin-bottom: 2ex;
 .card { border-width: 0 !important; }
 .card-header { display: none !important; }
 	
-/* override FDA tables so they look nicer in print */
+/* override FDA tables so they look nicer in print * /
 .spl .formTable, 
 .spl .formTablePetite,
 .spl .formTableMorePetite,
@@ -978,4 +978,4 @@ margin-bottom: 2ex;
     border: 1px solid #CCCCCC !important;
 }
 
-}	
+} */	
