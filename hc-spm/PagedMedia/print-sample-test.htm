@@ -1,7 +1,7 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=10"><meta name="documentId" content="df363dae-0612-4be7-bb92-a8381fa1da35"><meta name="documentSetId" content="ac9c8e28-2798-4134-8197-2b249d836002"><meta name="documentVersionNumber" content="3"><meta name="documentEffectiveTime" content="20180101">
-<title>HEY LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
+<title>HOO LORUM IPSUM (acetaminophen), TABLET, CAPSULE, POWDER</title>
 <!--<link rel="stylesheet" href="https://healthcanada.github.io/HPFB/product-monograph/style-sheet/spl_canada.css">--> 
 <!--<link rel="stylesheet" href="spl.css">-->
 
@@ -9,6 +9,14 @@
       window.PagedConfig = {
         after: (flow) => console.log(flow.performance)
       }
+	  
+	  /* unsubtle way of moving the template into the main body */
+	  function showContent() {
+		var temp = document.getElementsByTagName("template")[0];
+		var clon = temp.content.cloneNode(true);
+		document.body.appendChild(clon);
+	  }
+	  
     </script>
 	<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
 
@@ -35,13 +43,9 @@
 					content: target-counter(attr(href), page);
 					float: right;
 				}
-				
-				template {
-					display: block;
-				}
 			</style></head><body><main class="col">
 			<div class="container-fluid" id="main"><div class="row position-relative"><div class="col">
-			
+<button onclick="showContent()">Show hidden content</button>			
 <!-- PMH - 1 remove all of the old hide-in-print PRODUCT DETAILS
 			<div class="card mb-2 hide-in-print" id="bdeefc11-4315-41e3-8c56-83e8bf4f770b"><h5 class="card-header text-white bg-aurora-accent1">PRODUCT DETAILS</h5>
 			<div id="product-accordion"><section class="card m-2" id="company-details"><h6 class="card-header p-0 bg-aurora-light"><button class="btn bg-aurora-light text-left w-100" type="button" data-toggle="collapse" data-target="#collapse-company-details" aria-expanded="true" aria-controls="collapse-company-details">COMPANY DETAILS</button></h6><div id="collapse-company-details" class="collapse show spl" data-parent="#product-accordion"><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Market Authorization Holder -&nbsp;</span>Acme Pharma Inc. (1111)</td></tr><tr><th scope="col" class="formTitle">Contact Address</th><th scope="col" class="formTitle">Additional Contact Information</th></tr><tr class="formTableRowAlt"><td class="formItem"><table><tr><td>9526 Columbia St.</td></tr><tr><td>Hanover Park,&nbsp;Illinois,&nbsp;60133</td></tr><tr><td>United States of America (the)</td></tr></table></td><td class="formItem"><div>Tel: +1-202-555-0178</div><div>Email: <a href="mailto:test@canada.ca">test@canada.ca</a></div><div>Web: <a href="http://www.test.ca">http://www.test.ca</a></div></td></tr></table><table width="100%" cellpadding="3" cellspacing="0" class="formTableMorePetite"><tr><td colspan="4" class="formHeadingReg"><span class="formHeadingTitle">Canadian Importer/Distributor -&nbsp;</span>Acme Distributing Ltd. (0000)</td></tr><tr><th scope="col" class="formTitle">Contact Address</th><th scope="col" class="formTitle">Additional Contact Information</th></tr><tr class="formTableRowAlt"><td class="formItem"><table><tr><td>250 Lanark Ave.</td></tr><tr><td>Ottawa,&nbsp;Ontario,&nbsp;K1Z 6R5</td></tr><tr><td>Canada</td></tr></table></td><td class="formItem"><div>Tel: +1-416-555-0134</div><div>Email: <a href="mailto:test.2@canada.ca">test.2@canada.ca</a></div><div>Web: <a href="http://www.test.ca">http://www.test.ca</a></div></td></tr></table></div></section><section class="card m-2" id="product-1"><h6 class="card-header p-0 bg-aurora-light"><button class="btn bg-aurora-light text-left w-100" type="button" data-toggle="collapse" data-target="#collapse-product-1" aria-expanded="true" aria-controls="collapse-product-1">Product #1 LORUM IPSUM TABLETS 
