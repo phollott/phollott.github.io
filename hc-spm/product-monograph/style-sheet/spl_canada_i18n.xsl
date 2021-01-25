@@ -4,6 +4,7 @@
 	<my:texts>
 		<!-- English Labels -->
 		<tableOfContents lang="en">TABLE OF CONTENTS</tableOfContents>
+		<tocBoilerplate lang="en">Sections or subsections that are not applicable at the time of authorization are not listed.</tocBoilerplate>
 		<productDetails lang="en">PRODUCT DETAILS</productDetails>
 		<companyDetails lang="en">COMPANY DETAILS</companyDetails>
 		<labeler lang="en">Market Authorization Holder</labeler>
@@ -33,16 +34,18 @@
 		<size lang="en">Size</size>
 		<imprint lang="en">Imprint</imprint>
 		<flavor lang="en">Flavour</flavor>
-		<combinationProduct lang="en">Combination Product</combinationProduct>
+		<combinationProduct lang="en">Combination Product Type</combinationProduct>
 		<pharmaStandard lang="en">Pharmaceutical Standard</pharmaStandard>
 		<schedule lang="en">Schedule</schedule>
 		<therapeuticClass lang="en">Therapeutic Class</therapeuticClass>
-		<packaging lang="en">Packaging</packaging>
+		<packaging lang="en">Packaging Status</packaging>
 		<itemCode lang="en">Package Identifier</itemCode>
 		<packageDescription lang="en">Package Description</packageDescription>
+		<packageRegStatus lang="en">Package Available</packageRegStatus>
+		<productRegStatus lang="en">Product Regulatory Status</productRegStatus>
 		<approvalDate lang="en">Date of Approval</approvalDate>
 		<cancellationDate lang="en">Date of Cancellation</cancellationDate>
-		<marketingInfo lang="en">Regulatory Status</marketingInfo>
+		<marketingInfo lang="en">Product Status</marketingInfo>
 		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
 		<applicationNumber lang="en">Control Number</applicationNumber>
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
@@ -54,14 +57,16 @@
 		<andConnective lang="en">&#160;and&#160;</andConnective>
 		<ofConnective lang="en">&#160;of&#160;</ofConnective>
 		<toConnective lang="en">&#160;-&#160;</toConnective>
+
 		<!-- French Labels -->
 		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
+		<tocBoilerplate lang="fr">Les sections ou sous-sections qui ne sont pas pertinentes au moment de l’autorisation ne sont pas énumérées.</tocBoilerplate>
 		<productDetails lang="fr">DÉTAILS SUR LE PRODUIT</productDetails>
 		<companyDetails lang="fr">RENSEIGNEMENTS SUR L’ENTREPRISE</companyDetails>
 		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>
 		<registrant lang="fr">Importateur/distributeur canadien</registrant>
 		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
-		<partyTelephone lang="fr">Autres coordonnées</partyTelephone>
+		<partyAdditional lang="fr">Autres coordonnées</partyAdditional>
 		<partyEmail lang="fr">Couriel&#160;</partyEmail>
 		<partyTel lang="fr">Tél.&#160;</partyTel>
 		<partyWeb lang="fr">Site Web&#160;</partyWeb>
@@ -85,16 +90,18 @@
 		<size lang="fr">Taille</size>
 		<imprint lang="fr">Empreinte</imprint>
 		<flavor lang="fr">Saveur</flavor>
-		<combinationProduct lang="fr">Produit mixte</combinationProduct>
+		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
 		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
 		<schedule lang="fr">Annexe</schedule>
-		<therapeuticClass lang="fr">Classe thérapeutique</therapeuticClass>
-		<packaging lang="fr">Emballage</packaging>
+		<therapeuticClass lang="fr">Classification thérapeutique</therapeuticClass>
+		<packaging lang="fr">État de l’emballage</packaging>
 		<itemCode lang="fr">Identificateur d’emballage</itemCode>
 		<packageDescription lang="fr">Description de l’emballage</packageDescription>
+		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
+		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
 		<approvalDate lang="fr">Date d’approbation</approvalDate>
 		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
-		<marketingInfo lang="fr">Régime d’emploi homologué</marketingInfo>
+		<marketingInfo lang="fr">État du produit</marketingInfo>
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
@@ -108,8 +115,22 @@
 		<toConnective lang="fr">&#160;-&#160;</toConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
-	
-	<!-- global templates like date formatting may be specialized for different regions -->
+		
+	<!-- global templates like date and string cd formatting may be specialized for different regions -->
+	<xsl:template name="string-lowercase">
+		<!--** Convert the input text that is passed in as a parameter to lower case  -->
+		<xsl:param name="text"/>
+		<xsl:value-of select="translate($text,
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ', 
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ')"/>
+	</xsl:template>
+	<xsl:template name="string-uppercase">
+		<!--** Convert the input text that is passed in as a parameter to upper case  -->
+		<xsl:param name="text"/>
+		<xsl:value-of select="translate($text,
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ', 
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ')"/>
+	</xsl:template>
 	<xsl:template name="string-to-date">
 		<xsl:param name="text"/>
 		<xsl:param name="displayMonth">true</xsl:param>
