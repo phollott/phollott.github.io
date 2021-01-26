@@ -389,9 +389,12 @@
 	top: -5px;
 }
 
+
+/*  PMH reduce size of pl tables to 60% */
+
 .spl table	{
 	white-space: wrap;
-	font-size: 100%;
+	font-size: 60%;
 /*
 	border-top-style: none;
 	border-bottom-style: none;
