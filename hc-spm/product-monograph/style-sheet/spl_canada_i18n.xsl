@@ -49,14 +49,14 @@
 		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
 		<applicationNumber lang="en">Control Number</applicationNumber>
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
-		<partNumber lang="en">Part&#160;#</partNumber>
-		<part lang="en">Part&#160;</part>
+		<partNumber lang="en">Part #</partNumber>
+		<part lang="en">Part </part>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
-		<inConnective lang="en">&#160;in&#160;</inConnective>
-		<andConnective lang="en">&#160;and&#160;</andConnective>
-		<ofConnective lang="en">&#160;of&#160;</ofConnective>
-		<toConnective lang="en">&#160;-&#160;</toConnective>
+		<inConnective lang="en"> in </inConnective>
+		<andConnective lang="en"> and </andConnective>
+		<ofConnective lang="en"> of </ofConnective>
+		<toConnective lang="en"> - </toConnective>
 
 		<!-- French Labels -->
 		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
@@ -67,9 +67,9 @@
 		<registrant lang="fr">Importateur/distributeur canadien</registrant>
 		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
 		<partyAdditional lang="fr">Autres coordonnées</partyAdditional>
-		<partyEmail lang="fr">Couriel&#160;</partyEmail>
-		<partyTel lang="fr">Tél.&#160;</partyTel>
-		<partyWeb lang="fr">Site Web&#160;</partyWeb>
+		<partyEmail lang="fr">Couriel </partyEmail>
+		<partyTel lang="fr">Tél. </partyTel>
+		<partyWeb lang="fr">Site Web </partyWeb>
 		<product lang="fr">Produit</product>
 		<productInfo lang="fr">Renseignements sur le produit</productInfo>
 		<brandName lang="fr">Nom de marque</brandName>
@@ -105,14 +105,14 @@
 		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
 		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
 		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
-		<partNumber lang="fr">No&#160;d’élément</partNumber>
-		<part lang="fr">Élément&#160;</part>
+		<partNumber lang="fr">No d’élément</partNumber>
+		<part lang="fr">Élément </part>
 		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
 		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
-		<inConnective lang="fr">&#160;dans&#160;</inConnective>
-		<andConnective lang="fr">&#160;et&#160;</andConnective>
-		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
-		<toConnective lang="fr">&#160;-&#160;</toConnective>
+		<inConnective lang="fr"> dans </inConnective>
+		<andConnective lang="fr"> et </andConnective>
+		<ofConnective lang="fr"> de </ofConnective>
+		<toConnective lang="fr"> - </toConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		
