@@ -182,14 +182,14 @@
 					top: 0;
 				}
 				
-				/* Print Table of Contents Styles that should be in CSS eventually */	
+				/* Print Table of Contents Styles that should be in CSS eventually [pmh - moved] 
 				ul.toc {
 					list-style-type: none;
 				}					
 				li.toc a::after {
 					content: target-counter(attr(href), page);
 					float: right;
-				}
+				} */	
 
 				<!-- this french language reduction reduces only the top level navigation -->
 				<xsl:if test="$lang='fr'">#side .nav-top { font-size: 75%; }</xsl:if>				

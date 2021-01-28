@@ -17,11 +17,26 @@
 	margin-bottom: 0.5in;
 	orphans: 4; 
 	widows: 2;
+	
+	/* [pmh] add page number on bottom right, and may need to adjust the margins */
+    @bottom-right {
+        content: counter(page);
+    }
+}
+
+/* [pmh] these styles are used in during PDF generation for the print table of contents */
+ul.toc {
+	list-style-type: none;
+}					
+li.toc a::after {
+	content: target-counter(attr(href), page);
+	float: right;
 }
 
 .spl {
 	font-family: "Rubik", sans-serif;
-	font-size: 12pt;	
+	/* [pmh] adjusted print view font-size from 12pt to 10pt so it looks right without bootstrap styles */
+	font-size: 10pt;	
 	color: #000000;
 	margin-left: 0in;
 	margin-right: 0in;
@@ -29,6 +44,10 @@
 	margin-bottom: 0in;
 }
 
+/* [pmh] using inline width has been deprecated, and this change was required for PDF generation */
+.spl .fullWidth {
+	width: 100%;
+}
 
 .spl div.DocumentTitle {
         display: none;
