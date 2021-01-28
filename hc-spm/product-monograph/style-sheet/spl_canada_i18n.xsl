@@ -121,15 +121,15 @@
 		<!--** Convert the input text that is passed in as a parameter to lower case  -->
 		<xsl:param name="text"/>
 		<xsl:value-of select="translate($text,
-			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ', 
-			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ')"/>
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 
+			'abcdefghijklmnopqrstuvwxyz')"/>
 	</xsl:template>
 	<xsl:template name="string-uppercase">
 		<!--** Convert the input text that is passed in as a parameter to upper case  -->
 		<xsl:param name="text"/>
 		<xsl:value-of select="translate($text,
-			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ', 
-			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ')"/>
+			'abcdefghijklmnopqrstuvwxyz', 
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
 	</xsl:template>
 	<xsl:template name="string-to-date">
 		<xsl:param name="text"/>
