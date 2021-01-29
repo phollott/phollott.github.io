@@ -59,61 +59,6 @@
 		<toConnective lang="en"> - </toConnective>
 
 		<!-- French Labels -->
-		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
-		<tocBoilerplate lang="fr">Les sections ou sous-sections qui ne sont pas pertinentes au moment de l’autorisation ne sont pas énumérées.</tocBoilerplate>
-		<productDetails lang="fr">DÉTAILS SUR LE PRODUIT</productDetails>
-		<companyDetails lang="fr">RENSEIGNEMENTS SUR L’ENTREPRISE</companyDetails>
-		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>
-		<registrant lang="fr">Importateur/distributeur canadien</registrant>
-		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
-		<partyAdditional lang="fr">Autres coordonnées</partyAdditional>
-		<partyEmail lang="fr">Couriel </partyEmail>
-		<partyTel lang="fr">Tél. </partyTel>
-		<partyWeb lang="fr">Site Web </partyWeb>
-		<product lang="fr">Produit</product>
-		<productInfo lang="fr">Renseignements sur le produit</productInfo>
-		<brandName lang="fr">Nom de marque</brandName>
-		<nonPropName lang="fr">Dénomination non exclusive</nonPropName>
-		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
-		<adminRoute lang="fr">Voie d’administration</adminRoute>
-		<dosageForm lang="fr">Forme pharmaceutique</dosageForm>
-		<activeIngredients lang="fr">Principe actif/Fragment actif</activeIngredients>
-		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
-		<ingredientName lang="fr">Nom d’ingrédient</ingredientName>
-		<strength lang="fr">Concentration</strength>
-		<basisOfStrength lang="fr">Base de la concentration</basisOfStrength>
-		<productType lang="fr">Type de produit</productType>
-		<productCharacteristics lang="fr">Caractéristiques du produit</productCharacteristics>
-		<color lang="fr">Couleur</color>
-		<shape lang="fr">Forme</shape>
-		<score lang="fr">Rainure</score>
-		<size lang="fr">Taille</size>
-		<imprint lang="fr">Empreinte</imprint>
-		<flavor lang="fr">Saveur</flavor>
-		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
-		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
-		<schedule lang="fr">Annexe</schedule>
-		<therapeuticClass lang="fr">Classification thérapeutique</therapeuticClass>
-		<packaging lang="fr">État de l’emballage</packaging>
-		<itemCode lang="fr">Identificateur d’emballage</itemCode>
-		<packageDescription lang="fr">Description de l’emballage</packageDescription>
-		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
-		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
-		<approvalDate lang="fr">Date d’approbation</approvalDate>
-		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
-		<marketingInfo lang="fr">État du produit</marketingInfo>
-		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
-		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
-		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
-		<partNumber lang="fr">No d’élément</partNumber>
-		<part lang="fr">Élément </part>
-		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
-		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
-		<inConnective lang="fr"> dans </inConnective>
-		<andConnective lang="fr"> et </andConnective>
-		<ofConnective lang="fr"> de </ofConnective>
-		<toConnective lang="fr"> - </toConnective>
-	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		
 	<!-- global templates like date and string cd formatting may be specialized for different regions -->
