@@ -14,6 +14,7 @@
 				<button class="btn bg-aurora-light text-left w-100" type="button" 
 				data-toggle="collapse" data-target="#collapse-company-details" 
 				aria-expanded="true" aria-controls="collapse-company-details">
+					Hello... <xsl value-of select="$lang"/> Helloo.
 					<xsl:value-of select="$labels/companyDetails[@lang = $lang]"/>
 				</button>
 			</h6>
