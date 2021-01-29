@@ -57,8 +57,7 @@
 		<andConnective lang="en"> and </andConnective>
 		<ofConnective lang="en"> of </ofConnective>
 		<toConnective lang="en"> - </toConnective>
-
-		<!-- French Labels -->
+	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		
 	<!-- global templates like date and string cd formatting may be specialized for different regions -->
