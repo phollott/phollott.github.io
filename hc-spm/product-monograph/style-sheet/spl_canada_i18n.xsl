@@ -49,14 +49,70 @@
 		<marketingCategory lang="en">Regulatory Activity Type</marketingCategory>
 		<applicationNumber lang="en">Control Number</applicationNumber>
 		<partQuantity lang="en">Quantity of Parts</partQuantity>
-		<partNumber lang="en">Part #</partNumber>
-		<part lang="en">Part </part>
+		<partNumber lang="en">Part&#160;#</partNumber>
+		<part lang="en">Part&#160;</part>
 		<pkgQuantity lang="en">Package Quantity</pkgQuantity>
 		<ttlProdQty lang="en">Total Product Quantity</ttlProdQty>
-		<inConnective lang="en"> in </inConnective>
-		<andConnective lang="en"> and </andConnective>
-		<ofConnective lang="en"> of </ofConnective>
-		<toConnective lang="en"> - </toConnective>
+		<inConnective lang="en">&#160;in&#160;</inConnective>
+		<andConnective lang="en">&#160;and&#160;</andConnective>
+		<ofConnective lang="en">&#160;of&#160;</ofConnective>
+		<toConnective lang="en">&#160;-&#160;</toConnective>
+
+		<!-- French Labels -->
+		<tableOfContents lang="fr">TABLE DES MATIÈRES</tableOfContents>
+		<tocBoilerplate lang="fr">Les sections ou sous-sections qui ne sont pas pertinentes au moment de l’autorisation ne sont pas énumérées.</tocBoilerplate>
+		<productDetails lang="fr">DÉTAILS SUR LE PRODUIT</productDetails>
+		<companyDetails lang="fr">RENSEIGNEMENTS SUR L’ENTREPRISE</companyDetails>
+		<labeler lang="fr">Détenteur de l’autorisation de mise sur le marché</labeler>
+		<registrant lang="fr">Importateur/distributeur canadien</registrant>
+		<partyAddress lang="fr">Adresse de la personne-ressource</partyAddress>
+		<partyAdditional lang="fr">Autres coordonnées</partyAdditional>
+		<partyEmail lang="fr">Couriel&#160;</partyEmail>
+		<partyTel lang="fr">Tél.&#160;</partyTel>
+		<partyWeb lang="fr">Site Web&#160;</partyWeb>
+		<product lang="fr">Produit</product>
+		<productInfo lang="fr">Renseignements sur le produit</productInfo>
+		<brandName lang="fr">Nom de marque</brandName>
+		<nonPropName lang="fr">Dénomination non exclusive</nonPropName>
+		<din lang="fr">Numéro d’identification du médicament (DIN)</din>
+		<adminRoute lang="fr">Voie d’administration</adminRoute>
+		<dosageForm lang="fr">Forme pharmaceutique</dosageForm>
+		<activeIngredients lang="fr">Principe actif/Fragment actif</activeIngredients>
+		<inactiveIngredients lang="fr">Ingrédients inactifs</inactiveIngredients>
+		<ingredientName lang="fr">Nom d’ingrédient</ingredientName>
+		<strength lang="fr">Concentration</strength>
+		<basisOfStrength lang="fr">Base de la concentration</basisOfStrength>
+		<productType lang="fr">Type de produit</productType>
+		<productCharacteristics lang="fr">Caractéristiques du produit</productCharacteristics>
+		<color lang="fr">Couleur</color>
+		<shape lang="fr">Forme</shape>
+		<score lang="fr">Rainure</score>
+		<size lang="fr">Taille</size>
+		<imprint lang="fr">Empreinte</imprint>
+		<flavor lang="fr">Saveur</flavor>
+		<combinationProduct lang="fr">Type de produit combiné</combinationProduct>
+		<pharmaStandard lang="fr">Norme pharmaceutique</pharmaStandard>
+		<schedule lang="fr">Annexe</schedule>
+		<therapeuticClass lang="fr">Classification thérapeutique</therapeuticClass>
+		<packaging lang="fr">État de l’emballage</packaging>
+		<itemCode lang="fr">Identificateur d’emballage</itemCode>
+		<packageDescription lang="fr">Description de l’emballage</packageDescription>
+		<packageRegStatus lang="fr">Emballage disponible</packageRegStatus>
+		<productRegStatus lang="fr">État réglementaire du produit</productRegStatus>
+		<approvalDate lang="fr">Date d’approbation</approvalDate>
+		<cancellationDate lang="fr">Date d’annulation</cancellationDate>
+		<marketingInfo lang="fr">État du produit</marketingInfo>
+		<marketingCategory lang="fr">Type d’activité de réglementation</marketingCategory>
+		<applicationNumber lang="fr">Numéro de contrôle</applicationNumber>
+		<partQuantity lang="fr">Nombre d’éléments</partQuantity>
+		<partNumber lang="fr">No&#160;d’élément</partNumber>
+		<part lang="fr">Élément&#160;</part>
+		<pkgQuantity lang="fr">Nombre d’emballages</pkgQuantity>
+		<ttlProdQty lang="fr">Quantité de produit totale</ttlProdQty>
+		<inConnective lang="fr">&#160;dans&#160;</inConnective>
+		<andConnective lang="fr">&#160;et&#160;</andConnective>
+		<ofConnective lang="fr">&#160;de&#160;</ofConnective>
+		<toConnective lang="fr">&#160;-&#160;</toConnective>
 	</my:texts>
 	<xsl:variable name="labels" select="document('')/*/my:texts"/>
 		
@@ -65,15 +121,15 @@
 		<!--** Convert the input text that is passed in as a parameter to lower case  -->
 		<xsl:param name="text"/>
 		<xsl:value-of select="translate($text,
-			'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 
-			'abcdefghijklmnopqrstuvwxyz')"/>
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ', 
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ')"/>
 	</xsl:template>
 	<xsl:template name="string-uppercase">
 		<!--** Convert the input text that is passed in as a parameter to upper case  -->
 		<xsl:param name="text"/>
 		<xsl:value-of select="translate($text,
-			'abcdefghijklmnopqrstuvwxyz', 
-			'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+			'abcdefghijklmnopqrstuvwxyzàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿžšœ', 
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞŸŽŠŒ')"/>
 	</xsl:template>
 	<xsl:template name="string-to-date">
 		<xsl:param name="text"/>
