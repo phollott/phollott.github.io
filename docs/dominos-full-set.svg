@@ -40,8 +40,8 @@
 	
 	svg.addEventListener("load",function(){
 		svg.getElementById("blank").style.display="none"
-		if (svg.getElementById("title" + gyre.width))
-			 svg.getElementById("title" + gyre.width).style.display="inline"
+		if (svg.getElementById("turn" + gyre.width))
+			 svg.getElementById("turn" + gyre.width).style.display="inline"
 		else
 			 svg.getElementById("fin").style.display="inline"
 	}, false);
@@ -75,9 +75,8 @@
 	
 	function eliminate(id, ...rest) {
 		grps = grps.filter(i => i !== id); scale(svg.getElementById(id), 0.01)
-
 		// restart at next gyre if we have reached the target for the current gyre
-		if (++gyre.score == gyre.target) {
+		if (gyre.score++ == gyre.target) {
 			gyre.complete = true
 			svg.getElementById("complete").style.display = "inline"
 			setTimeout(() => {
@@ -135,7 +134,7 @@
 				return decodeURIComponent(pair[1]);
 			}
 		}
-		href = window.location.href + ("?gyre=0"); window.location.href=href
+		href = window.location.href + ("?gyre=1"); window.location.href=href
 	}
 	
   </script>  
@@ -3237,35 +3236,35 @@
     <g id="blank">
 		<rect x="-220" y="0" width="850" height="400" fill="white"/>
 	</g>
-    <g onclick="gyre.start(this, 4, maples, 12000)" style="display:none" id="title0">
+    <g onclick="gyre.start(this, 4, maples, 13000)" style="display:none" id="turn1">
 		<rect x="-220" y="0" width="850" height="400" fill="#e1d06e"/> <!-- https://www.hexanderson.com/4-->
-		<text id="prompt" text-anchor="middle" x="50%" y="80" fill="#617337">Round 1: Catch six dominoes to advance to next level!</text>		
+		<text id="prompt" text-anchor="middle" x="50%" y="80" fill="#617337">Turn 1: Catch six dominoes to advance to next level!</text>		
 		<text id="encouragement" text-anchor="middle" x="50%" y="110" fill="#617337">(Click anywhere to begin)</text>		
 		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#195b4e" font-size="20pt">Turning and turning in the widening gyre...</text>
 		<text x="50%" y="300" text-anchor="middle" fill="#617337">(Wm. B. Yeats, interpreted as dominoes and vector graphics)</text>
 	</g>
-    <g onclick="gyre.start(this, 5, falcons, 11000)" style="display:none" id="title1">
+    <g onclick="gyre.start(this, 5, falcons, 13000)" style="display:none" id="turn2">
 		<rect x="-220" y="0" width="850" height="400" fill="#236157"/>
-		<text id="prompt" text-anchor="middle" x="50%" y="130" fill="#acd4cc">Round 2: Catch yourself six dominoes to advance to next level!</text>		
+		<text id="prompt" text-anchor="middle" x="50%" y="130" fill="#acd4cc">Turn 2: Catch yourself six dominoes to advance to next level!</text>		
 		<text id="encouragement" text-anchor="middle" x="50%" y="280" fill="#acd4cc">You are doing so well :)</text>		
 		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#43bba7" font-size="20pt">The falcon cannot hear the falconer!</text>
 	</g>
-    <g onclick="gyre.start(this, 3, maples, 14000)" style="display:none" id="title2">
+    <g onclick="gyre.start(this, 3, maples, 15000)" style="display:none" id="turn3">
 		<rect x="-220" y="0" width="850" height="400" fill="#d8aa88"/>
-		<text id="prompt" text-anchor="middle" x="50%" y="110" fill="#4e1042">Round 3: Catch six dominoes! Advance to next level!!!</text>		
+		<text id="prompt" text-anchor="middle" x="50%" y="110" fill="#4e1042">Turn 3: Catch six dominoes! Advance to next level!!!</text>		
 		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#900403" font-size="20pt">Things fall apart; The centre cannot hold</text>
 		<text x="50%" y="300" text-anchor="middle" fill="#4e1042">(Props to hexanderson.com for palettes)</text>
 	</g>
-    <g onclick="setInterval(function(){gyre.switch = gyre.switch*-1},3000);gyre.start(this, 4, falcons, 10000)" style="display:none" id="title3">
-		<rect x="-220" y="0" width="850" height="400" fill="#b45e3b"/>
-		<text id="prompt" text-anchor="middle" x="50%" y="130" fill="#abbbc7">Round 4: Catch six to advance!</text>		
-		<text id="encouragement" text-anchor="middle" x="50%" y="260" fill="#abbbc7">Collision detection in SVG is hard, need to investigate</text>		
-		<text id="encouragement" text-anchor="middle" x="50%" y="280" fill="#abbbc7">https://github.com/abagames/svg-path-collider</text>		
-		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#8acaf0" font-size="20pt">Mere anarchy is loosed upon the world</text>
+    <g onclick="setInterval(function(){gyre.switch = gyre.switch*-1},3000);gyre.start(this, 4, falcons, 11000)" style="display:none" id="turn4">
+		<rect x="-220" y="0" width="850" height="400" fill="#ABBBC7"/>
+		<text id="prompt" text-anchor="middle" x="50%" y="130" fill="#FFFFFF">Turn 4: Catch six to advance!</text>		
+		<text id="encouragement" text-anchor="middle" x="50%" y="260" fill="#FFFFFF">Collision detection in SVG is hard, need to investigate</text>		
+		<text id="encouragement" text-anchor="middle" x="50%" y="280" fill="#FFFFFF">https://github.com/abagames/svg-path-collider</text>		
+		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#B45E3B" font-size="20pt">Mere anarchy is loosed upon the world</text>
 	</g>
-    <g onclick="gyre.start(this, 2, maples, 14000)" style="display:none" id="title4">
+    <g onclick="gyre.start(this, 2, maples, 15000)" style="display:none" id="turn5">
 		<rect x="-220" y="0" width="850" height="400" fill="#B45E3B"/>
-		<text id="prompt" text-anchor="middle" x="50%" y="110" fill="#ABBBC7">Round 5: You've got this! Catch six dominoes!</text>		
+		<text id="prompt" text-anchor="middle" x="50%" y="110" fill="#ABBBC7">Turn 5: You've got this! Catch six dominoes!</text>		
 		<text id="verse" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#8ACAF0" font-size="20pt">The blood-dimmed tide is loosed</text>
 		<text x="50%" y="300" text-anchor="middle" fill="#ABBBC7">(Thank you for indulging this foolishness)</text>
 	</g>
