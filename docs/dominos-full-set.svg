@@ -68,7 +68,7 @@
 			case 1: 
 				scale(_el, 0.9, 0.9)
 			case 2:
-				rotate(_el, -8*gyre.switch, 30, -500)
+				rotate(_el, -7*gyre.switch, 30, -500)
 		}
 	}	
 
