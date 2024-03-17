@@ -78,6 +78,7 @@
 		// restart at next gyre if we have reached the target for the current gyre
 		if (gyre.score++ == gyre.target) {
 			gyre.complete = true
+			svg.getElementById("completeText").textContent = "Turn " + gyre.width + " Completed!!!"
 			svg.getElementById("complete").style.display = "inline"
 			setTimeout(() => {
 				href = window.location.href + ("&amp;gyre=" + ++gyre.width);window.location.href=href
@@ -3270,7 +3271,7 @@
 	</g>
     <g id="complete" style="display:none">
 		<rect x="-220" y="0" width="850" height="400" fill="#caf0f8"/>
-		<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="red" font-size="32pt">COMPLETE!!!</text>		
+		<text id="completeText" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="red" font-size="28pt">COMPLETE!!!</text>		
 	</g>
     <g id="fin" style="display:none">
 		<rect x="-220" y="0" width="850" height="400" fill="#e0a517"/>
