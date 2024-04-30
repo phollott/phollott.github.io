@@ -1,0 +1,466 @@
+<html>
+  <head>
+    <title>Turtle Tai Chi</title>
+  </head>
+  <body style="background-color:#009A17;">
+	<br/><h1 style="text-align:center; color:#DDDDDD">Bubbling Springs - First 17 Positions of Taoist Tai Chi (Front, Back, and Feet)</h1>
+<div style="text-align: center; margin: auto">
+	<iframe src="http://www.youtube.com/embed/9PKWaECjf-I?yt:stretch=16:9&vq=hd720p&autoplay=1&mute=1&start=7&playlist=9PKWaECjf-I&color=red&iv_load_policy=3&rel=0&showinfo=0&autohide=0&controls=1" 
+		id="ytPlayer"
+		width="560" height="315" allowtransparency="true" frameborder="0" 
+		allow="accelerometer; autoplay; encrypted-media; gyroscope"
+	></iframe>
+	<iframe src="http://www.youtube.com/embed/uJUL_OEKrxA?yt:stretch=16:9&vq=hd720p&autoplay=1&mute=1&start=12&playlist=uJUL_OEKrxA&color=red&iv_load_policy=3&rel=0&showinfo=0&autohide=0&controls=1" 
+		id="ytPlayer"
+		width="560" height="315" allowtransparency="true" frameborder="0" 
+		allow="accelerometer; autoplay; encrypted-media; gyroscope"
+	></iframe>
+</div>
+
+<svg style="position: absolute; top: 100px; left: 250px"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg2"
+    sodipodi:docname="footprint.svg"
+    inkscape:export-filename="G:\Documents and Settings\milo\Mijn documenten\politie-aa\map-icons\footprint48x48.png"
+    viewBox="0 0 560 315"
+    inkscape:export-xdpi="90"
+    version="1.1"
+    inkscape:export-ydpi="90"
+    inkscape:version="0.47 r22583"
+  >
+
+<script type="text/ecmascript">
+
+	/* Initialization and Startup */
+
+	const svg = document.getElementById("svg2")
+	const element = {
+		pos: -1, positions: null, position: null, act: -1, step: 6, run: null
+	}
+
+	svg.addEventListener("load",function() {
+		element.rightfoot = svg.getElementById("rightFoot"); element.rightheel = svg.getElementById("rightHeel"); element.righttoe = svg.getElementById("rightToe")
+		element.leftfoot = svg.getElementById("leftFoot"); element.leftheel = svg.getElementById("leftHeel"); element.lefttoe = svg.getElementById("leftToe")
+		element.run = setInterval(request, 1000); // start setInterval as "run"
+	}, false);
+
+	/* Main Loop */
+
+	function request() {
+		if (!element.position || (element.act === element.position.actions.length-1)) {
+			// load, clear, and run the next position
+			if (element.pos++ &lt; element.positions.length-1) {
+				element.position = element.positions[element.pos]
+				element.act = -1
+				clearInterval(element.run)
+				let desc = "[" + element.pos + "] " + element.position.position; console.log(desc)
+				svg.getElementById("position").textContent = desc
+				element.run = setInterval(request, element.position.interval)	
+			} else {
+				console.log('restart now')
+				window.location.reload()
+			}
+		} else {
+			element.position.actions[++element.act]()
+		}
+	}
+
+	/* Positions */
+
+	const Start = {
+		position: "Start", interval: 3000,
+		actions: [
+			function() {
+				balance()
+			}
+		]
+	}
+
+	const OpeningOfTaiChi = {
+		position: "Opening of Tai Chi", interval: 1300,
+		actions: [
+			function() {
+				rotateRightHeel(90)
+			}, 
+			function() {
+				rotateLeftToe(45)
+			}
+		]
+	}
+
+	const LeftGraspBirdTail = {
+		position: "Left Grasp Bird's Tail", interval: 1800,
+		actions: [
+			function() {
+				stepForwardLeft(2.7, 1.3)
+			}
+		]
+	}
+
+	const GraspBirdTail = {
+		position: "Grasp Bird's Tail", interval: 2300,
+		actions: [
+			function() {
+				stepForwardRight(2.5, -1); setOpacityRight(0.70); setOpacityLeft(0.30)
+			},
+			function() {
+				setOpacityRight(0.30); setOpacityLeft(0.70)
+			},
+			function() {
+				setOpacityRight(0.70); setOpacityLeft(0.30)
+			},
+			function() {
+				setOpacityRight(0.30); setOpacityLeft(0.70)
+			},
+			function() {
+				balance()
+			}
+		]
+	}
+
+	const WhipToOneSide = {
+		position: "Whip To One Side", interval: 1700,
+		actions: [
+			function() {
+				rotateRightHeel(-135)
+			},
+			function() {
+				rotateLeftToe(-135); stepForwardLeft(0, -1.3); raiseLeftHeel()
+			},
+			function() {
+				stepForwardLeft(1.8, 0); balance()
+			}
+		]
+	}
+
+	const StepUpRaiseHands = {
+		position: "Step Up and Raise Hands", interval: 1900,
+		actions: [
+			function() {
+				rotateLeftHeel(45)
+			},
+			function() { //(4, -8)
+				rotateRightHeel(45); stepForwardRight(1, -1.5); raiseRightToe()
+			}
+		]
+	}
+
+	const WhiteStorkSpreadsWings = {
+		position: "White Stork Spreads Wings", interval: 1800,
+		actions: [
+			function() { // (6, -2)
+				stepForwardRight(1, -0.2); rotateRightHeel(-45); balance()
+			},
+			function() { // (4, 4)
+				raiseLeftHeel(); rotateLeftToe(-45); stepForwardLeft(0.5, 0.5)
+			}
+		]
+	}
+
+	const BrushKneeLeft = {
+		position: "Brush Knee Left", interval: 1800,
+		actions: [
+			function() {
+				stepForwardLeft(1, 0); balance()
+			}
+		]
+	}
+
+	const StrumPeiPa = {
+		position: "Strum the Pei Pa", interval: 1800,
+		actions: [
+			function() {
+				stepForwardRight(0.3, -0.3)
+			},
+			function() {
+				raiseLeftToe()
+			}
+		]
+	}
+
+	const BrushKneeTwistStepLeft = {
+		position: "Brush Knee and Twist Step (Left)", interval: 1800,
+		actions: [
+			function() {
+				stepForwardLeft(1, 0); balance()
+			},
+			function() {
+				rotateLeftHeel(-45)
+			}
+		]
+	}
+
+	const BrushKneeTwistStepRight = {
+		position: "Brush Knee and Twist Step (Right)", interval: 1800,
+		actions: [
+			function() {
+				rotateRightHeel(-45); stepForwardRight(3, 0)
+			},
+			function() {
+				rotateRightHeel(45)
+			}
+		]
+	}
+
+	const BrushKneeLeft2 = {
+		position: "Brush Knee Left", interval: 1800,
+		actions: [
+			function() {
+				rotateLeftHeel(45); stepForwardLeft(3, 0)
+			}
+		]
+	}
+
+	const ChopWithFist = {
+		position: "Chop With Fist", interval: 1800,
+		actions: [
+			function() {
+				stepForwardRight(0, 3)
+			},
+			function() {
+				rotateLeftToe(45); raiseLeftHeel()
+			}
+		]
+	}
+
+	const StepUpDeflectParryPunch = {
+		position: "Step Up, Deflect, Parry, Punch", interval: 1800,
+		actions: [
+			function() {
+				stepForwardLeft(3, 0.5); balance()
+			}
+		]
+	}
+
+	const AppearToCloseEntrance = {
+		position: "Appear To Close Entrance", interval: 1800,
+		actions: [
+			function() {
+				setOpacityRight(0.70); setOpacityLeft(0.30)
+			},
+			function() {
+				setOpacityRight(0.30); setOpacityLeft(0.70)
+			},
+			function() {
+				balance()
+			}
+		]
+	}
+
+	const CrossHands = {
+		position: "Cross Hands", interval: 1800,
+		actions: [
+			function() {
+				rotateLeftHeel(90)
+			},
+			function() {
+				rotateRightToe(45)
+			},
+			function() {
+				stepForwardRight(0, 0.5)
+			}
+		]
+	}
+
+
+	element.positions = [Start, OpeningOfTaiChi, LeftGraspBirdTail, GraspBirdTail, WhipToOneSide
+    , StepUpRaiseHands, WhiteStorkSpreadsWings, BrushKneeLeft, StrumPeiPa
+	, BrushKneeTwistStepLeft, BrushKneeTwistStepRight, BrushKneeLeft2, StrumPeiPa, BrushKneeTwistStepLeft
+    , ChopWithFist, StepUpDeflectParryPunch, AppearToCloseEntrance, CrossHands ]
+
+	/* Actions */
+
+	function balance() { setOpacityRight(0.5);setOpacityLeft(0.5) }
+	function rotateRightHeel(_deg) { rotate(element.rightfoot, _deg, 0, 1) }
+	function rotateRightToe(_deg) { rotate(element.rightfoot, _deg, 0, -5) }
+	function rotateLeftHeel(_deg) { rotate(element.leftfoot, _deg, 0, 1) }
+	function rotateLeftToe(_deg) { rotate(element.leftfoot, _deg, 0, -5) }
+
+	function raiseRightHeel() { setOpacity(element.rightheel, 0) }
+	function raiseRightToe() { setOpacity(element.righttoe, 0) }
+	function stepForwardRight(_len, _side) { 
+		translate(element.rightfoot, _side ? element.step * _side : 0, -element.step * _len) 
+	}
+
+	function raiseLeftHeel() { setOpacity(element.leftheel, 0) }
+	function raiseLeftToe() { setOpacity(element.lefttoe, 0) }
+	function stepForwardLeft(_len, _side) {
+		translate(element.leftfoot, _side ? element.step * _side : 0, -element.step * _len)
+	}
+
+	function setOpacity( _el, _op) {
+		_el.style.opacity = _op
+	}	
+
+	function setOpacityRight(_op) {
+		element.rightheel.style.opacity = _op;element.righttoe.style.opacity = _op
+	}	
+
+	function setOpacityLeft(_op) {
+		element.leftheel.style.opacity = _op;element.lefttoe.style.opacity = _op
+	}	
+
+	function translate( _el, _x, _y) {
+		var transform = _el.transform.baseVal.getItem(0), mat = transform.matrix   
+		transform.setMatrix( mat.translate( _x, _y ) )
+	}	
+	
+	function rotate( _el, _r, _x, _y) {
+		var transform = _el.transform.baseVal.getItem(0), mat = transform.matrix   
+		transform.setMatrix( mat.translate( _x, _y ) )
+		transform.setMatrix( mat.rotate( _r) )
+		transform.setMatrix( mat.translate( -_x, -_y ) )
+	}
+	
+</script>
+
+  <g
+      id="layer1"
+      inkscape:label="Layer 1"
+      inkscape:groupmode="layer"
+	  transform="scale(2.5) translate(-60 -90)"
+    >
+	<!-- https://yqnn.github.io/svg-path-editor/ -->
+	<g id="leftFoot" transform="translate(98 180)">
+		<path
+			id="leftToe"
+			sodipodi:nodetypes="ccc"
+			style="stroke:#FFFFFF;fill:#FFFFFF;opacity:0.5"
+			d="m -0.8122 -2.1732 l 1.4244 -0.3997 c 2.0754 -5.2336 -3.5365 -4.9785 -1.4244 0.3997 z"
+		/>
+		<path
+			id="leftHeel"
+			sodipodi:nodetypes="ccc"
+			style="stroke:#FFFFFF;fill:#FFFFFF;opacity:0.5"
+			d="m 0.4975 -1.0123 l -1.197 0.2118 c -0.8323 2.5646 2.2775 2.3428 1.197 -0.2118 z"
+		/>
+		<line id="leftLine" style="stroke:#000000;stroke-width:0.5;fill:#000000;opacity:0.5" x1="2" y1="12" x2="2" y2="-18"/>
+	</g>
+	<g id="rightFoot" transform="translate(106 180)">
+		<path
+			id="rightToe"
+			sodipodi:nodetypes="ccc"
+			style="stroke:#FFFFFF;fill:#FFFFFF;opacity:0.5"
+			d="m 0.8122 -2.1732 l -1.4244 -0.3997 c -2.0754 -5.2336 3.5365 -4.9785 1.4244 0.3997 z"
+		/>
+		<path
+			id="rightHeel"
+			sodipodi:nodetypes="ccc"
+			style="stroke:#FFFFFF;fill:#FFFFFF;opacity:0.5"
+			d="m -0.4975 -1.0123 l 1.197 0.2118 c 0.8323 2.5646 -2.2775 2.3428 -1.197 -0.2118 z"
+		/>
+		<line id="rightLine" style="stroke:#000000;stroke-width:0.5;fill:#000000;opacity:0.5" x1="-2" y1="12" x2="-2" y2="-18"/>
+	</g>
+  </g
+  >
+   <g id="info" transform="translate(50 180)">
+		<text id="position" text-anchor="middle" x="50%" y="35" fill="#DDDDDD">START</text>		
+	</g>
+	<metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >footprint</dc:title
+        >
+        <dc:date
+          >2011-03-18T16:17:08</dc:date
+        >
+        <dc:description
+        />
+        <dc:source
+          >https://openclipart.org/detail/128215/footprint-by-milovanderlinden</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >milovanderlinden</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >black</rdf:li
+            >
+            <rdf:li
+              >foot</rdf:li
+            >
+            <rdf:li
+              >print</rdf:li
+            >
+            <rdf:li
+              >red</rdf:li
+            >
+            <rdf:li
+              >shoe</rdf:li
+            >
+            <rdf:li
+              >sign</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
+
+  </body>
+</html>
