@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+
+http://127.0.0.1:8080/launch.html?launch=eyJhIjoiMSJ9&iss=https%3A%2F%2Flaunch.smarthealthit.org%2Fv%2Fr4%2Ffhir
+
+http://127.0.0.1:8080/index.html
+https://docs.smarthealthit.org/tutorials/javascript/
+https://fhirblog.com/2016/03/13/implementing-smart-on-fhir-in-an-ehr/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7233102/
+
+-->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Launch My APP</title>
+        <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+    </head>
+    <body>
+        <script>
+		
+			/* Connect to an open server and browse patients
+
+			const client = FHIR.client("https://r3.smarthealthit.org");
+			client.request("Patient").then(console.log).catch(console.error); */
+		
+			// SMART Authorization (Launch Flow)
+		
+            FHIR.oauth2.authorize({
+
+              // The client_id that you should have obtained after registering a client at
+              // the EHR.
+              clientId: "http://launch.smarthealthit.org",
+
+              // The scopes that you request from the EHR. In this case we want to:
+              // launch            - Get the launch context
+              // openid & fhirUser - Get the current user
+              // patient/*.read    - Read patient data
+              scope: "launch openid fhirUser patient/*.read",
+
+              // Typically, if your redirectUri points to the root of the current directory
+              // (where the launchUri is), you can omit this option because the default value is
+              // ".". However, some servers do not support directory indexes so "." and "./"
+              // will not automatically map to the "index.html" file in that directory.
+              redirectUri: "index.html"
+            });
+        </script>
+    </body>
+</html>
