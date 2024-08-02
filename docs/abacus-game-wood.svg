@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) https://css-tricks.com/creating-patterns-with-svg-filters/ -->
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="340">
+	<script>
+		
+		// Once we have a click event from the column and the row, we will show all beads in the column, and hide the actual bead
+		function handleBeadClick(type, bead) {
+			if (type === 'row') this.row = bead
+			if (type === 'col') this.col = bead
+			if (this.row &amp;&amp; this.col) {
+				for(c in this.col.childNodes) {
+					if (this.col.childNodes[c].id) {
+						this.col.childNodes[c].style.opacity = 1		
+					}
+				}
+				this.row.style.opacity = 0		
+				this.row = undefined; this.col = undefined
+			}
+		}
+	
+	</script>
+	
+	<text transform="translate(500 50)">
+        <tspan x="0" dy="1.2em">Two challenges I ran into:</tspan>
+        <tspan x="0" dy="1.8em">1. Using SVG Symbols with E4X JavaScript is a real pain, so I abandoned</tspan>
+		<tspan x="0" dy="1.2em">that approach and just used shapes directly within the SVG for each of</tspan>
+		<tspan x="0" dy="1.2em">the clickable objects (beads); otherwise, childNodes are only accessible</tspan>
+		<tspan x="0" dy="1.2em">within the Symbol itself, not the Use reference. Didn't work.</tspan>
+        <tspan x="0" dy="1.8em">2. Two events get triggered when a bead is clicked - one to hide the bead</tspan>
+        <tspan x="0" dy="1.2em">that got clicked, one to unhide any of the other beads in that column,</tspan>
+        <tspan x="0" dy="1.2em">resulting in the appearance of beads getting pushed around; unfortunately,</tspan>
+        <tspan x="0" dy="1.2em">these events can occur out of order, so I am using two static variables to</tspan>
+        <tspan x="0" dy="1.2em">defer the screen update until both events have triggered.</tspan>
+    </text>
+		
+	<defs>
+		
+		<!-- Filter declaration -->
+		<filter
+		  id="filterLight" filterUnits="userSpaceOnUse"
+		  x="0" y="0" width="600" height="3400">
+		  <!-- offsetBlur -->
+		  <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+		  <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+
+		  <!-- litPaint -->
+		  <feSpecularLighting
+			in="blur" surfaceScale="5"
+			specularConstant=".75" specularExponent="20"
+			lighting-color="#bbbbbb" result="specOut">
+			<fePointLight x="-5000" y="-10000" z="20000" />
+		  </feSpecularLighting>
+		  <feComposite in="specOut" in2="SourceAlpha"
+			operator="in" result="specOut"/>
+		  <feComposite
+			in="SourceGraphic" in2="specOut"
+			operator="arithmetic" result="litPaint" 
+			k1="0" k2="1" k3="1" k4="0"/>
+
+		  <!-- merge offsetBlur + litPaint -->
+		  <feMerge>
+			<feMergeNode in="offsetBlur" />
+			<feMergeNode in="litPaint" />
+		  </feMerge>
+		</filter>
+
+		<filter id='filterRoughPaper' x='0%' y='0%' width='100%' height="100%">
+			<feTurbulence type="fractalNoise" baseFrequency='0.04' result='noise' numOctaves="5" />
+			<feDiffuseLighting in='noise' lighting-color='white' surfaceScale='2'>
+				<feDistantLight azimuth='45' elevation='60' />
+			</feDiffuseLighting>
+		</filter>
+
+		<filter id="filterWood" x='0%' y='0%' width='100%' height="100%">
+			<feTurbulence type="fractalNoise" baseFrequency=".1 .01"/>
+			<feColorMatrix values="0 0 0 .11 .69
+								   0 0 0 .09 .38
+								   0 0 0 .08 .14
+								   0 0 0 0 1"/>
+		</filter>
+
+		<filter id="filterIslands" x='0%' y='0%' width='100%' height="100%">
+			<feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5"/>
+			<feColorMatrix values="1 0 0 0 0
+								   1 0 0 0 0
+								   1 0 0 0 0
+								   0 0 0 0 1"/>
+			<feComponentTransfer>
+				<feFuncR type="table" tableValues="0 .02 .03 .03 .09 .12 .27 .91 .3 .03 0 0"/>
+				<feFuncG type="table" tableValues=".01 .09 .16 .18 .38 .48 .54 .73 .33 .09 .01 .01"/>
+				<feFuncB type="table" tableValues=".03 .17 .3 .25 .37 .42 .42 .6 .17 .01 0 0"/>
+			</feComponentTransfer>
+		</filter>
+
+		<filter id="filterMarble">
+			<feTurbulence id="turbulence" type="turbulence" baseFrequency="0.009" numOctaves="5" />
+			<feDisplacementMap id="displacement" in="SourceGraphic" scale="200" />
+		</filter>
+			
+	</defs>
+
+	<g transform="translate(50 50)">
+		<rect x="0" y="0" width="370" height="270" filter="url(#filterWood)"/>
+
+		<g style="fill:none;stroke:gold" filter="url(#filterLight)">
+		<rect x="30" y="30" width="306" height="206" stroke-width="20"/>
+		<path d="M20 105 L330 105 Z" stroke-width="12" />	
+		</g>
+	
+		<g id="col9" transform="translate(50 39)" filter="url(#filterLight)">
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+
+		<g id="col8" transform="translate(80 39)" filter="url(#filterLight)">
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col7" transform="translate(110 39)" filter="url(#filterLight)">
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col6" transform="translate(140 39)" filter="url(#filterLight)">		
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col5" transform="translate(170 39)" filter="url(#filterLight)">	
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col4" transform="translate(200 39)" filter="url(#filterLight)">		
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col3" transform="translate(230 39)" filter="url(#filterLight)">		
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col2" transform="translate(260 39)" filter="url(#filterLight)">		
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+		<g id="col1" transform="translate(290 39)" filter="url(#filterLight)">		
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)">
+				<path d="M12 0 L12 60 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+			</g>
+			<g style="stroke:none;fill:brown" onclick="handleBeadClick('col', this)" transform="translate(0 70)">
+				<path d="M12 0 L12 116 Z" style="fill:none;stroke:gold;stroke-width:2"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 0) "  onclick="handleBeadClick('row', this)" style="opacity:0"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 23)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 46)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t1" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 69)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t2" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 92)"  onclick="handleBeadClick('row', this)"/>
+				<circle id="t3" cx="10" cy="14" r="10" transform="scale(1.2 0.8) translate(0 115)" onclick="handleBeadClick('row', this)"/>
+			</g>
+		</g>
+		
+	</g>
+
+</svg>
