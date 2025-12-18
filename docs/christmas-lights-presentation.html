@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Lights Sozi Presentation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0f23;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        #sozi-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        /* Sozi controls styling */
+        .sozi-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .sozi-controls button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .sozi-controls button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .frame-info {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            z-index: 1000;
+            max-width: 300px;
+        }
+    </style>
+    <!-- Sozi JavaScript Library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sozi@21.12.31/js/sozi.min.js"></script>
+</head>
+<body>
+    <div id="sozi-container">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             xmlns:sozi="http://sozi.baierouge.fr" 
+             width="1200" 
+             height="800" 
+             viewBox="0 0 1200 800">
+          
+          <!-- Background -->
+          <defs>
+            <radialGradient id="nightSky" cx="50%" cy="30%">
+              <stop offset="0%" style="stop-color:#1a1a2e"/>
+              <stop offset="100%" style="stop-color:#0f0f23"/>
+            </radialGradient>
+            
+            <!-- Glow effects for bulbs -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            
+            <filter id="sparkle">
+              <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          
+          <!-- Night sky background -->
+          <rect width="1200" height="800" fill="url(#nightSky)"/>
+          
+          <!-- Stars in background -->
+          <circle cx="100" cy="80" r="1" fill="#ffffff" opacity="0.8"/>
+          <circle cx="200" cy="120" r="1.5" fill="#ffffff" opacity="0.6"/>
+          <circle cx="350" cy="60" r="1" fill="#ffffff" opacity="0.9"/>
+          <circle cx="480" cy="100" r="1" fill="#ffffff" opacity="0.7"/>
+          <circle cx="620" cy="40" r="1.5" fill="#ffffff" opacity="0.8"/>
+          <circle cx="750" cy="90" r="1" fill="#ffffff" opacity="0.6"/>
+          <circle cx="880" cy="50" r="1" fill="#ffffff" opacity="0.9"/>
+          <circle cx="1000" cy="110" r="1.5" fill="#ffffff" opacity="0.7"/>
+          <circle cx="1120" cy="70" r="1" fill="#ffffff" opacity="0.8"/>
+          
+          <!-- Main Christmas lights strand -->
+          <g id="lightsStrand">
+            
+            <!-- Wire/Cable -->
+            <path d="M 50 300 Q 200 250 350 280 T 650 260 Q 800 280 950 240 Q 1050 220 1150 260" 
+                  stroke="#2a2a2a" 
+                  stroke-width="4" 
+                  fill="none"/>
+            
+            <!-- Christmas light bulbs along the strand -->
+            
+            <!-- Bulb 1 - Red -->
+            <g id="bulb1" transform="translate(120,275)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ff4444" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ff6666" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffaaaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 2 - Green -->
+            <g id="bulb2" transform="translate(220,255)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#44ff44" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#66ff66" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#aaffaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 3 - Blue -->
+            <g id="bulb3" transform="translate(300,270)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#4444ff" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#6666ff" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#aaaaff" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 4 - Yellow -->
+            <g id="bulb4" transform="translate(400,275)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ffff44" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ffff66" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffffaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 5 - Purple -->
+            <g id="bulb5" transform="translate(500,265)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ff44ff" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ff66ff" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffaaff" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 6 - Orange -->
+            <g id="bulb6" transform="translate(580,268)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ff8844" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ffaa66" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffccaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 7 - Cyan -->
+            <g id="bulb7" transform="translate(680,260)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#44ffff" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#66ffff" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#aaffff" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 8 - Pink -->
+            <g id="bulb8" transform="translate(780,275)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ff88cc" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ffaadd" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffccee" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 9 - Lime -->
+            <g id="bulb9" transform="translate(880,250)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#88ff44" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#aaff66" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ccffaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 10 - Red -->
+            <g id="bulb10" transform="translate(980,235)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#ff4444" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#ff6666" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#ffaaaa" opacity="0.5"/>
+            </g>
+            
+            <!-- Bulb 11 - Blue -->
+            <g id="bulb11" transform="translate(1080,250)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#4444ff" filter="url(#glow)"/>
+              <ellipse cx="0" cy="-3" rx="8" ry="10" fill="#6666ff" opacity="0.8"/>
+              <rect x="-3" y="-18" width="6" height="6" rx="1" fill="#333"/>
+              <circle cx="0" cy="3" r="3" fill="#aaaaff" opacity="0.5"/>
+            </g>
+          </g>
+          
+          <!-- Decorative sparkles -->
+          <g id="sparkles" opacity="0.7">
+            <g transform="translate(150,200)" filter="url(#sparkle)">
+              <path d="M 0,-8 L 2,0 L 0,8 L -2,0 Z" fill="#ffffff"/>
+              <path d="M -8,0 L 0,2 L 8,0 L 0,-2 Z" fill="#ffffff"/>
+            </g>
+            
+            <g transform="translate(450,180)" filter="url(#sparkle)">
+              <path d="M 0,-6 L 1.5,0 L 0,6 L -1.5,0 Z" fill="#ffffff"/>
+              <path d="M -6,0 L 0,1.5 L 6,0 L 0,-1.5 Z" fill="#ffffff"/>
+            </g>
+            
+            <g transform="translate(750,190)" filter="url(#sparkle)">
+              <path d="M 0,-8 L 2,0 L 0,8 L -2,0 Z" fill="#ffffff"/>
+              <path d="M -8,0 L 0,2 L 8,0 L 0,-2 Z" fill="#ffffff"/>
+            </g>
+            
+            <g transform="translate(1050,170)" filter="url(#sparkle)">
+              <path d="M 0,-6 L 1.5,0 L 0,6 L -1.5,0 Z" fill="#ffffff"/>
+              <path d="M -6,0 L 0,1.5 L 6,0 L 0,-1.5 Z" fill="#ffffff"/>
+            </g>
+          </g>
+          
+          <!-- Title text -->
+          <text x="600" y="500" font-family="serif" font-size="36" font-weight="bold" 
+                text-anchor="middle" fill="#ffffff" opacity="0.9">
+            Christmas Lights Display
+          </text>
+          
+          <!-- Subtitle -->
+          <text x="600" y="540" font-family="serif" font-size="18" 
+                text-anchor="middle" fill="#cccccc" opacity="0.8">
+            A Festive Light Show Presentation
+          </text>
+          
+          <!-- Sozi Frames -->
+          
+          <!-- Frame 1: Overview of entire strand -->
+          <g sozi:frame="frame1">
+            <sozi:title>Welcome to the Light Show</sozi:title>
+            <sozi:sequence>1</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>5000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>1000</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>lightsStrand</sozi:refid>
+            <sozi:cx>600</sozi:cx>
+            <sozi:cy>400</sozi:cy>
+            <sozi:width>1200</sozi:width>
+            <sozi:height>800</sozi:height>
+          </g>
+          
+          <!-- Frame 2: Focus on left section (bulbs 1-4) -->
+          <g sozi:frame="frame2">
+            <sozi:title>The Beginning of the Strand</sozi:title>
+            <sozi:sequence>2</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>4000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>1500</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>bulb2</sozi:refid>
+            <sozi:cx>270</sozi:cx>
+            <sozi:cy>265</sozi:cy>
+            <sozi:width>400</sozi:width>
+            <sozi:height>300</sozi:height>
+          </g>
+          
+          <!-- Frame 3: Focus on center section (bulbs 5-7) -->
+          <g sozi:frame="frame3">
+            <sozi:title>The Heart of the Display</sozi:title>
+            <sozi:sequence>3</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>4000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>1500</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>bulb6</sozi:refid>
+            <sozi:cx>630</sozi:cx>
+            <sozi:cy>264</sozi:cy>
+            <sozi:width>400</sozi:width>
+            <sozi:height>300</sozi:height>
+          </g>
+          
+          <!-- Frame 4: Focus on right section (bulbs 8-11) -->
+          <g sozi:frame="frame4">
+            <sozi:title>The Grand Finale</sozi:title>
+            <sozi:sequence>4</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>4000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>1500</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>bulb9</sozi:refid>
+            <sozi:cx>980</sozi:cx>
+            <sozi:cy>242</sozi:cy>
+            <sozi:width>400</sozi:width>
+            <sozi:height>300</sozi:height>
+          </g>
+          
+          <!-- Frame 5: Close-up of a single bulb -->
+          <g sozi:frame="frame5">
+            <sozi:title>A Single Light's Magic</sozi:title>
+            <sozi:sequence>5</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>3000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>2000</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>bulb4</sozi:refid>
+            <sozi:cx>400</sozi:cx>
+            <sozi:cy>275</sozi:cy>
+            <sozi:width>150</sozi:width>
+            <sozi:height>150</sozi:height>
+          </g>
+          
+          <!-- Frame 6: Return to full view with sparkles -->
+          <g sozi:frame="frame6">
+            <sozi:title>The Complete Christmas Magic</sozi:title>
+            <sozi:sequence>6</sozi:sequence>
+            <sozi:timeout-enable>false</sozi:timeout-enable>
+            <sozi:timeout-ms>5000</sozi:timeout-ms>
+            <sozi:transition-duration-ms>2000</sozi:transition-duration-ms>
+            <sozi:transition-zoom-percent>0</sozi:transition-zoom-percent>
+            <sozi:transition-profile>ease</sozi:transition-profile>
+            <sozi:refid>lightsStrand</sozi:refid>
+            <sozi:cx>600</sozi:cx>
+            <sozi:cy>350</sozi:cy>
+            <sozi:width>1200</sozi:width>
+            <sozi:height>600</sozi:height>
+          </g>
+
+        </svg>
+    </div>
+    
+    <!-- Frame information display -->
+    <div class="frame-info" id="frameInfo">
+        <strong>Welcome to the Light Show</strong><br>
+        Frame 1 of 6
+    </div>
+    
+    <!-- Navigation controls -->
+    <div class="sozi-controls">
+        <button onclick="previousFrame()">◀ Previous</button>
+        <button onclick="togglePlay()">▶ Play/Pause</button>
+        <button onclick="nextFrame()">Next ▶</button>
+        <button onclick="resetPresentation()">↺ Reset</button>
+    </div>
+
+    <script>
+        // Sozi presentation instance
+        let presentation;
+        let currentFrameIndex = 0;
+        let isPlaying = false;
+        let playTimeout;
+        
+        // Frame titles for display
+        const frameTitles = [
+            "Welcome to the Light Show",
+            "The Beginning of the Strand", 
+            "The Heart of the Display",
+            "The Grand Finale",
+            "A Single Light's Magic",
+            "The Complete Christmas Magic"
+        ];
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Sozi
+            if (typeof sozi !== 'undefined') {
+                presentation = new sozi.Presentation(document.querySelector('svg'));
+                presentation.enableMouseEvents();
+                presentation.enableKeyboardEvents();
+                
+                // Listen for frame changes
+                presentation.addEventListener('frameChange', function(evt) {
+                    currentFrameIndex = evt.index;
+                    updateFrameInfo();
+                });
+                
+                // Start with first frame
+                presentation.showFrame(0);
+                updateFrameInfo();
+            }
+        });
+        
+        function updateFrameInfo() {
+            const frameInfo = document.getElementById('frameInfo');
+            frameInfo.innerHTML = `<strong>${frameTitles[currentFrameIndex]}</strong><br>Frame ${currentFrameIndex + 1} of ${frameTitles.length}`;
+        }
+        
+        function nextFrame() {
+            if (presentation && currentFrameIndex < frameTitles.length - 1) {
+                presentation.showFrame(currentFrameIndex + 1);
+            }
+        }
+        
+        function previousFrame() {
+            if (presentation && currentFrameIndex > 0) {
+                presentation.showFrame(currentFrameIndex - 1);
+            }
+        }
+        
+        function togglePlay() {
+            if (isPlaying) {
+                clearTimeout(playTimeout);
+                isPlaying = false;
+            } else {
+                isPlaying = true;
+                autoPlay();
+            }
+        }
+        
+        function autoPlay() {
+            if (!isPlaying) return;
+            
+            if (currentFrameIndex < frameTitles.length - 1) {
+                nextFrame();
+                playTimeout = setTimeout(autoPlay, 4000); // 4 seconds per frame
+            } else {
+                isPlaying = false;
+            }
+        }
+        
+        function resetPresentation() {
+            if (presentation) {
+                presentation.showFrame(0);
+                clearTimeout(playTimeout);
+                isPlaying = false;
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            switch(e.key) {
+                case 'ArrowRight':
+                case ' ':
+                    nextFrame();
+                    break;
+                case 'ArrowLeft':
+                    previousFrame();
+                    break;
+                case 'Home':
+                    resetPresentation();
+                    break;
+                case 'p':
+                case 'P':
+                    togglePlay();
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
